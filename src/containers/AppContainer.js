@@ -5,6 +5,7 @@ import {connect} from 'react-redux'
 import Navbar from './NavContainer';
 import Footer from './FooterContainer';
 import Followers from '../components/Followers';
+import BuildingList from '../components/BuildingList'
 
 class AppContainer extends React.Component {
     render(){
@@ -14,7 +15,16 @@ class AppContainer extends React.Component {
                     <Navbar/>
                 </Row>
                 <Row size={75} style={{}}>
-                    <Followers {...this.props}/>
+                    <Col size={5}></Col>
+                    <Col size={90}>
+                        <Row size={10}>
+                            <Followers {...this.props}/>
+                        </Row>
+                        <Row size={90}>
+                            <BuildingList {...this.props}/>
+                        </Row>
+                    </Col>
+                    <Col size={5}></Col>
                 </Row>
                 <Row size={10}>
                     <Footer/>

@@ -16,7 +16,6 @@ const styles = {
 class Followers extends React.Component {
     constructor(props){
         super(props)
-        console.log(this.props)
     }
     render(){
         const {profile} = this.props
@@ -24,16 +23,16 @@ class Followers extends React.Component {
             <Grid style={styles.container}>
                 <Row>
                     <Col style={styles.grid}>
-                        <Text>{profile.buildings.length}</Text>
-                        <Text>buildings</Text>
+                        <Text style={style.number}>{profile.buildings.length}</Text>
+                        <Text style={style.text}>buildings</Text>
                     </Col>
                     <Col style={styles.grid}>
-                        <Text>{profile.followers}</Text>
-                        <Text>followers</Text>
+                        <Text style={style.number}>{profile.followers}</Text>
+                        <Text style={style.text}>followers</Text>
                     </Col>
                     <Col style={styles.grid}>
-                        <Text>{profile.following}</Text>
-                        <Text>followers</Text>
+                        <Text style={style.number}>{profile.following}</Text>
+                        <Text style={style.text}>followers</Text>
                     </Col>
                 </Row>
             </Grid>
@@ -42,3 +41,14 @@ class Followers extends React.Component {
 }
 
 export default Followers
+
+const style = {
+    number: {
+        color: '#1e3799',
+        fontWeight: 'bold',
+        fontSize: 18
+    },
+    text: {
+        color: "#95a5a6",
+    }
+}

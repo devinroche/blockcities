@@ -7,7 +7,11 @@ const initialState = {
         followers: 350,
         following: 68,
         buildings: [
-            "http://via.placeholder.com/150x350"
+            "http://via.placeholder.com/150x350",
+            "http://via.placeholder.com/150x350",
+            "http://via.placeholder.com/150x350",
+            "http://via.placeholder.com/150x350",
+            "http://via.placeholder.com/150x350",
         ]
     }
 }

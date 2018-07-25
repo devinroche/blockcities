@@ -5,14 +5,18 @@
 ## getting up and running!
 these are the steps to get started
 
+### required stuffs
+```
+npm i -g create-react-native-app
+```
 ### clone the repo
 ```
 git clone https://github.com/devinroche/blockcities
 ```
 
-### required stuffs
+### install the deps
 ```
-npm i -g create-react-native-app
+npm install
 ```
 
 ### running the code
