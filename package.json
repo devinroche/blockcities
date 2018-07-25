@@ -23,6 +23,7 @@
     "react": "16.3.1",
     "react-native": "~0.55.2",
     "react-native-easy-grid": "^0.2.0",
+    "react-native-image-grid": "^1.0.0",
     "react-native-navbar": "^2.1.0",
     "react-native-vector-icons": "^4.6.0",
     "react-redux": "^5.0.7",

@@ -1,11 +1,12 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Image, ScrollView, TouchableOpacity} from 'react-native';
 import { Col, Row, Grid } from "react-native-easy-grid";
+import PhotoGrid from 'react-native-image-grid';
 
 const styles = {
     container: {
         flex: 1, 
-        alignItems: 'center'
+        width: 400
     },
     grid: {
         flex: 1,
@@ -16,18 +17,35 @@ const styles = {
 class BuildingList extends React.Component {
     constructor(props){
         super(props)
-        console.log(this.props)
     }
+    renderItem(item, itemSize, itemPaddingHorizontal) {
+        console.log(itemSize)
+        return(
+          <TouchableOpacity
+            key = { item.id }
+            style = {{ width: 160, height: 200, paddingHorizontal: itemPaddingHorizontal }}
+            onPress = { () => { console.log('fart')}}>
+            <Image
+              resizeMode = "cover"
+              style = {{ flex: 1}}
+              source = {{ uri: item.src }}
+            />
+          </TouchableOpacity>
+        )
+      }
+
     render(){
         const {buildings} = this.props.profile
         return (
-            <Grid style={styles.container}>
-                {
-                    buildings.map((e, i) => {
-                        console.log(e, i)
-                    })
-                }
-            </Grid>
+            <ScrollView style={styles.container}>
+                <PhotoGrid
+                    data = { buildings }
+                    itemsPerRow = { 2 }
+                    itemMargin = { 1 }
+                    itemPaddingHorizontal={10}
+                    renderItem = { this.renderItem }
+                />
+            </ScrollView>
         );
     }
 }
