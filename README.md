@@ -20,3 +20,5 @@ npm i -g create-react-native-app
 - run with ios simulator: ```npm run ios```
 - run with android simulator: ```npm run android```
 
+## resources
+- [figma](https://www.figma.com/proto/gVHO1nMs0o5RpGmA7RRvP9/BlockCities-App-Snap?node-id=79%3A54&scaling=scale-down-width&redirected=1)
