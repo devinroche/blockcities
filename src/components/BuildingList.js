@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Text, Image, ScrollView, TouchableOpacity} from 'react-native';
 import { Col, Row, Grid } from "react-native-easy-grid";
 import PhotoGrid from 'react-native-image-grid';
+import Building from './Building';
 
 const styles = {
     container: {
@@ -19,18 +20,8 @@ class BuildingList extends React.Component {
         super(props)
     }
     renderItem(item, itemSize, itemPaddingHorizontal) {
-        console.log(itemSize)
         return(
-          <TouchableOpacity
-            key = { item.id }
-            style = {{ width: 160, height: 200, paddingHorizontal: itemPaddingHorizontal }}
-            onPress = { () => { console.log('fart')}}>
-            <Image
-              resizeMode = "cover"
-              style = {{ flex: 1}}
-              source = {{ uri: item.src }}
-            />
-          </TouchableOpacity>
+          <Building key={item.id} item={item} itemSize={itemSize} itemPaddingHorizontal={itemPaddingHorizontal}/>
         )
       }
 
@@ -42,7 +33,7 @@ class BuildingList extends React.Component {
                     data = { buildings }
                     itemsPerRow = { 2 }
                     itemMargin = { 1 }
-                    itemPaddingHorizontal={10}
+                    itemPaddingHorizontal={6}
                     renderItem = { this.renderItem }
                 />
             </ScrollView>
@@ -60,5 +51,19 @@ const style = {
     },
     text: {
         color: "#95a5a6",
+    },
+    buildingHead : {
+        paddingTop: 5,
+        fontSize: 14,
+        color: '#000000'
+    },
+    subBuildingText: {
+        fontSize: 12,
+        color: '#1e3799',
+    },
+    buyText: {
+        color: "#95a5a6",
+        fontSize: 10,
+        paddingBottom: 5
     }
 }

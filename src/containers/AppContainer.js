@@ -14,19 +14,19 @@ class AppContainer extends React.Component {
                 <Row size={10} style={{paddingTop: 40, paddingBottom: 10}}>
                     <Navbar/>
                 </Row>
-                <Row size={75} style={{}}>
+                <Row size={75}>
                     <Col size={5}></Col>
                     <Col size={90}>
                         <Row size={10}>
                             <Followers {...this.props}/>
                         </Row>
-                        <Row size={90}>
+                        <Row size={94}>
                             <BuildingList {...this.props}/>
                         </Row>
                     </Col>
                     <Col size={5}></Col>
                 </Row>
-                <Row size={10}>
+                <Row size={6} style={{paddingTop: 10, borderTopWidth: .5, borderTopColor: '#95a5a6'}}>
                     <Footer/>
                 </Row>
             </Grid>
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
     },
   });
-  
+
   const border = {
       borderWidth: 1
   }
