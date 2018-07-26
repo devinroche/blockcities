@@ -9,8 +9,9 @@ import BuildingList from '../components/BuildingList'
 
 class AppContainer extends React.Component {
     render(){
+        console.log(this.props)
         return (
-            <Grid>
+            <Grid style={{backgroundColor: '#ffffff'}}>
                 <Row size={10} style={{paddingTop: 40, paddingBottom: 10}}>
                     <Navbar/>
                 </Row>

@@ -1,18 +1,5 @@
 import React from 'react';
-import {View, Text, Image, ScrollView, TouchableOpacity} from 'react-native';
-import { Col, Row, Grid } from "react-native-easy-grid";
-import PhotoGrid from 'react-native-image-grid';
-
-const styles = {
-    container: {
-        flex: 1, 
-        width: 400
-    },
-    grid: {
-        flex: 1,
-        alignItems: 'center',
-    },
-};
+import {Text, Image, TouchableOpacity} from 'react-native';
 
 class Building extends React.Component {
     constructor(props){
@@ -32,7 +19,7 @@ class Building extends React.Component {
                 />
                 <Text style={style.buildingHead}>Building #{item.id}</Text>
                 <Text style={style.subBuildingText}>Era {Math.floor(Math.random() * 5)} - Foo Bar</Text>
-                <Text style={style.buyText}>&#128184; Buy 0.0{Math.floor(Math.random() * 99)}</Text>
+                <Text style={style.buyText}>&#128184; Buy {(Math.random() * (0.04 - .01) + .01).toFixed(3)}</Text>
           </TouchableOpacity>
         );
     }

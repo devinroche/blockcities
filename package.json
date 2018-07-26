@@ -26,6 +26,7 @@
     "react-native-image-grid": "^1.0.0",
     "react-native-navbar": "^2.1.0",
     "react-native-vector-icons": "^4.6.0",
+    "react-navigation": "^2.9.2",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0"

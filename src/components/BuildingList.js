@@ -42,28 +42,3 @@ class BuildingList extends React.Component {
 }
 
 export default BuildingList
-
-const style = {
-    number: {
-        color: '#1e3799',
-        fontWeight: 'bold',
-        fontSize: 18
-    },
-    text: {
-        color: "#95a5a6",
-    },
-    buildingHead : {
-        paddingTop: 5,
-        fontSize: 14,
-        color: '#000000'
-    },
-    subBuildingText: {
-        fontSize: 12,
-        color: '#1e3799',
-    },
-    buyText: {
-        color: "#95a5a6",
-        fontSize: 10,
-        paddingBottom: 5
-    }
-}
