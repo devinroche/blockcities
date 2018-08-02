@@ -1,7 +1,7 @@
-import {GET_PROFILE} from './types'
+import { GET_PROFILE } from './types';
 
-export const getProfile = () => {
-    return {
-        type: GET_PROFILE
-    }
-}
+const getProfile = () => ({
+    type: GET_PROFILE,
+});
+
+export default getProfile;

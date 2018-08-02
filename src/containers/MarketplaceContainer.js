@@ -1,10 +1,9 @@
 import React from 'react';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import { connect } from 'react-redux';
+import { Text } from 'react-native';
 import Navbar from './NavContainer';
 import Footer from './FooterContainer';
-import Followers from '../components/Followers';
-import BuildingList from '../components/BuildingList';
 
 const styles = {
     grid: {
@@ -21,7 +20,7 @@ const styles = {
     },
 };
 
-const ProfileContainer = props => (
+const MarketplaceContainer = props => (
     <Grid style={styles.grid}>
         <Row size={10} style={styles.topRow}>
             <Navbar navigation={props.navigation} />
@@ -29,11 +28,8 @@ const ProfileContainer = props => (
         <Row size={75}>
             <Col size={5} />
             <Col size={90}>
-                <Row size={10}>
-                    <Followers {...props} />
-                </Row>
-                <Row size={94}>
-                    <BuildingList {...props} />
+                <Row size={100}>
+                    <Text>marketplace page</Text>
                 </Row>
             </Col>
             <Col size={5} />
@@ -44,7 +40,6 @@ const ProfileContainer = props => (
     </Grid>
 );
 
-
 const mapStateToProps = state => (state.reducer);
 
-export default connect(mapStateToProps)(ProfileContainer);
+export default connect(mapStateToProps)(MarketplaceContainer);
