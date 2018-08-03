@@ -7,16 +7,18 @@ export default {
     FONT_DEMIBOLD: 'GDemiBold',
     FONT_MEDIUM: 'GMedium',
     FONT_REGULAR: 'GRegular',
-    FONT_Light: 'GLight',
+    FONT_LIGHT: 'GLight',
 
     LIGHT_BLUE: '#B9DBF0',
     MEDIUM_BLUE: '#4D92FF',
     DARK_BLUE: '#3258A8',
+    LIGHT_GREY: '#95a5a6',
 
     GREY_TEXT: '#828282',
     LIGHT_TEXT_COLOR: '#FFFFFF',
     DARK_TEXT_COLOR: '#3258A8',
     BLUE_TEXT: '#7294E8',
+    BLACK_TEXT: '#000000',
 
     BTN_RADIUS: '14px',
 };

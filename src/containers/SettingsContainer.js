@@ -13,18 +13,11 @@ const styles = {
         paddingTop: 40,
         paddingBottom: 10,
     },
-    bottomRow: {
-        paddingTop: 10,
-        borderTopWidth: 0.5,
-        borderTopColor: '#95a5a6',
-    },
 };
 
 const SettingsContainer = ({ navigation }) => (
     <Grid style={styles.grid}>
-        <Row size={10} style={styles.topRow}>
-            <Navbar navigation={navigation} />
-        </Row>
+        <Navbar navigation={navigation} />
         <Row size={75}>
             <Col size={5} />
             <Col size={90}>
@@ -34,9 +27,7 @@ const SettingsContainer = ({ navigation }) => (
             </Col>
             <Col size={5} />
         </Row>
-        <Row size={6} style={styles.bottomRow}>
-            <Footer navigation={navigation} />
-        </Row>
+        <Footer navigation={navigation} />
     </Grid>
 );
 

@@ -3,24 +3,16 @@ import theme from './theme';
 
 export default StyleSheet.create({
     touch: {
-        width: 160, 
-        height: 250, 
+        width: 160,
+        height: 250,
         paddingHorizontal: 20,
     },
-    number: {
-        color: '#1e3799',
-        fontWeight: 'bold',
-        fontSize: theme.FONT_SIZE_MEDIUM,
-    },
-    text: {
-        color: '#95a5a6',
-    },
     buildingHead: {
-        lineHeight: 18,
+        paddingTop: 5,
         fontFamily: theme.FONT_MEDIUM,
         fontSize: theme.FONT_SIZE_LARGE,
         letterSpacing: 1,
-        color: '#000000',
+        color: theme.BLACK_TEXT,
     },
     subBuildingText: {
         lineHeight: 18,

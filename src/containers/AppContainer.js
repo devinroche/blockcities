@@ -11,17 +11,6 @@ const styles = {
     grid: {
         backgroundColor: '#ffffff',
     },
-    topRow: {
-        paddingTop: 40,
-        paddingBottom: 10,
-        backgroundColor: 'transparent',
-    },
-    bottomRow: {
-        paddingTop: 10,
-        borderTopWidth: 0.5,
-        borderTopColor: '#95a5a6',
-        backgroundColor: '#ffffff',
-    },
     img: {
         flex: 1,
         resizeMode: 'cover',
@@ -33,18 +22,14 @@ const styles = {
 
 const AppContainer = props => (
     <Grid style={styles.grid}>
-        <Row size={10} style={styles.topRow}>
-            <Navbar navigation={props.navigation} />
-        </Row>
-        <Row size={82}>
+        <Navbar navigation={props.navigation} darkMode={true}/>
+        <Row size={82} style={{backgroundColor: '#B9DBF0'}}>
             <Image
                 style={styles.img}
                 source={wallpaper}
             />
         </Row>
-        <Row size={8} style={styles.bottomRow}>
-            <Footer navigation={props.navigation} />
-        </Row>
+        <Footer navigation={props.navigation} darkMode={true}/>
     </Grid>
 );
 

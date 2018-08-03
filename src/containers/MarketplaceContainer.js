@@ -22,9 +22,7 @@ const styles = {
 
 const MarketplaceContainer = props => (
     <Grid style={styles.grid}>
-        <Row size={10} style={styles.topRow}>
-            <Navbar navigation={props.navigation} />
-        </Row>
+        <Navbar navigation={props.navigation} />
         <Row size={75}>
             <Col size={5} />
             <Col size={90}>
@@ -34,9 +32,7 @@ const MarketplaceContainer = props => (
             </Col>
             <Col size={5} />
         </Row>
-        <Row size={6} style={styles.bottomRow}>
-            <Footer navigation={props.navigation} />
-        </Row>
+        <Footer navigation={props.navigation} />
     </Grid>
 );
 
