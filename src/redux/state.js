@@ -1,22 +1,19 @@
 const initialState = {
     user: {
-        name: "PrestonAttebery"
+        name: 'PrestonAttebery',
     },
     profile: {
-        buildings: 15,
         followers: 350,
         following: 68,
-        buildings: [ 
-            {id: 0, src: "https://pbs.twimg.com/media/DguOUZnVQAEfFOF.jpg"},
-            {id: 1, src: "https://pbs.twimg.com/media/DiVdGFzX0AAN3JB.jpg"},
-            {id: 2, src: "https://pbs.twimg.com/media/DgoErWyVQAAx88i.jpg"},
-            {id: 3, src: "https://pbs.twimg.com/media/DguOUZnVQAEfFOF.jpg"},
-            {id: 4, src: "https://pbs.twimg.com/media/DiVdGFzX0AAN3JB.jpg"},
-            {id: 5, src: "https://pbs.twimg.com/media/DgoErWyVQAAx88i.jpg"},
-        ]
-    }
-}
+        buildings: [
+            { id: 0, src: 'https://pbs.twimg.com/media/DguOUZnVQAEfFOF.jpg' },
+            { id: 1, src: 'https://pbs.twimg.com/media/DiVdGFzX0AAN3JB.jpg' },
+            { id: 2, src: 'https://pbs.twimg.com/media/DgoErWyVQAAx88i.jpg' },
+            { id: 3, src: 'https://pbs.twimg.com/media/DguOUZnVQAEfFOF.jpg' },
+            { id: 4, src: 'https://pbs.twimg.com/media/DiVdGFzX0AAN3JB.jpg' },
+            { id: 5, src: 'https://pbs.twimg.com/media/DgoErWyVQAAx88i.jpg' },
+        ],
+    },
+};
 
 export default initialState;
-
-//https://pbs.twimg.com/media/DguOUZnVQAEfFOF.jpg

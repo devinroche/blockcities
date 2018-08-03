@@ -1,33 +1,32 @@
 import React from 'react';
-import {View, Text} from 'react-native';
-import {connect} from 'react-redux'
-import NavigationBar from 'react-native-navbar';
-import RightBtn from './Nav/RightBtn'
-import LeftBtn from './Nav/LeftBtn'
-import CenterBtn from './Nav/CenterBtn'
-import { Col, Row, Grid } from "react-native-easy-grid";
+import { Col, Grid } from 'react-native-easy-grid';
+import RightBtn from '../components/Nav/RightBtn';
+import LeftBtn from '../components/Nav/LeftBtn';
+import CenterBtn from '../components/Nav/CenterBtn';
 
 const styles = {
     container: {
         flex: 1,
-        alignItems: 'center'
+        alignItems: 'center',
     },
     grid: {
         flex: 1,
-        alignItems: 'center'
-    }
+        alignItems: 'center',
+    },
 };
 
-class Navbar extends React.Component {
-    render(){
-        return (
-            <Grid style={{ flex: 1, alignItems: 'center', }}>
-                <Col style={styles.grid}><LeftBtn/></Col>
-                <Col style={styles.grid}><CenterBtn/></Col>
-                <Col style={styles.grid}><RightBtn/></Col>
-            </Grid>
-        );
-    }
-}
+const Navbar = props => (
+    <Grid style={styles.grid}>
+        <Col style={styles.grid}>
+            <LeftBtn {...props} />
+        </Col>
+        <Col style={styles.grid}>
+            <CenterBtn {...props} />
+        </Col>
+        <Col style={styles.grid}>
+            <RightBtn {...props} />
+        </Col>
+    </Grid>
+);
 
-export default Navbar
+export default Navbar;
