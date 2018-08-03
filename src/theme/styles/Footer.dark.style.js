@@ -15,5 +15,6 @@ export default StyleSheet.create({
         borderTopWidth: 0.5,
         borderTopColor: theme.LIGHT_BLUE,
         backgroundColor: theme.LIGHT_BLUE,
+        zIndex: 100,
     },
 });

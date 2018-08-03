@@ -5,16 +5,15 @@ import { Text } from 'react-native';
 import Navbar from './NavContainer';
 import Footer from './FooterContainer';
 import styles from '../theme/styles/Containers.style';
+import Marketplace from '../components/Marketplace';
 
 const MarketplaceContainer = props => (
     <Grid style={styles.grid}>
         <Navbar navigation={props.navigation} />
         <Row size={75}>
             <Col size={5} />
-            <Col size={90}>
-                <Row size={100}>
-                    <Text>marketplace page</Text>
-                </Row>
+            <Col size={90} >
+                <Marketplace />
             </Col>
             <Col size={5} />
         </Row>
