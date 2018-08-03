@@ -18,4 +18,10 @@ export default StyleSheet.create({
     text: {
         color: theme.LIGHT_GREY,
     },
+    line: {
+        borderTopWidth: 1,
+        borderTopColor: theme.LIGHT_GREY,
+        width: '100%',
+        padding: 10,
+    },
 });

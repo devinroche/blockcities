@@ -1,8 +1,9 @@
 const initialState = {
-    user: {
-        name: 'PrestonAttebery',
-    },
     profile: {
+        user: {
+            name: 'Devin Roche',
+            username: 'devinroche',
+        },
         followers: 350,
         following: 68,
         buildings: [

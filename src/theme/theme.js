@@ -2,6 +2,7 @@ export default {
     FONT_SIZE_SMALL: 12,
     FONT_SIZE_MEDIUM: 14,
     FONT_SIZE_LARGE: 16,
+    FONT_SIZE_XLARGE: 24,
 
     FONT_BOLD: 'GBold',
     FONT_DEMIBOLD: 'GDemiBold',
@@ -14,6 +15,7 @@ export default {
     DARK_BLUE: '#3258A8',
     LIGHT_GREY: '#95a5a6',
 
+    GREY_STANDARD: '#BDBDBD',
     GREY_TEXT: '#828282',
     LIGHT_TEXT_COLOR: '#FFFFFF',
     DARK_TEXT_COLOR: '#3258A8',
