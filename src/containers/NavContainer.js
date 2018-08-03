@@ -3,8 +3,8 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
 import RightBtn from '../components/Nav/RightBtn';
 import LeftBtn from '../components/Nav/LeftBtn';
 import CenterBtn from '../components/Nav/CenterBtn';
-import light from '../theme/Navbar.light.style';
-import dark from '../theme/Navbar.dark.style';
+import light from '../theme/styles/Navbar.light.style';
+import dark from '../theme/styles/Navbar.dark.style';
 
 const Navbar = (props) => {
     const { darkMode } = props;

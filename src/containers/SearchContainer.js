@@ -6,21 +6,7 @@ import {
 } from 'react-native';
 import Navbar from './NavContainer';
 import Footer from './FooterContainer';
-
-const styles = {
-    grid: {
-        backgroundColor: '#ffffff',
-    },
-    topRow: {
-        paddingTop: 40,
-        paddingBottom: 10,
-    },
-    bottomRow: {
-        paddingTop: 10,
-        borderTopWidth: 0.5,
-        borderTopColor: '#95a5a6',
-    },
-};
+import styles from '../theme/styles/Containers.style';
 
 const DismissKeyboard = ({ children }) => (
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
@@ -37,7 +23,7 @@ const SearchContainer = props => (
                 <Col size={90}>
                     <Row size={10}>
                         <TextInput
-                            style={{ height: 40, borderColor: 'gray', width: '100%' }}
+                            style={styles.textInput}
                             placeholder="Search buildings, cities ..."
                             onChangeText={text => console.log(text)}
                             value=""

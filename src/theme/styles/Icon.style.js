@@ -1,4 +1,4 @@
-import theme from './theme';
+import theme from '../theme';
 
 const styles = {
     dark: theme.DARK_BLUE,

@@ -4,21 +4,7 @@ import { connect } from 'react-redux';
 import { Text } from 'react-native';
 import Navbar from './NavContainer';
 import Footer from './FooterContainer';
-
-const styles = {
-    grid: {
-        backgroundColor: '#ffffff',
-    },
-    topRow: {
-        paddingTop: 40,
-        paddingBottom: 10,
-    },
-    bottomRow: {
-        paddingTop: 10,
-        borderTopWidth: 0.5,
-        borderTopColor: '#95a5a6',
-    },
-};
+import styles from '../theme/styles/Containers.style';
 
 const MarketplaceContainer = props => (
     <Grid style={styles.grid}>

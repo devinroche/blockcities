@@ -5,7 +5,7 @@ import Navbar from './NavContainer';
 import Footer from './FooterContainer';
 import Followers from '../components/Followers';
 import BuildingList from '../components/BuildingList';
-import styles from '../theme/Profile.style';
+import styles from '../theme/styles/Profile.style';
 
 const ProfileContainer = props => (
     <Grid style={styles.grid}>

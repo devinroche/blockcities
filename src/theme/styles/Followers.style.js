@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import theme from './theme';
+import theme from '../theme';
 
 export default StyleSheet.create({
     container: {
@@ -9,11 +9,13 @@ export default StyleSheet.create({
     grid: {
         flex: 1,
         alignItems: 'center',
-        backgroundColor: theme.LIGHT_BLUE,
     },
-    topRow: {
-        paddingTop: 40,
-        paddingBottom: 10,
-        backgroundColor: theme.LIGHT_BLUE,
+    number: {
+        color: theme.DARK_BLUE,
+        fontFamily: 'GDemiBold',
+        fontSize: 18,
+    },
+    text: {
+        color: theme.LIGHT_GREY,
     },
 });

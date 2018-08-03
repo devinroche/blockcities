@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, Image, TouchableOpacity } from 'react-native';
-import style from '../theme/Building.style';
+import style from '../theme/styles/Building.style';
 
 const Building = ({ item }) => (
     <TouchableOpacity

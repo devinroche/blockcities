@@ -4,16 +4,7 @@ import { connect } from 'react-redux';
 import { Text } from 'react-native';
 import Navbar from './NavContainer';
 import Footer from './FooterContainer';
-
-const styles = {
-    grid: {
-        backgroundColor: '#ffffff',
-    },
-    topRow: {
-        paddingTop: 40,
-        paddingBottom: 10,
-    },
-};
+import styles from '../theme/styles/Containers.style';
 
 const SettingsContainer = ({ navigation }) => (
     <Grid style={styles.grid}>

@@ -5,25 +5,12 @@ import { connect } from 'react-redux';
 import Navbar from './NavContainer';
 import wallpaper from '../utils/wallpaper.png';
 import Footer from './FooterContainer';
-
-
-const styles = {
-    grid: {
-        backgroundColor: '#ffffff',
-    },
-    img: {
-        flex: 1,
-        resizeMode: 'cover',
-        width: null,
-        height: null,
-    },
-};
-
+import styles from '../theme/styles/Containers.style';
 
 const AppContainer = props => (
     <Grid style={styles.grid}>
         <Navbar navigation={props.navigation} darkMode={true}/>
-        <Row size={82} style={{backgroundColor: '#B9DBF0'}}>
+        <Row size={82} style={styles.body}>
             <Image
                 style={styles.img}
                 source={wallpaper}

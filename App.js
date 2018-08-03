@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import { createStackNavigator } from 'react-navigation';
 import { Font } from 'expo';
 import store from './src/redux/store';
-
 import AppContainer from './src/containers/AppContainer';
 import ProfileContainer from './src/containers/ProfileContainer';
 import SearchContainer from './src/containers/SearchContainer';
