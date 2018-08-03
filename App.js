@@ -2,14 +2,25 @@ import React from 'react';
 import { View } from 'react-native';
 import { Provider } from 'react-redux';
 import { createStackNavigator } from 'react-navigation';
-import AppContainer from './src/containers/AppContainer';
+import { Font } from 'expo';
 import store from './src/redux/store';
+
+import AppContainer from './src/containers/AppContainer';
 import ProfileContainer from './src/containers/ProfileContainer';
 import SearchContainer from './src/containers/SearchContainer';
 import SettingsContainer from './src/containers/SettingsContainer'
 import MarketplaceContainer from './src/containers/MarketplaceContainer';
 
 export default class App extends React.Component {
+    componentDidMount() {
+        Font.loadAsync({
+            'GBold': require('./assets/fonts/GreycliffCF-Bold.otf'),
+            'GDemiBold': require('./assets/fonts/GreycliffCF-DemiBold.otf'),
+            'GMedium': require('./assets/fonts/GreycliffCF-Medium.otf'),
+            'GRegular': require('./assets/fonts/GreycliffCF-Regular.otf'),
+            'GLight': require('./assets/fonts/GreycliffCF-Light.otf'),
+        })
+    }
     render() {
         return (
             <Provider store={store}>
