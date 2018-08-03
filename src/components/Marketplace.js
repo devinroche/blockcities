@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Grid } from 'react-native-easy-grid';
 import SvgAnimatedLinearGradient from 'react-native-svg-animated-linear-gradient';
-import Svg from 'react-native-svg';
+import { Svg } from 'expo';
 import styles from '../theme/styles/Followers.style';
 
 const Marketplace = () => (
