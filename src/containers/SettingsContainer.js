@@ -5,7 +5,7 @@ import { Text } from 'react-native';
 import BackContainer from './BackContainer';
 import Footer from './FooterContainer';
 import styles from '../theme/styles/Containers.style';
-import Settings from '../components/Settings';
+import Settings from '../components/Settings/Settings';
 
 const SettingsContainer = (props) => {
     const { navigation, profile } = props;
