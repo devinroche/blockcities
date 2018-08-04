@@ -10,7 +10,7 @@ import styles from '../theme/styles/Containers.style';
 const AppContainer = props => (
     <Grid style={styles.grid}>
         <Navbar navigation={props.navigation} darkMode={true}/>
-        <Row size={82} style={styles.body}>
+        <Row size={84} style={styles.body}>
             <Image
                 style={styles.img}
                 source={wallpaper}

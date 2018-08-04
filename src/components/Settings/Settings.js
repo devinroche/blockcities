@@ -17,7 +17,7 @@ const Settings = (profile) => {
                     source={avatar}
                 />
             </Row>
-            <Row size={.5}>
+            <Row size={1}>
                 <Text style={font.bold}>@{profile.user.username}</Text>
             </Row>
             <Row size={.5}>

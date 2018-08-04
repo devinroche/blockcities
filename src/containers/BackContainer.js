@@ -7,7 +7,7 @@ import typography from '../theme/styles/Typography.style';
 
 const BackContainer = (props) => {
     return (
-        <Row size={10} style={styles.topRow}>
+        <Row size={15} style={styles.topRow}>
             <Grid style={styles.grid}>
                 <Col style={styles.grid}>
                     <Back {...props} />

@@ -5,7 +5,7 @@ import styles from '../../theme/styles/Settings.style';
 import font from '../../theme/styles/Typography.style';
 
 const UpdateEmail = () => (
-    <Row size={1}>
+    <Row size={2}>
         <Grid>
             <Row size={.75}>
                 <Text style={font.strong}>Update Email</Text>
@@ -18,7 +18,7 @@ const UpdateEmail = () => (
                     value={''}
                 />
             </Row>
-            <Row size={.5} style={styles.response}>
+            <Row size={1} style={styles.response}>
                 <Col>
                     <Text style={font.info}>Verify your new email.</Text>
                 </Col>

@@ -7,9 +7,10 @@ export default StyleSheet.create({
         alignItems: 'center',
     },
     response: {
-        marginTop: 10,
         flex: 1,
         alignItems: 'center',
+        borderWidth: 1,
+        marginTop: 10,
     },
     img: {
         width: 80, 
@@ -56,5 +57,6 @@ export default StyleSheet.create({
         justifyContent: 'center',  
         width: 100, 
         height: 35,
+        marginBottom: 5,
     },
 });
