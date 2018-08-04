@@ -11,6 +11,6 @@ const CenterBtn = ({ navigation, darkMode }) => {
             <Icon name="layers" size={20} color={style} />
         </TouchableOpacity>
     );
-}
+};
 
 export default CenterBtn;

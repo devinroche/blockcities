@@ -12,7 +12,7 @@ export default StyleSheet.create({
         backgroundColor: theme.LIGHT_TEXT_COLOR,
     },
     topRow: {
-        paddingTop: 40,
+        paddingTop: 20,
         paddingBottom: 10,
         backgroundColor: theme.LIGHT_TEXT_COLOR,
     },

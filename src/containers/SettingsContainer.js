@@ -1,7 +1,6 @@
 import React from 'react';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import { connect } from 'react-redux';
-import { Text } from 'react-native';
 import BackContainer from './BackContainer';
 import Footer from './FooterContainer';
 import styles from '../theme/styles/Containers.style';
@@ -9,7 +8,6 @@ import Settings from '../components/Settings/Settings';
 
 const SettingsContainer = (props) => {
     const { navigation, profile } = props;
-    console.log(profile)
     return (
         <Grid style={styles.grid}>
             <BackContainer navigation={navigation} />
@@ -23,7 +21,7 @@ const SettingsContainer = (props) => {
             <Footer navigation={navigation} />
         </Grid>
     );
-}
+};
 
 const mapStateToProps = state => (state.reducer);
 

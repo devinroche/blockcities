@@ -7,15 +7,17 @@ import font from '../../theme/styles/Typography.style';
 const UpdateEmail = () => (
     <Row size={2}>
         <Grid>
-            <Row size={.75}>
+            <Row size={0.75}>
                 <Text style={font.strong}>Update Email</Text>
             </Row>
             <Row size={1}>
                 <TextInput
                     style={styles.input}
-                    onChangeText={(text) => console.log(text)}
-                    placeholder={'you@email.com'}
-                    value={''}
+                    onChangeText={text => console.log(text)}
+                    autoCorrect={false}
+                    underlineColorAndroid="transparent"
+                    placeholder="you@email.com"
+                    value=""
                 />
             </Row>
             <Row size={1} style={styles.response}>

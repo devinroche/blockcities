@@ -22,7 +22,7 @@ const SearchContainer = (props) => {
             <Row size={75}>
                 <Col size={5} />
                 <DismissKeyboard>
-                    
+
                     <Col size={90}>
                         <Row size={10}>
                             <TextInput

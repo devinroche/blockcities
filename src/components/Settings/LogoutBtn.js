@@ -5,14 +5,18 @@ import styles from '../../theme/styles/Settings.style';
 import font from '../../theme/styles/Typography.style';
 
 const LogoutBtn = () => (
-    <Row size={.5}>
-        <TouchableOpacity
-            onPress={() => console.log('fart')}
-            style={styles.warningButton}
-        >
-            <Text style={font.light}>Logout</Text>
-        </TouchableOpacity>
-    </Row>
+    <React.Fragment>
+        <Row size={0.5} />
+        <Row size={0.5}>
+            <TouchableOpacity
+                onPress={() => console.log('fart')}
+                style={styles.warningButton}
+            >
+                <Text style={font.light}>Logout</Text>
+            </TouchableOpacity>
+        </Row>
+        <Row size={0.5} />
+    </React.Fragment>
 );
 
 export default LogoutBtn;

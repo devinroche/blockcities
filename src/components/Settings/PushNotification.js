@@ -7,7 +7,7 @@ import font from '../../theme/styles/Typography.style';
 const PushNotification = () => (
     <Row size={1} style={styles.pillContainer}>
         <Grid>
-            <Row size={.75}>
+            <Row size={0.75}>
                 <Col size={1}>
                     <Text style={font.strong}>Push Notifications</Text>
                 </Col>

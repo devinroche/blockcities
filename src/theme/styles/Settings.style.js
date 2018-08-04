@@ -9,11 +9,10 @@ export default StyleSheet.create({
     response: {
         flex: 1,
         alignItems: 'center',
-        borderWidth: 1,
         marginTop: 10,
     },
     img: {
-        width: 80, 
+        width: 80,
         height: 80,
     },
     grid: {
@@ -38,25 +37,25 @@ export default StyleSheet.create({
         paddingBottom: 20,
     },
     input: {
-        height: 45, 
-        backgroundColor: '#F2F2F2', 
-        borderRadius: 35, 
-        width: '100%', 
+        height: 45,
+        backgroundColor: '#F2F2F2',
+        borderRadius: 35,
+        width: '100%',
         padding: 15,
     },
     smallButton: {
-        backgroundColor: '#4D92FF', 
-        borderRadius: 20, 
-        alignItems: 'center', 
+        backgroundColor: '#4D92FF',
+        borderRadius: 20,
+        alignItems: 'center',
         padding: 6,
     },
-    warningButton: { 
-        backgroundColor: '#EB5757', 
-        borderRadius: 20, 
-        alignItems: 'center', 
-        justifyContent: 'center',  
-        width: 100, 
+    warningButton: {
+        backgroundColor: '#EB5757',
+        borderRadius: 20,
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: 100,
         height: 35,
-        marginBottom: 5,
+        marginBottom: 15,
     },
 });
