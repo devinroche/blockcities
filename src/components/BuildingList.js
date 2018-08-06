@@ -2,17 +2,7 @@ import React from 'react';
 import { ScrollView } from 'react-native';
 import PhotoGrid from 'react-native-image-grid';
 import Building from './Building';
-
-const styles = {
-    container: {
-        flex: 1,
-        width: 400,
-    },
-    grid: {
-        flex: 1,
-        alignItems: 'center',
-    },
-};
+import styles from '../theme/styles/BuildingList.style';
 
 export default class BuildingList extends React.Component {
     constructor(props) {

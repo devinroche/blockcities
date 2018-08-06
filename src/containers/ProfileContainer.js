@@ -5,27 +5,11 @@ import Navbar from './NavContainer';
 import Footer from './FooterContainer';
 import Followers from '../components/Followers';
 import BuildingList from '../components/BuildingList';
-
-const styles = {
-    grid: {
-        backgroundColor: '#ffffff',
-    },
-    topRow: {
-        paddingTop: 40,
-        paddingBottom: 10,
-    },
-    bottomRow: {
-        paddingTop: 10,
-        borderTopWidth: 0.5,
-        borderTopColor: '#95a5a6',
-    },
-};
+import styles from '../theme/styles/Profile.style';
 
 const ProfileContainer = props => (
     <Grid style={styles.grid}>
-        <Row size={10} style={styles.topRow}>
-            <Navbar navigation={props.navigation} />
-        </Row>
+        <Navbar navigation={props.navigation} />
         <Row size={75}>
             <Col size={5} />
             <Col size={90}>
@@ -38,9 +22,7 @@ const ProfileContainer = props => (
             </Col>
             <Col size={5} />
         </Row>
-        <Row size={6} style={styles.bottomRow}>
-            <Footer navigation={props.navigation} />
-        </Row>
+        <Footer navigation={props.navigation} />
     </Grid>
 );
 
