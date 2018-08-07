@@ -39,6 +39,5 @@ export default StyleSheet.create({
     clearButton: {
         backgroundColor: '#FFFFFF',
         alignItems: 'center',
-
     },
 });

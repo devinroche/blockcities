@@ -3,7 +3,7 @@ import { Row, Grid } from 'react-native-easy-grid';
 import {
     TextInput, Image,
 } from 'react-native';
-import styles from '../../theme/styles/Login.style';
+import styles from '../../theme/styles/CreateAccount.style';
 import loginImage from '../../utils/login-image.png';
 // import font from '../../theme/styles/Typography.style';
 import LoginBtn from './LoginBtn';
@@ -29,7 +29,7 @@ const Login = (props) => {
                     value=""
                 />
             </Row>
-            <Row size={0.025} />
+            <Row size={0.05} />
             <Row size={0.1}>
                 <TextInput
                     style={styles.input}
@@ -40,7 +40,7 @@ const Login = (props) => {
                     value=""
                 />
             </Row>
-            <Row size={0.025} />
+            <Row size={0.05} />
             <LoginBtn
                 navigation={navigation}
             />

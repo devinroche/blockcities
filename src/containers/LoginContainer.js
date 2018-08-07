@@ -10,7 +10,7 @@ const LoginContainer = (props) => {
 
     return (
         <Grid style={styles.grid}>
-            <Row size={0.3} />
+            <Row size={0.25} />
             <Login
                 navigation={navigation}
             />
