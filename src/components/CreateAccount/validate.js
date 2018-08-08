@@ -1,5 +1,4 @@
 const validate = (values) => {
-    console.log(values)
     const errors = {};
     if (!values.name || values.name.length < 3) {
         errors.name = 'Required';

@@ -15,6 +15,7 @@ const initialState = {
             { id: 5, src: 'https://pbs.twimg.com/media/DgoErWyVQAAx88i.jpg' },
         ],
     },
+    userInfo: {}
 };
 
 export default initialState;
