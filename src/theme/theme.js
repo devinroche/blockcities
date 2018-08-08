@@ -5,7 +5,7 @@ export default {
     FONT_SIZE_XLARGE: 24,
 
     FONT_BOLD: 'GBold',
-    FONT_DEMIBOLD: 'GDemiBold',
+    FONT_DEMIBOLD: 'GDemi',
     FONT_MEDIUM: 'GMedium',
     FONT_REGULAR: 'GRegular',
     FONT_LIGHT: 'GLight',
@@ -21,6 +21,7 @@ export default {
     DARK_TEXT_COLOR: '#3258A8',
     BLUE_TEXT: '#7294E8',
     BLACK_TEXT: '#000000',
+    ERR_TEXT: '#EB5757',
 
     BTN_RADIUS: '14px',
 };

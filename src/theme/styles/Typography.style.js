@@ -2,6 +2,17 @@ import { StyleSheet } from 'react-native';
 import theme from '../theme';
 
 export default StyleSheet.create({
+    xlarge: {
+        fontSize: theme.FONT_SIZE_XLARGE,
+        fontFamily: theme.FONT_DEMIBOLD,
+        letterSpacing: 2,
+    },
+    error: {
+        fontSize: theme.FONT_SIZE_MEDIUM,
+        fontFamily: theme.FONT_REGULAR,
+        letterSpacing: 1,
+        color: theme.ERR_TEXT,
+    },
     title: {
         fontSize: theme.FONT_SIZE_XLARGE,
         fontFamily: theme.FONT_DEMIBOLD,

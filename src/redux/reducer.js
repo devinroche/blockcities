@@ -1,19 +1,10 @@
 import { combineReducers } from 'redux';
-import initialState from './state';
-import { GET_PROFILE } from './types';
-
-const reducer = (state = initialState, action) => {
-    switch (action.type) {
-    case GET_PROFILE:
-        return state;
-
-    default:
-        return state;
-    }
-};
+import { reducer as formReducer } from 'redux-form'
+import profileReducer from './profile/reducer';
 
 const rootReducer = combineReducers({
-    reducer,
+    profileReducer,
+    form: formReducer,
 });
 
 export default rootReducer;

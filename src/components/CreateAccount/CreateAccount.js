@@ -1,15 +1,16 @@
 import React from 'react';
+import { Text, Image} from 'react-native';
+import { Field, reduxForm } from 'redux-form';
 import { Row, Col, Grid } from 'react-native-easy-grid';
-import {
-    Text, TextInput, Image,
-} from 'react-native';
 import styles from '../../theme/styles/CreateAccount.style';
+import MyTextInput from '../TextInput';
 import loginImage from '../../utils/login-image.png';
-// import font from '../../theme/styles/Typography.style';
+import font from '../../theme/styles/Typography.style';
+import validate from './validate';
 import NextBtn from './NextBtn';
 
 const CreateAccount = (props) => {
-    const { navigation } = props;
+    const { navigation, handleSubmit, pristine, reset, submitting } = props;
     return (
         <Grid style={styles.container}>
             <Row size={0.15} />
@@ -29,28 +30,32 @@ const CreateAccount = (props) => {
                     source={loginImage}
                 />
             </Row>
-            <Row size={0.12}>
-                <TextInput
+            <Row size={0.13}>
+                <Field
+                    name="name"
                     style={styles.input}
-                    onChangeText={text => console.log(text)}
-                    autoCorrect={false}
-                    underlineColorAndroid="transparent"
+                    component={MyTextInput}
+                    type="text"
                     placeholder="Name"
-                    value=""
                 />
             </Row>
-            <Row size={0.12}>
-                <TextInput
+            <Row size={0.13}>
+                <Field
+                    name="email"
                     style={styles.input}
-                    onChangeText={text => console.log(text)}
-                    autoCorrect={false}
-                    underlineColorAndroid="transparent"
+                    type="email"
+                    component={MyTextInput}
                     placeholder="Email Address"
-                    value=""
                 />
             </Row>
         </Grid>
     );
 };
 
-export default CreateAccount;
+export default reduxForm({
+    form: 'signup',
+    destroyOnUnmount: false,
+    validate,
+    touchOnChange: true,
+    touchOnBlur: true
+})(CreateAccount);

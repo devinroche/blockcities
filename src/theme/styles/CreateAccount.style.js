@@ -20,6 +20,14 @@ export default StyleSheet.create({
         fontWeight: '700',
         fontSize: 12,
     },
+    errorText: {
+        paddingTop: 10,
+        paddingBottom: 10,
+    },
+    errorInput: {
+        borderWidth: 2,
+        borderColor: theme.ERR_TEXT,
+    },
     loginText: {
         color: theme.LIGHT_TEXT_COLOR,
         fontWeight: '700',
