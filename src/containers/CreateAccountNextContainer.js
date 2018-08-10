@@ -12,7 +12,10 @@ const CreateAccountNextContainer = (props) => {
         <Grid style={styles.grid}>
             <CreateAccountNext
                 navigation={navigation}
-                onSubmit={(values) => sendUserInfo(values)}
+                onSubmit={(values) => {
+                    sendUserInfo(values)
+                    navigation.navigate('Home')
+                }}
             />
             <Row size={0.5} />
         </Grid>

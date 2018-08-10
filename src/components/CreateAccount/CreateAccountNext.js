@@ -55,12 +55,10 @@ const CreateAccountNext = (props) => {
                 />
             </Row>
             <Row size={0.09}>
-                <TouchableOpacity onPress={handleSubmit}>
-                    <Text>submit</Text>
-                </TouchableOpacity>
-                {/* <CreateAccountBtn
+                <CreateAccountBtn
+                    submit={handleSubmit}
                     navigation={navigation}
-                /> */}
+                />
             </Row>
         </Grid>
     );

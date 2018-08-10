@@ -4,7 +4,7 @@ import theme from '../theme';
 export default StyleSheet.create({
     xlarge: {
         fontSize: theme.FONT_SIZE_XLARGE,
-        fontFamily: theme.FONT_DEMIBOLD,
+        fontFamily: theme.FONT_MEDIUM,
         letterSpacing: 2,
     },
     error: {
@@ -15,7 +15,7 @@ export default StyleSheet.create({
     },
     title: {
         fontSize: theme.FONT_SIZE_XLARGE,
-        fontFamily: theme.FONT_DEMIBOLD,
+        fontFamily: theme.FONT_MEDIUM,
         letterSpacing: 2,
     },
     bold: {
@@ -26,7 +26,7 @@ export default StyleSheet.create({
     },
     normal: {
         fontSize: theme.FONT_SIZE_LARGE,
-        fontFamily: theme.FONT_DEMIBOLD,
+        fontFamily: theme.FONT_MEDIUM,
         letterSpacing: 1,
         color: theme.GREY_STANDARD,
     },
@@ -38,7 +38,7 @@ export default StyleSheet.create({
     },
     info: {
         fontSize: theme.FONT_SIZE_MEDIUM,
-        fontFamily: theme.FONT_DEMIBOLD,
+        fontFamily: theme.FONT_MEDIUM,
         letterSpacing: 1,
         color: theme.GREY_STANDARD,
     },

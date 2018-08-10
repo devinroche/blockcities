@@ -21,17 +21,13 @@ export const userSuccess = (data) => {
 
 export const sendUserInfo = (userObj) => {
     delete userObj.password2
-    console.log(userObj)
     return {
-        type: SIGNUP_PENDING,
+        types: [SIGNUP_PENDING, SIGNUP_SUCCESS, SIGNUP_ERROR],
         payload: {
             request: {
-                method: 'GET',
-                url: `/buildings`,
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                }
-                // data: userObj
+                method: 'POST',
+                url: `/users`,
+                data: userObj
             },
         },
     };

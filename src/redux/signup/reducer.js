@@ -6,7 +6,7 @@ const signupReducer = (state = initialState, action) => {
         case SIGNUP_SUCCESS:
             return {
                 ...state,
-                user: data
+                user: action.payload.data
             }
         
         default:
