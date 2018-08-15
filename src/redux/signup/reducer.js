@@ -1,14 +1,23 @@
-import { SIGNUP_PENDING, SIGNUP_ERROR, SIGNUP_SUCCESS, } from './types';
+import { LOGIN_SUCCESS, SIGNUP_PENDING, SIGNUP_ERROR, SIGNUP_SUCCESS, } from './types';
 import initialState from '../state';
 
 const signupReducer = (state = initialState, action) => {
     switch(action.type) {
         case SIGNUP_SUCCESS:
+            console.log('loadapp')
             return {
                 ...state,
-                user: action.payload.data
+                user: action.payload.data,
+                loadApp: true,
             }
-        
+        case LOGIN_SUCCESS:
+            console.log('loadapp')
+            return {
+                ...state,
+                user: action.payload.data,
+                loadApp: true,
+            }
+
         default:
             return {...state}
     }

@@ -22,9 +22,9 @@ const CreateAccountNextContainer = (props) => {
     );
 };
 
-const mapStateToProps = state => {
-    return { state };
-};
+const mapStateToProps = state => (
+    state.signupReducer
+)
 
 const mapDispatchToProps = {
     sendUserInfo

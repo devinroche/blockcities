@@ -30,7 +30,7 @@ const CreateAccount = (props) => {
                     source={loginImage}
                 />
             </Row>
-            <Row size={0.13}>
+            <Row size={0.17}>
                 <Field
                     name="name"
                     style={styles.input}
@@ -39,7 +39,7 @@ const CreateAccount = (props) => {
                     placeholder="Name"
                 />
             </Row>
-            <Row size={0.13}>
+            <Row size={0.17}>
                 <Field
                     name="email"
                     style={styles.input}

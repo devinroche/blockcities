@@ -15,6 +15,7 @@ export default function MyTextInput(props) {
                     {...inputProps}
                     style={style}
                     secureTextEntry={type === 'password'}
+                    underlineColorAndroid="transparent"
                     onChangeText={input.onChange}
                     onBlur={input.onBlur}
                     onFocus={input.onFocus}

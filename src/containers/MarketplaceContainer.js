@@ -23,6 +23,5 @@ const MarketplaceContainer = (props) => {
     );
 };
 
-const mapStateToProps = state => (state.profileReducer);
 
-export default connect(mapStateToProps)(MarketplaceContainer);
+export default MarketplaceContainer;

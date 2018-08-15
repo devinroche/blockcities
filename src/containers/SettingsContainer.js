@@ -14,7 +14,7 @@ const SettingsContainer = (props) => {
             <Row size={75}>
                 <Col size={5} />
                 <Col size={90}>
-                    <Settings {...profile} />
+                    {/* <Settings {...profile} /> */}
                 </Col>
                 <Col size={5} />
             </Row>
@@ -23,6 +23,4 @@ const SettingsContainer = (props) => {
     );
 };
 
-const mapStateToProps = state => (state.profileReducer);
-
-export default connect(mapStateToProps)(SettingsContainer);
+export default SettingsContainer;

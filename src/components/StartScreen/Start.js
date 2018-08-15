@@ -14,23 +14,23 @@ const Start = (props) => {
     const { navigation } = props;
     return (
         <Grid style={styles.container}>
-            <Row size={1.5}>
+            <Row size={50}>
                 <Image
-                    style={styles.img}
+                    style={[styles.img]}
                     source={startImage}
                 />
             </Row>
-            <Row size={0.3} />
-            <Row size={0.5}>
+            <Row size={5} />
+            <Row size={25}>
                 <Text style={font.xlarge}>Block Cities</Text>
             </Row>
-            <Row size={0.7} />
-            <Row size={0.5}>
+            {/* <Row size={1} /> */}
+            <Row size={15}>
                 <SignUpBtn
                     navigation={navigation}
                 />
             </Row>
-            <Row size={0.5}>
+            <Row size={15}>
                 <SignInBtn
                     navigation={navigation}
                 />

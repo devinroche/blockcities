@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
 import styles from '../../theme/styles/CreateAccount.style';
-// import font from '../../theme/styles/Typography.style';
+import font from '../../theme/styles/Typography.style';
 
 const NoAccountBtn = ({ navigation }) => (
 
@@ -9,7 +9,7 @@ const NoAccountBtn = ({ navigation }) => (
         onPress={() => navigation.navigate('CreateAccount')}
         style={styles.clearButton}
     >
-        <Text style={styles.darkText}>No Account? Sign Up</Text>
+        <Text style={[styles.darkText, font.btnTextDarkSmall]}>No Account? Sign Up</Text>
     </TouchableOpacity>
 
 );

@@ -40,7 +40,6 @@ export default class App extends React.Component {
                     <Navigator />
                 </View>
             </Provider>
-            
         );
     }
 }

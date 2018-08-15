@@ -26,7 +26,4 @@ const ProfileContainer = props => (
     </Grid>
 );
 
-
-const mapStateToProps = state => (state.profileReducer);
-
-export default connect(mapStateToProps)(ProfileContainer);
+export default ProfileContainer;

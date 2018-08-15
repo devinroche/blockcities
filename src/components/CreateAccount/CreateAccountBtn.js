@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
 import styles from '../../theme/styles/CreateAccount.style';
 import sendUserInfo from '../../redux/signup/reducer';
-// import font from '../../theme/styles/Typography.style';
+import font from '../../theme/styles/Typography.style';
 
 const CreateAccountBtn = ({submit, navigation}) => (
     <TouchableOpacity

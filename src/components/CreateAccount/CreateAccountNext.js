@@ -9,7 +9,7 @@ import loginImage from '../../utils/login-image.png';
 import MyTextInput from '../TextInput';
 import CreateAccountBtn from './CreateAccountBtn';
 import validate from './validate';
-// import font from '../../theme/styles/Typography.style';
+import font from '../../theme/styles/Typography.style';
 
 const CreateAccountNext = (props) => {
     const { navigation, handleSubmit, pristine, reset, submitting } = props;

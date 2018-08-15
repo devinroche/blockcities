@@ -1,22 +1,16 @@
-import axios from 'axios';
-import { SIGNUP_PENDING, SIGNUP_ERROR, SIGNUP_SUCCESS, } from './types';
+import { LOGIN_PENDING, LOGIN_ERROR, LOGIN_SUCCESS, SIGNUP_PENDING, SIGNUP_ERROR, SIGNUP_SUCCESS, } from './types';
 
-const baseUrl = `http://localhost:8080`;
-
-export const userPending = () => ({
-    type: SIGNUP_PENDING
-})
-
-export const userError = (err) => ({
-    type: SIGNUP_ERROR
-})
-
-export const userSuccess = (data) => {
-    console.log(data)
-    return ({
-        type: SIGNUP_SUCCESS,
-        data: data
-    })
+export const sendUserLogin = (userObj) => {
+    return {
+        types: [LOGIN_PENDING, LOGIN_SUCCESS, LOGIN_ERROR],
+        payload: {
+            request: {
+                method: 'POST',
+                url: `/signin`,
+                data: userObj
+            },
+        },
+    };
 }
 
 export const sendUserInfo = (userObj) => {

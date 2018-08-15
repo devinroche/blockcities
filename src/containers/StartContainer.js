@@ -20,6 +20,4 @@ const StartContainer = (props) => {
     );
 };
 
-const mapStateToProps = state => (state.profileReducer);
-
-export default connect(mapStateToProps)(StartContainer);
+export default StartContainer;
