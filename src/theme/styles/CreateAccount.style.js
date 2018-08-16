@@ -45,6 +45,30 @@ export default StyleSheet.create({
         width: '80%',
         padding: 15,
     },
+    headerBtn: {
+        backgroundColor: '#B9DBF0',
+        borderRadius: 35,
+        alignItems: 'center',
+        width: '100%',
+        paddingTop: 7,
+        paddingBottom: 7,
+        paddingLeft: 10,
+        paddingRight: 10,
+        borderWidth: 1,
+        borderColor: '#4D92FF'
+    },
+    headerBtnDark: {
+        backgroundColor: '#4D92FF',
+        borderRadius: 35,
+        alignItems: 'center',
+        width: '100%',
+        paddingTop: 7,
+        paddingBottom: 7,
+        paddingLeft: 10,
+        paddingRight: 10,
+        borderWidth: 1,
+        borderColor: '#4D92FF'
+    },
     smallButton: {
         backgroundColor: '#4D92FF',
         borderRadius: 15,
