@@ -14,4 +14,10 @@ export default StyleSheet.create({
         borderTopWidth: 0.5,
         borderTopColor: '#95a5a6',
     },
+    centerContent: {
+        flex: 1,
+        justifyContent: 'center',
+        textAlign: 'center'
+        // alignItems: 'center',
+    }
 });

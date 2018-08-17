@@ -11,7 +11,7 @@ const Navbar = (props) => {
     const styles = darkMode ? dark : light;
 
     return (
-        <Row size={10} style={styles.topRow}>
+        <Row size={8} style={styles.topRow}>
             <Grid style={styles.grid}>
                 <Col style={styles.grid}>
                     <LeftBtn {...props} />

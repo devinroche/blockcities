@@ -8,7 +8,7 @@ const TopCitiesBtn = () => (
         onPress={console.log('top cities')}
         style={styles.headerBtn}
     >
-        <Text style={[styles.darkText, font.btnTextDarkSmall, {fontSize: 11}]}>Top Cities</Text>
+        <Text style={[styles.darkText, font.btnTextDarkSmall, {fontSize: 12}]}>Top Cities</Text>
     </TouchableOpacity>
 );
 

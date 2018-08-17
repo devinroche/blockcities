@@ -10,39 +10,52 @@ import theme from '../theme/theme';
 import Spinner from '../components/Spinner';
 import MyCityBtn from '../components/MyCity/MyCityBtn'
 import TopCitiesBtn from '../components/MyCity/TopCitiesBtn'
+import {getBuildings} from '../redux/building/actions'
 
-const AppContainer = props => {
-    const {loadApp, user} = props;
-    console.log(props)
+class AppContainer extends React.Component {
+    constructor(props){
+        super(props);
+        this.props.getBuildings()
+    }
 
-    if(!loadApp)
-        return <Spinner/>
+    render(){
+        const {loadApp, user} = this.props.signup;
+        const {navigation} = this.props
 
-    return (
-        <Grid style={styles.grid}>
-            {/* <Row size={1} style={{ backgroundColor: theme.LIGHT_BLUE }} /> */}
-            <Navbar navigation={props.navigation} darkMode user={user}/>
-            <Row size={10} style={{ backgroundColor: theme.LIGHT_BLUE }}>
-                <Col size={2.5}/>
-                <Col size={3}><MyCityBtn/></Col>
-                <Col size={1}/>
-                <Col size={3}><TopCitiesBtn/></Col>
-                <Col size={2.5}/>
-            </Row>
-            <Row size={81} style={styles.body}>
-                <Image
-                    style={styles.img}
-                    source={wallpaper}
-                />
-            </Row>
-            <Footer navigation={props.navigation} darkMode />
-        </Grid>
-    );
+        if(!loadApp)
+            return <Spinner/>
+
+        return (
+            <Grid style={styles.grid}>
+                {/* <Row size={1} style={{ backgroundColor: theme.LIGHT_BLUE }} /> */}
+                <Navbar navigation={navigation} darkMode user={user}/>
+                <Row size={10} style={{ backgroundColor: theme.LIGHT_BLUE }}>
+                    <Col size={2.5}/>
+                    <Col size={3}><MyCityBtn/></Col>
+                    <Col size={1}/>
+                    <Col size={3}><TopCitiesBtn/></Col>
+                    <Col size={2.5}/>
+                </Row>
+                <Row size={81} style={styles.body}>
+                    <Image
+                        style={styles.img}
+                        source={wallpaper}
+                    />
+                </Row>
+                <Footer navigation={navigation} darkMode />
+            </Grid>
+        );
+    }
 }
 
+const mapStateToProps = state => {
+    return {
+        signup: state.signupReducer,
+    }
+}
 
-const mapStateToProps = state => (
-    state.signupReducer
-)
+const mapDispatchToProps = {
+    getBuildings
+}
 
-export default connect(mapStateToProps)(AppContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(AppContainer);

@@ -13,27 +13,38 @@ export default class BuildingList extends React.Component {
     renderItem(item, itemSize, itemPaddingHorizontal) {
         return (
             <Building
-                key={item.id}
+                key={item.ID}
                 item={item}
                 itemSize={itemSize}
+                updateBuilding={(item) => this.props.updateBuilding(item)}
+                redirect={() => this.props.navigation.navigate('BuildingPage')}
                 itemPaddingHorizontal={itemPaddingHorizontal}
             />
         );
     }
 
     render() {
-        const { profile } = this.props;
-        const { buildings } = profile;
+        const userBuildings = randArr(this.props.buildings)
         return (
             <ScrollView style={styles.container}>
                 <PhotoGrid
-                    data={buildings}
+                    data={userBuildings}
                     itemsPerRow={2}
-                    itemMargin={1}
-                    itemPaddingHorizontal={6}
+                    itemMargin={10}
+                    itemPaddingHorizontal={0}
                     renderItem={this.renderItem}
                 />
             </ScrollView>
         );
     }
+}
+
+const randArr = (buildingArr) => {
+    let numEl = Math.floor(Math.random() * 5) + 1
+    let newArr = []
+    while(numEl){
+        newArr.push(buildingArr[Math.floor(Math.random() * buildingArr.length)])
+        numEl--;
+    }
+    return newArr.filter((e, i) => newArr.indexOf(e) == i);
 }

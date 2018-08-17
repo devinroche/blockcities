@@ -13,7 +13,7 @@ import StartContainer from './src/containers/StartContainer';
 import LoginContainer from './src/containers/LoginContainer';
 import CreateAccountContainer from './src/containers/CreateAccountContainer';
 import CreateAccountNextContainer from './src/containers/CreateAccountNextContainer';
-
+import BuildingContainer from './src/containers/BuildingContainer';
 
 export default class App extends React.Component {
     state = {
@@ -54,6 +54,7 @@ const Navigator = createStackNavigator({
     Login: { screen: LoginContainer },
     CreateAccount: { screen: CreateAccountContainer },
     CreateAccountNext: { screen: CreateAccountNextContainer },
+    BuildingPage: { screen: BuildingContainer }
 }, {
     initialRouteName: 'Start',
     headerMode: 'none',
