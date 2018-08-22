@@ -23,7 +23,7 @@ export default class App extends React.Component {
     async componentDidMount() {
         await Font.loadAsync({
             GBold: require('./assets/fonts/GreycliffCF-Bold.otf'),
-            // GDemi: require('./assets/fonts/GreycliffCF-DemiBold.otf'),
+            GDemi: require('./assets/fonts/GreycliffCF-DemiBold.otf'),
             GMedium: require('./assets/fonts/GreycliffCF-Medium.otf'),
             GRegular: require('./assets/fonts/GreycliffCF-Regular.otf'),
             GLight: require('./assets/fonts/GreycliffCF-Light.otf'),

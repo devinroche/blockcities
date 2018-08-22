@@ -7,7 +7,6 @@ class Building extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            isOpened: false,
             backgroundColor: randColors[Math.floor(Math.random() * 4)]
         }
     }
@@ -15,29 +14,21 @@ class Building extends React.Component {
         const {item} = this.props
 
         return (
-            <TouchableOpacity
-                style={style.touch}
+            <TouchableOpacity style={style.touch}
                 onPress={() => {
                     this.props.updateBuilding(item)
                     this.props.redirect()
-            }}
+                }}
             >
-                <Lightbox 
-                    underlayColor="white" 
-                    onOpen={() => this.setState({isOpened: true})}
-                    onClose={() => this.setState({isOpened: false})}
-                >
-                    <View style={[style.container, 
-                    { backgroundColor: this.state.backgroundColor}, 
-                    this.state.isOpened && {flex: 1, width: Dimensions.get('window').width }
+                <View style={[style.container,
+                    { backgroundColor: this.state.backgroundColor}
                 ]}>
-                            <Image
-                                style={style.img}
-                                source={{ uri: item.ImageURL }}
-                                resizeMode="contain"
-                            />
-                    </View>
-                </Lightbox>
+                    <Image
+                        style={style.img}
+                        source={{ uri: item.ImageURL }}
+                        resizeMode="contain"
+                    />
+                </View>
                 <Text style={style.buildingHead}>{item.Name}</Text>
                 <Text style={style.subBuildingText}>Era {Math.floor(Math.random() * 5)} - {randStats()}</Text>
                 <Text style={style.buyText}> &#128184; Buy {(Math.random() * (0.04 - 0.01) + 0.01).toFixed(3)}</Text>

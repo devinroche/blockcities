@@ -8,8 +8,8 @@ const RightBtn = ({ navigation, darkMode }) => {
     const style = darkMode ? styles.dark : styles.light;
 
     return (
-        <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
-            <Image source={gear}/>
+        <TouchableOpacity onPress={() => navigation.navigate('Settings')} >
+            <Image source={gear} style={{alignSelf: 'flex-end'}}/>
         </TouchableOpacity>
     );
 };

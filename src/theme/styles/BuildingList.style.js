@@ -9,4 +9,9 @@ export default StyleSheet.create({
         flex: 1,
         alignItems: 'center',
     },
+    centerContent: {
+        flex: 1,
+        justifyContent: 'center',
+        textAlign: 'center'
+    }
 });

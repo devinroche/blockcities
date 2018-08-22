@@ -67,5 +67,27 @@ export default StyleSheet.create({
         letterSpacing: 1,
         color: theme.LIGHT_TEXT_COLOR,
     },
-
+    buildingHead: {
+        fontFamily: theme.FONT_DEMI,
+        fontSize: theme.FONT_SIZE_XLARGE,
+        letterSpacing: 1,
+    },
+    buildingContentHead: {
+        fontFamily: theme.FONT_DEMI,
+        fontSize: theme.FONT_SIZE_SMALL,
+        letterSpacing: 1,
+        color: '#828282'
+    },
+    buildingContent: {
+        fontFamily: theme.FONT_REGULAR,
+        fontSize: theme.FONT_SIZE_XLARGE-2,
+        letterSpacing: 1,
+    },
+    buildingDetails: {
+        fontFamily: theme.FONT_BOLD,
+        fontSize: theme.FONT_SIZE_MEDIUM,
+        letterSpacing: 1,
+        color: '#828282',
+        lineHeight: 25,
+    },
 });

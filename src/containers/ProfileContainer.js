@@ -15,24 +15,20 @@ const ProfileContainer = props => {
     console.log(signupReducer.user)
     return (
         <Grid style={styles.grid}>
-            <Navbar navigation={props.navigation} />
             <Row size={85}>
-                <Col size={2.5} />
-                <Col size={95}>
-                    <Row size={4}>
-                        <Text style={[styles.centerContent, fonts.btnTextDark]}>{signupReducer.user.Name}</Text>
-                    </Row>
-                    <Row size={4}>
-                        <Text style={[styles.centerContent, fonts.info]}>@{signupReducer.user.Username}</Text>
-                    </Row>
-                    <Row size={12}>
-                        <Followers {...props} />
-                    </Row>
-                    <Row size={94}>
-                        <BuildingList buildings={buildingReducer.buildingList} navigation={props.navigation} updateBuilding={props.currentBuilding}/>
+                <Col size={2} />
+                <Col size={96}>
+                    <Navbar navigation={props.navigation} />
+                    <Row size={92}>
+                        <BuildingList
+                            user={signupReducer.user}
+                            buildings={buildingReducer.buildingList}
+                            navigation={props.navigation}
+                            updateBuilding={props.currentBuilding}
+                        />
                     </Row>
                 </Col>
-                <Col size={2.5} />
+                <Col size={2} />
             </Row>
             <Footer navigation={props.navigation} />
         </Grid>

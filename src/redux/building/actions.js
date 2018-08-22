@@ -13,7 +13,6 @@ export const getBuildings = () => {
 }
 
 export const currentBuilding = (building) => {
-    console.log(building)
     return {
         type: CURR_BUILDING,
         data: building

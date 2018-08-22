@@ -76,8 +76,8 @@ export default StyleSheet.create({
         backgroundColor: '#78cbff',
         borderRadius: 15,
         alignItems: 'center',
-        width: '30%',
-        paddingVertical: 10,
+        width: '40%',
+        paddingVertical: 7.5,
         paddingHorizontal: 25,
     },
     clearButton: {
@@ -89,7 +89,7 @@ export default StyleSheet.create({
         height: 45,
         backgroundColor: '#F2F2F2',
         borderRadius: 35,
-        width: '75%',
+        width: '80%',
         padding: 15,
     },
     align: {

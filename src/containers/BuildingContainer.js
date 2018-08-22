@@ -9,18 +9,18 @@ import styles from '../theme/styles/Profile.style';
 import BuildingPage from '../components/Building/BuildingPage'
 
 const BuildingContainer = props => {
-    console.log(props.currentBuilding)
+    console.log('BUILDING', props.currentBuilding)
     return (
         <Grid style={styles.grid}>
             <Navbar navigation={props.navigation} />
             <Row size={75}>
-                <Col size={2.5} />
-                <Col size={95}>
+                <Col size={5} />
+                <Col size={90}>
                     <Row size={94}>
-                        {/* <BuildingPage navigation={props.navigation} item={props.building}/> */}
+                        <BuildingPage navigation={props.navigation} item={props.currentBuilding}/>
                     </Row>
                 </Col>
-                <Col size={2.5} />
+                <Col size={5} />
             </Row>
             <Footer navigation={props.navigation} />
         </Grid>

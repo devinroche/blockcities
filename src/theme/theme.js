@@ -5,7 +5,7 @@ export default {
     FONT_SIZE_XLARGE: 24,
 
     FONT_BOLD: 'GBold',
-    // FONT_BOLD: 'GDemi',
+    FONT_DEMI: 'GDemi',
     FONT_MEDIUM: 'GMedium',
     FONT_REGULAR: 'GRegular',
     FONT_LIGHT: 'GLight',

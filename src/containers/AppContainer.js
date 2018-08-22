@@ -26,9 +26,10 @@ class AppContainer extends React.Component {
             return <Spinner/>
 
         return (
-            <Grid style={styles.grid}>
-                {/* <Row size={1} style={{ backgroundColor: theme.LIGHT_BLUE }} /> */}
-                <Navbar navigation={navigation} darkMode user={user}/>
+            <Grid style={[styles.grid, { backgroundColor: theme.LIGHT_BLUE }]}>
+                <Col size={2} />
+                <Col size={96}>
+                    <Navbar navigation={navigation} darkMode user={user}/>
                 <Row size={10} style={{ backgroundColor: theme.LIGHT_BLUE }}>
                     <Col size={2.5}/>
                     <Col size={3}><MyCityBtn/></Col>
@@ -42,7 +43,9 @@ class AppContainer extends React.Component {
                         source={wallpaper}
                     />
                 </Row>
-                <Footer navigation={navigation} darkMode />
+                    <Footer navigation={navigation} darkMode />
+                </Col>
+                <Col size={2} />
             </Grid>
         );
     }
