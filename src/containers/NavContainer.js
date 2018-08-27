@@ -1,4 +1,5 @@
 import React from 'react';
+import {View} from 'react-native'
 import { Col, Grid, Row } from 'react-native-easy-grid';
 import RightBtn from '../components/Nav/RightBtn';
 import LeftBtn from '../components/Nav/LeftBtn';
@@ -11,15 +12,15 @@ const Navbar = (props) => {
     const styles = darkMode ? dark : light;
 
     return (
-        <Row size={15} style={styles.topRow}>
-            <Grid style={styles.grid}>
-                <Col style={styles.grid}>
+        <Row size={8} style={[styles.topRow]}>
+            <Grid style={[styles.grid, {justifyContent: 'space-between'}]}>
+                <Col>
                     <LeftBtn {...props} />
                 </Col>
-                <Col style={styles.grid}>
+                <Col>
                     <CenterBtn {...props} />
                 </Col>
-                <Col style={styles.grid}>
+                <Col>
                     <RightBtn {...props} />
                 </Col>
             </Grid>

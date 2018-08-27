@@ -13,7 +13,7 @@ export default StyleSheet.create({
     bottomRow: {
         paddingTop: 10,
         borderTopWidth: 0.5,
-        borderTopColor: theme.LIGHT_GREY,
+        borderTopColor: '#F2F2F2',
         backgroundColor: theme.LIGHT_TEXT_COLOR,
         zIndex: 100,
     },

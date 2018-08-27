@@ -1,6 +1,7 @@
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/SimpleLineIcons';
+import searchIcon from '../../utils/search.png';
 import styles from '../../theme/styles/Icon.style';
 
 const LeftBtn = ({ navigation, darkMode }) => {
@@ -8,7 +9,7 @@ const LeftBtn = ({ navigation, darkMode }) => {
 
     return (
         <TouchableOpacity onPress={() => navigation.navigate('Search')}>
-            <Icon name="magnifier" size={20} color={style} />
+            <Image source={searchIcon}/>
         </TouchableOpacity>
     );
 };

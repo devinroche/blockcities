@@ -1,8 +1,8 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Text} from 'react-native';
 import { Provider } from 'react-redux';
 import { createStackNavigator } from 'react-navigation';
-import { Font } from 'expo';
+import { Font, Asset } from 'expo';
 import store from './src/redux/store';
 import AppContainer from './src/containers/AppContainer';
 import ProfileContainer from './src/containers/ProfileContainer';
@@ -13,29 +13,34 @@ import StartContainer from './src/containers/StartContainer';
 import LoginContainer from './src/containers/LoginContainer';
 import CreateAccountContainer from './src/containers/CreateAccountContainer';
 import CreateAccountNextContainer from './src/containers/CreateAccountNextContainer';
-
+import BuildingContainer from './src/containers/BuildingContainer';
+import FeaturedContainer from './src/containers/FeaturedContainer'
 
 export default class App extends React.Component {
-    componentDidMount() {
-        Font.loadAsync({
-        'GBold': require('./assets/fonts/GreycliffCF-Bold.otf'),
-        'GDemiBold': require('./assets/fonts/GreycliffCF-DemiBold.otf'),
-        'GMedium': require('./assets/fonts/GreycliffCF-Medium.otf'),
-        'GRegular': require('./assets/fonts/GreycliffCF-Regular.otf'),
-        'GLight': require('./assets/fonts/GreycliffCF-Light.otf'),
-    })
+    state = {
+        loaded: false,
+    }
 
-}
+    async componentDidMount() {
+        await Font.loadAsync({
+            GBold: require('./assets/fonts/GreycliffCF-Bold.otf'),
+            GDemi: require('./assets/fonts/GreycliffCF-DemiBold.otf'),
+            GMedium: require('./assets/fonts/GreycliffCF-Medium.otf'),
+            GRegular: require('./assets/fonts/GreycliffCF-Regular.otf'),
+            GLight: require('./assets/fonts/GreycliffCF-Light.otf'),
+        })
+        this.setState({loaded: true});
+    }
     render() {
-
+        if (!this.state.loaded) {
+            return <Text>loading</Text>;
+        }
         return (
-
             <Provider store={store}>
                 <View style={{ flex: 1 }}>
                     <Navigator />
                 </View>
             </Provider>
-            
         );
     }
 }
@@ -50,6 +55,8 @@ const Navigator = createStackNavigator({
     Login: { screen: LoginContainer },
     CreateAccount: { screen: CreateAccountContainer },
     CreateAccountNext: { screen: CreateAccountNextContainer },
+    BuildingPage: { screen: BuildingContainer },
+    FeaturedPage: {screen: FeaturedContainer}
 }, {
     initialRouteName: 'Start',
     headerMode: 'none',

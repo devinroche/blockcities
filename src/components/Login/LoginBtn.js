@@ -1,14 +1,14 @@
 import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
 import styles from '../../theme/styles/CreateAccount.style';
-// import font from '../../theme/styles/Typography.style';
+import font from '../../theme/styles/Typography.style';
 
-const LoginBtn = ({ navigation }) => (
+const LoginBtn = ({ submit }) => (
     <TouchableOpacity
-        onPress={() => navigation.navigate('Home')}
+        onPress={submit}
         style={styles.largeButton}
     >
-        <Text style={styles.loginText}>Sign In</Text>
+        <Text style={[styles.loginText, font.btnText]}>Sign In</Text>
     </TouchableOpacity>
 );
 

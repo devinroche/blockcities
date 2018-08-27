@@ -18,6 +18,4 @@ const CreateAccountContainer = (props) => {
     );
 };
 
-const mapStateToProps = state => (state.reducer);
-
-export default connect(mapStateToProps)(CreateAccountContainer);
+export default CreateAccountContainer;

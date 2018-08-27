@@ -12,7 +12,7 @@ export default StyleSheet.create({
     },
     number: {
         color: theme.DARK_BLUE,
-        fontFamily: 'GDemiBold',
+        fontFamily: 'GBold',
         fontSize: 18,
     },
     text: {

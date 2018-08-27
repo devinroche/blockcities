@@ -20,6 +20,4 @@ const StartContainer = (props) => {
     );
 };
 
-const mapStateToProps = state => (state.reducer);
-
-export default connect(mapStateToProps)(StartContainer);
+export default StartContainer;

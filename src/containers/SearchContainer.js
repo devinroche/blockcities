@@ -45,6 +45,4 @@ const SearchContainer = (props) => {
     );
 };
 
-const mapStateToProps = state => (state.reducer);
-
-export default connect(mapStateToProps)(SearchContainer);
+export default SearchContainer;
