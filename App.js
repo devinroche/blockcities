@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text} from 'react-native';
 import { Provider } from 'react-redux';
 import { createStackNavigator } from 'react-navigation';
-import { Font } from 'expo';
+import { Font, Asset } from 'expo';
 import store from './src/redux/store';
 import AppContainer from './src/containers/AppContainer';
 import ProfileContainer from './src/containers/ProfileContainer';
@@ -14,6 +14,7 @@ import LoginContainer from './src/containers/LoginContainer';
 import CreateAccountContainer from './src/containers/CreateAccountContainer';
 import CreateAccountNextContainer from './src/containers/CreateAccountNextContainer';
 import BuildingContainer from './src/containers/BuildingContainer';
+import FeaturedContainer from './src/containers/FeaturedContainer'
 
 export default class App extends React.Component {
     state = {
@@ -54,7 +55,8 @@ const Navigator = createStackNavigator({
     Login: { screen: LoginContainer },
     CreateAccount: { screen: CreateAccountContainer },
     CreateAccountNext: { screen: CreateAccountNextContainer },
-    BuildingPage: { screen: BuildingContainer }
+    BuildingPage: { screen: BuildingContainer },
+    FeaturedPage: {screen: FeaturedContainer}
 }, {
     initialRouteName: 'Start',
     headerMode: 'none',

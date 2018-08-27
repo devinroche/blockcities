@@ -43,6 +43,13 @@ export default StyleSheet.create({
         letterSpacing: 1,
         color: theme.GREY_STANDARD,
     },
+    infoFeature: {
+        fontSize: theme.FONT_SIZE_MEDIUM,
+        fontFamily: theme.FONT_DEMI,
+        lineHeight: 25,
+        letterSpacing: 1,
+        color: theme.GREY_TEXT,
+    },
     btnText: {
         fontSize: theme.FONT_SIZE_LARGE,
         fontFamily: theme.FONT_BOLD,
@@ -90,4 +97,15 @@ export default StyleSheet.create({
         color: '#828282',
         lineHeight: 25,
     },
+    featureHead: {
+        fontFamily: theme.FONT_MEDIUM,
+        fontSize: 30,
+        color: '#000000',
+    },
+    featurePrice: {
+        fontFamily: theme.FONT_DEMI,
+        fontSize: 14,
+        letterSpacing: 1,
+        color: '#7294e8'
+    }
 });

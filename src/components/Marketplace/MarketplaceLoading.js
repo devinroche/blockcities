@@ -2,9 +2,9 @@ import React from 'react';
 import { Row, Grid } from 'react-native-easy-grid';
 import SvgAnimatedLinearGradient from 'react-native-svg-animated-linear-gradient';
 import { Svg } from 'expo';
-import styles from '../theme/styles/Followers.style';
+import styles from '../../theme/styles/Followers.style';
 
-const Marketplace = () => (
+const MarketplaceLoading = () => (
     <Grid style={styles.container}>
         <Row>
             <SvgAnimatedLinearGradient height={600}>
@@ -31,4 +31,4 @@ const Marketplace = () => (
 );
 
 
-export default Marketplace;
+export default MarketplaceLoading;

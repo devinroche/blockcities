@@ -6,9 +6,9 @@ import Footer from './FooterContainer';
 import Followers from '../components/Followers';
 import BuildingList from '../components/BuildingList';
 import styles from '../theme/styles/Profile.style';
-import BuildingPage from '../components/Building/BuildingPage'
+import FeaturedCollection from '../components/Marketplace/FeaturedCollection/FeaturedCollection'
 
-const BuildingContainer = props => {
+const FeaturedContainer = props => {
     return (
         <Grid style={styles.grid}>
             <Navbar navigation={props.navigation} />
@@ -16,7 +16,7 @@ const BuildingContainer = props => {
                 <Col size={5} />
                 <Col size={90}>
                     <Row size={94}>
-                        <BuildingPage navigation={props.navigation} item={props.currentBuilding}/>
+                        <FeaturedCollection />
                     </Row>
                 </Col>
                 <Col size={5} />
@@ -30,4 +30,4 @@ const mapStateToProps = state => (
     state.buildingReducer
 )
 
-export default connect(mapStateToProps)(BuildingContainer);
+export default connect(mapStateToProps)(FeaturedContainer);

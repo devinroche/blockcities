@@ -12,7 +12,6 @@ import fonts from '../theme/styles/Typography.style'
 
 const ProfileContainer = props => {
     const {buildingReducer, signupReducer} = props
-    console.log(signupReducer.user)
     return (
         <Grid style={styles.grid}>
             <Row size={85}>
