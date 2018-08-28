@@ -6,6 +6,7 @@ import PhotoGrid from 'react-native-image-grid';
 import Building from '../Building'
 import font from '../../theme/styles/Typography.style';
 import LimitedEdition from './LimitedEdition'
+import { connectInfiniteHits } from "react-instantsearch/connectors";
 
 class Marketplace extends React.Component {
     constructor(props){

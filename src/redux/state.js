@@ -12,6 +12,7 @@ const initialState = {
         ],
     },
     loadApp: false,
+    showSearch: false,
 };
 
 export default initialState;

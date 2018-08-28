@@ -1,14 +1,11 @@
 import React from 'react';
 import { Col, Row, Grid } from 'react-native-easy-grid';
-import {Text} from 'react-native'
 import { connect } from 'react-redux';
 import Navbar from './NavContainer';
 import Footer from './FooterContainer';
-import Followers from '../components/Followers';
 import BuildingList from '../components/BuildingList';
 import styles from '../theme/styles/Profile.style';
 import {currentBuilding} from '../redux/building/actions'
-import fonts from '../theme/styles/Typography.style'
 
 const ProfileContainer = props => {
     const {buildingReducer, signupReducer} = props

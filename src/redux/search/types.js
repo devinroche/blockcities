@@ -1,0 +1,2 @@
+export const TOGGLE_SEARCH = "TOGGLE_SEARCH";
+export const UPDATE_BUILDINGS = "UPDATE_BUILDINGS";

@@ -1,10 +1,8 @@
 import React from 'react';
-import { Row, Grid, Col } from 'react-native-easy-grid';
-import {Text, Image, ScrollView, View, TouchableOpacity} from 'react-native'
+import { Row, Grid } from 'react-native-easy-grid';
+import {Text, Image, ScrollView} from 'react-native'
 import font from '../../../theme/styles/Typography.style';
-import btnStyles from '../../../theme/styles/CreateAccount.style';
 import collection from '../../../utils/collection.png'
-import tc from '../../../utils/limited_edition_set.png'
 import IncludedBuildings from './IncludedBuildings'
 import BuildingFeatures from './BuildingFeatures'
 import CollectionFooter from './CollectionFooter'

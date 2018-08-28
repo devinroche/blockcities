@@ -11,10 +11,10 @@ import FeaturedCollection from '../components/Marketplace/FeaturedCollection/Fea
 const FeaturedContainer = props => {
     return (
         <Grid style={styles.grid}>
-            <Navbar navigation={props.navigation} />
             <Row size={75}>
                 <Col size={5} />
                 <Col size={90}>
+                    <Navbar navigation={props.navigation} />
                     <Row size={94}>
                         <FeaturedCollection />
                     </Row>

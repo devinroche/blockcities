@@ -1,11 +1,12 @@
 import React from 'react';
-import {View} from 'react-native'
 import { Col, Grid, Row } from 'react-native-easy-grid';
+import { connect } from 'react-redux';
 import RightBtn from '../components/Nav/RightBtn';
 import LeftBtn from '../components/Nav/LeftBtn';
 import CenterBtn from '../components/Nav/CenterBtn';
 import light from '../theme/styles/Navbar.light.style';
 import dark from '../theme/styles/Navbar.dark.style';
+import {toggleSearch} from '../redux/search/actions'
 
 const Navbar = (props) => {
     const { darkMode } = props;
@@ -28,4 +29,8 @@ const Navbar = (props) => {
     );
 };
 
-export default Navbar;
+const mapDispatchToProps = {
+    toggleSearch
+}
+
+export default connect(null, mapDispatchToProps)(Navbar);
