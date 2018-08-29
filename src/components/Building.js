@@ -1,62 +1,56 @@
 import React from 'react';
-import { Text, Image, TouchableOpacity } from 'react-native';
+import {
+    Text, Image, TouchableOpacity, View, Dimensions,
+} from 'react-native';
+import Lightbox from 'react-native-lightbox';
+import style from '../theme/styles/Building.style';
 
-const style = {
-    touch: {
-        width: 160, height: 250, paddingHorizontal: 20,
-    },
-    number: {
-        color: '#1e3799',
-        fontWeight: 'bold',
-        fontSize: 18,
-    },
-    text: {
-        color: '#95a5a6',
-    },
-    buildingHead: {
-        paddingTop: 5,
-        fontSize: 14,
-        color: '#000000',
-    },
-    subBuildingText: {
-        fontSize: 12,
-        color: '#1e3799',
-    },
-    buyText: {
-        color: '#95a5a6',
-        fontSize: 10,
-        paddingBottom: 5,
-    },
-    img: {
-        flex: 1, borderRadius: 10,
-    },
-};
+class Building extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            backgroundColor: randColors[Math.floor(Math.random() * 4)],
+        };
+    }
 
-const Building = ({ item }) => (
-    <TouchableOpacity
-        style={style.touch}
-        onPress={() => { console.log(item); }}
-    >
-        <Image
-            resizeMode="cover"
-            style={style.img}
-            source={{ uri: item.src }}
-        />
-        <Text style={style.buildingHead}>
-Building #
-            {item.id}
-        </Text>
-        <Text style={style.subBuildingText}>
-Era
-            {Math.floor(Math.random() * 5)}
-            {' '}
-- Foo Bar
-        </Text>
-        <Text style={style.buyText}>
-&#128184; Buy
-            {(Math.random() * (0.04 - 0.01) + 0.01).toFixed(3)}
-        </Text>
-    </TouchableOpacity>
-);
+    render() {
+        const { item } = this.props;
 
+        return (
+            <TouchableOpacity
+                style={style.touch}
+                onPress={() => {
+                    this.props.updateBuilding(item);
+                    this.props.redirect();
+                }}
+            >
+                <View style={[style.container,
+                    { backgroundColor: this.state.backgroundColor },
+                ]}
+                >
+                    <Image
+                        style={style.img}
+                        source={{ uri: item.ImageURL }}
+                        resizeMode="contain"
+                    />
+                </View>
+                <Text style={style.buildingHead}>{item.Name}</Text>
+                <Text style={style.subBuildingText}>Era {Math.floor(Math.random() * 5)} - {randStats()}</Text>
+                <Text style={style.buyText}> &#128184; Buy {(Math.random() * (0.04 - 0.01) + 0.01).toFixed(3)}</Text>
+            </TouchableOpacity>
+        );
+    }
+}
 export default Building;
+
+const randColors = [
+    '#ffedc1',
+    '#f0dddc',
+    '#b1cafb',
+    '#b9dbf0',
+];
+
+const randStats = () => {
+    const status = ['Slow Build', 'Normal Build', 'Fast Build'];
+    return status[Math.floor(Math.random() * 3)];
+};

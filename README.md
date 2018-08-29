@@ -25,4 +25,9 @@ npm install
 - run with android simulator: ```npm run android```
 
 ## resources
-- [figma](https://www.figma.com/proto/gVHO1nMs0o5RpGmA7RRvP9/BlockCities-App-Snap?node-id=79%3A54&scaling=scale-down-width&redirected=1)
+- [figma](https://www.figma.com/file/wIHBBlzXShf2QW0ACqJyPK/BlockCities-App-Prototype?node-id=1079%3A389)
+
+## possible libraries
+- [refresher](https://github.com/syrusakbary/react-native-refresher)
+- [buttons](https://github.com/jacklam718/react-native-button-component)
+- [image fitter](https://github.com/huiseoul/react-native-fit-image)

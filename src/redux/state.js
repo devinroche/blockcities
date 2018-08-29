@@ -1,7 +1,4 @@
 const initialState = {
-    user: {
-        name: 'PrestonAttebery',
-    },
     profile: {
         followers: 350,
         following: 68,
@@ -14,6 +11,8 @@ const initialState = {
             { id: 5, src: 'https://pbs.twimg.com/media/DgoErWyVQAAx88i.jpg' },
         ],
     },
+    loadApp: false,
+    showSearch: false,
 };
 
 export default initialState;

@@ -1,11 +1,18 @@
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
-import Icon from 'react-native-vector-icons/SimpleLineIcons';
+import { TouchableOpacity, Image } from 'react-native';
+import searchIcon from '../../../assets/img/search.png';
 
-const LeftBtn = ({ navigation }) => (
-    <TouchableOpacity onPress={() => navigation.navigate('Search')}>
-        <Icon name="magnifier" size={20} color="#30C2FF" />
-    </TouchableOpacity>
-);
+const LeftBtn = ({ navigation, toggleSearch }) => {
+    console.log(toggleSearch);
+    return (
+        <TouchableOpacity onPress={() => {
+            toggleSearch();
+            navigation.navigate('Marketplace');
+        }}
+        >
+            <Image source={searchIcon} />
+        </TouchableOpacity>
+    );
+};
 
 export default LeftBtn;

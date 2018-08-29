@@ -1,32 +1,36 @@
 import React from 'react';
-import { Col, Grid } from 'react-native-easy-grid';
+import { Col, Grid, Row } from 'react-native-easy-grid';
+import { connect } from 'react-redux';
 import RightBtn from '../components/Nav/RightBtn';
 import LeftBtn from '../components/Nav/LeftBtn';
 import CenterBtn from '../components/Nav/CenterBtn';
+import light from '../theme/styles/Navbar.light.style';
+import dark from '../theme/styles/Navbar.dark.style';
+import { toggleSearch } from '../redux/search/actions';
 
-const styles = {
-    container: {
-        flex: 1,
-        alignItems: 'center',
-    },
-    grid: {
-        flex: 1,
-        alignItems: 'center',
-    },
+const Navbar = (props) => {
+    const { darkMode } = props;
+    const styles = darkMode ? dark : light;
+
+    return (
+        <Row size={8} style={[styles.topRow]}>
+            <Grid style={[styles.grid, { justifyContent: 'space-between' }]}>
+                <Col>
+                    <LeftBtn {...props} />
+                </Col>
+                <Col>
+                    <CenterBtn {...props} />
+                </Col>
+                <Col>
+                    <RightBtn {...props} />
+                </Col>
+            </Grid>
+        </Row>
+    );
 };
 
-const Navbar = props => (
-    <Grid style={styles.grid}>
-        <Col style={styles.grid}>
-            <LeftBtn {...props} />
-        </Col>
-        <Col style={styles.grid}>
-            <CenterBtn {...props} />
-        </Col>
-        <Col style={styles.grid}>
-            <RightBtn {...props} />
-        </Col>
-    </Grid>
-);
+const mapDispatchToProps = {
+    toggleSearch,
+};
 
-export default Navbar;
+export default connect(null, mapDispatchToProps)(Navbar);

@@ -1,11 +1,18 @@
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/SimpleLineIcons';
+import styles from '../../theme/styles/Icon.style';
+import market from '../../../assets/img/Rectangle.png';
+import market_dark from '../../../assets/img/market_dark.png';
 
-const LeftBtn = ({ navigation }) => (
-    <TouchableOpacity onPress={() => navigation.navigate('Marketplace')}>
-        <Icon name="notebook" size={20} color="#95a5a6" />
-    </TouchableOpacity>
-);
+const LeftBtn = ({ navigation, darkMode }) => {
+    const icon = darkMode ? market_dark : market;
+
+    return (
+        <TouchableOpacity onPress={() => navigation.navigate('Marketplace')}>
+            <Image source={icon} />
+        </TouchableOpacity>
+    );
+};
 
 export default LeftBtn;

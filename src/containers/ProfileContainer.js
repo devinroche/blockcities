@@ -3,48 +3,41 @@ import { Col, Row, Grid } from 'react-native-easy-grid';
 import { connect } from 'react-redux';
 import Navbar from './NavContainer';
 import Footer from './FooterContainer';
-import Followers from '../components/Followers';
 import BuildingList from '../components/BuildingList';
+import styles from '../theme/styles/Profile.style';
+import { currentBuilding } from '../redux/building/actions';
 
-const styles = {
-    grid: {
-        backgroundColor: '#ffffff',
-    },
-    topRow: {
-        paddingTop: 40,
-        paddingBottom: 10,
-    },
-    bottomRow: {
-        paddingTop: 10,
-        borderTopWidth: 0.5,
-        borderTopColor: '#95a5a6',
-    },
+const ProfileContainer = (props) => {
+    const { buildingReducer, signupReducer } = props;
+    return (
+        <Grid style={styles.grid}>
+            <Row size={85}>
+                <Col size={2} />
+                <Col size={96}>
+                    <Navbar navigation={props.navigation} />
+                    <Row size={92}>
+                        <BuildingList
+                            user={signupReducer.user}
+                            buildings={buildingReducer.buildingList}
+                            navigation={props.navigation}
+                            updateBuilding={props.currentBuilding}
+                        />
+                    </Row>
+                </Col>
+                <Col size={2} />
+            </Row>
+            <Footer navigation={props.navigation} />
+        </Grid>
+    );
 };
 
-const ProfileContainer = props => (
-    <Grid style={styles.grid}>
-        <Row size={10} style={styles.topRow}>
-            <Navbar navigation={props.navigation} />
-        </Row>
-        <Row size={75}>
-            <Col size={5} />
-            <Col size={90}>
-                <Row size={10}>
-                    <Followers {...props} />
-                </Row>
-                <Row size={94}>
-                    <BuildingList {...props} />
-                </Row>
-            </Col>
-            <Col size={5} />
-        </Row>
-        <Row size={6} style={styles.bottomRow}>
-            <Footer navigation={props.navigation} />
-        </Row>
-    </Grid>
-);
+const mapStateToProps = state => ({
+    buildingReducer: state.buildingReducer,
+    signupReducer: state.signupReducer,
+});
 
+const mapDispatchToProps = {
+    currentBuilding,
+};
 
-const mapStateToProps = state => (state.reducer);
-
-export default connect(mapStateToProps)(ProfileContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(ProfileContainer);

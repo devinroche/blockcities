@@ -1,6 +1,6 @@
 import React from 'react';
 import { TouchableOpacity, Image, Text } from 'react-native';
-import avatar from '../../utils/avataaars.png';
+import avatar from '../../../assets/img/avataaars.png';
 
 const style = {
     container: {
@@ -13,13 +13,12 @@ const style = {
         paddingTop: 10, color: '#1e3799', fontWeight: 'bold',
     },
 };
-const CenterBtn = ({ navigation }) => (
+const CenterBtn = ({ navigation, user }) => (
     <TouchableOpacity style={style.container} onPress={() => navigation.navigate('Profile')}>
         <Image
             style={style.img}
             source={avatar}
         />
-        <Text style={style.text}> Devin Roche </Text>
     </TouchableOpacity>
 );
 

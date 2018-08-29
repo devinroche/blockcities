@@ -1,0 +1,27 @@
+export default {
+    FONT_SIZE_SMALL: 12,
+    FONT_SIZE_MEDIUM: 14,
+    FONT_SIZE_LARGE: 16,
+    FONT_SIZE_XLARGE: 24,
+
+    FONT_BOLD: 'GBold',
+    FONT_DEMI: 'GDemi',
+    FONT_MEDIUM: 'GMedium',
+    FONT_REGULAR: 'GRegular',
+    FONT_LIGHT: 'GLight',
+
+    LIGHT_BLUE: '#B9DBF0',
+    MEDIUM_BLUE: '#4D92FF',
+    DARK_BLUE: '#3258A8',
+    LIGHT_GREY: '#95a5a6',
+
+    GREY_STANDARD: '#BDBDBD',
+    GREY_TEXT: '#828282',
+    LIGHT_TEXT_COLOR: '#FFFFFF',
+    DARK_TEXT_COLOR: '#3258A8',
+    BLUE_TEXT: '#7294E8',
+    BLACK_TEXT: '#000000',
+    ERR_TEXT: '#EB5757',
+
+    BTN_RADIUS: '14px',
+};
