@@ -37,10 +37,10 @@ class Marketplace extends React.Component {
         }
         return (
             <View>
-                <Row size={4} style={{ height: 160 }}>
+                <Row size={4} style={{ justifyContent: 'center', paddingBottom: 15}}>
                     <LimitedEdition navigation={this.props.navigation} />
                 </Row>
-                <Row size={4} style={{ height: 40 }}>
+                <Row size={4} style={{ height: 40, paddingLeft: 10, paddingBottom: 0}}>
                     <Text style={font.buildingHead}>Hall of Fame &#127941;</Text>
                 </Row>
             </View>

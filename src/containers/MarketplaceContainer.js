@@ -19,17 +19,15 @@ class MarketplaceContainer extends React.Component {
 
     render() {
         const { navigation, searchReducer, buildingReducer } = this.props;
-        const buildings = searchReducer.data && searchReducer.data.length > 0 ? searchReducer.data : buildingReducer.buildingList;
+        const buildings = (searchReducer.showSearch && searchReducer.data && searchReducer.data.length > 0) ? searchReducer.data : buildingReducer.buildingList;
 
-        setTimeout(() => {
-            if (this.state.showMarketplace === false) this.setState({ showMarketplace: true });
-        }, 1500);
+        setTimeout(() => {if (this.state.showMarketplace === false) this.setState({ showMarketplace: true })}, 1500);
+
         return (
             <Grid style={styles.grid}>
-                {/* {this.props.searchReducer.showSearch && this.state.showMarketplace ? <SearchContainer  navigation={navigation}/> : <Navbar navigation={navigation} /> } */}
                 <Col size={2} />
                 <Col size={96}>
-                    {this.props.searchReducer.showSearch && this.state.showMarketplace ? <SearchContainer navigation={navigation} /> : <Navbar navigation={navigation} /> }
+                    {this.props.searchReducer.showSearch && this.state.showMarketplace ? <SearchContainer navigation={navigation} /> : <Navbar navigation={navigation} logo/> }
                     <Row size={81}>
                         {this.state.showMarketplace ? <Marketplace updateBuilding={this.props.currentBuilding} buildings={buildings} isSearch={this.props.searchReducer.showSearch} navigation={navigation} /> : <MarketplaceLoading />}
                     </Row>

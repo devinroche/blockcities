@@ -13,7 +13,7 @@ const FeaturedContainer = props => (
         <Row size={75}>
             <Col size={5} />
             <Col size={90}>
-                <Navbar navigation={props.navigation} />
+                <Navbar navigation={props.navigation} logo/>
                 <Row size={94}>
                     <FeaturedCollection />
                 </Row>
