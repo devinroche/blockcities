@@ -7,6 +7,7 @@ import styles from '../theme/styles/Containers.style';
 import MarketplaceLoading from '../components/Marketplace/MarketplaceLoading';
 import Marketplace from '../components/Marketplace/Marketplace'
 import SearchContainer from './SearchContainer'
+import {currentBuilding} from '../redux/building/actions'
 
 class MarketplaceContainer extends React.Component {
     constructor(props){
@@ -20,20 +21,21 @@ class MarketplaceContainer extends React.Component {
         const buildings = searchReducer.data && searchReducer.data.length > 0 ? searchReducer.data : buildingReducer.buildingList
 
         setTimeout(() => {
-            if(this.state.showMarketplace === false) 
+            if(this.state.showMarketplace === false)
                 this.setState({showMarketplace: true})
-            }, 2500)
+            }, 1500)
         return (
             <Grid style={styles.grid}>
-                {this.props.searchReducer.showSearch && this.state.showMarketplace ? <SearchContainer /> : <Navbar navigation={navigation} /> }
-                <Row size={75}>
-                    <Col size={5} />
-                    <Col size={90}>
-                        {this.state.showMarketplace ? <Marketplace buildings={buildings} navigation={navigation}/> : <MarketplaceLoading />}
+                {/* {this.props.searchReducer.showSearch && this.state.showMarketplace ? <SearchContainer  navigation={navigation}/> : <Navbar navigation={navigation} /> } */}
+                    <Col size={2} />
+                    <Col size={96}>
+                        {this.props.searchReducer.showSearch && this.state.showMarketplace ? <SearchContainer  navigation={navigation}/> : <Navbar navigation={navigation} /> }
+                        <Row size={81}>
+                            {this.state.showMarketplace ? <Marketplace updateBuilding={this.props.currentBuilding} buildings={buildings} isSearch={this.props.searchReducer.showSearch} navigation={navigation}/> : <MarketplaceLoading />}
+                        </Row>
+                        <Footer navigation={navigation} />
                     </Col>
-                    <Col size={5} />
-                </Row>
-                <Footer navigation={navigation} />
+                    <Col size={2}/>
             </Grid>
         );
     }
@@ -46,4 +48,8 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(MarketplaceContainer);
+const mapDispatchToProps = {
+    currentBuilding
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MarketplaceContainer);

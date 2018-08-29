@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 import MyTextInput from '../TextInput';
 import styles from '../../theme/styles/CreateAccount.style';
-import loginImage from '../../utils/login-image.png';
+import loginImage from '../../../assets/img/login-image.png';
 import font from '../../theme/styles/Typography.style';
 import LoginBtn from './LoginBtn';
 import NoAccountBtn from './NoAccountBtn';

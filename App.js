@@ -1,8 +1,8 @@
 import React from 'react';
-import { View, Text} from 'react-native';
+import { View, Text, Image} from 'react-native';
 import { Provider } from 'react-redux';
 import { createStackNavigator } from 'react-navigation';
-import { Font, Asset } from 'expo';
+import { Font, Asset, AppLoading } from 'expo';
 import store from './src/redux/store';
 import AppContainer from './src/containers/AppContainer';
 import ProfileContainer from './src/containers/ProfileContainer';
@@ -15,25 +15,37 @@ import CreateAccountContainer from './src/containers/CreateAccountContainer';
 import CreateAccountNextContainer from './src/containers/CreateAccountNextContainer';
 import BuildingContainer from './src/containers/BuildingContainer';
 import FeaturedContainer from './src/containers/FeaturedContainer'
+import {fonts2load, images2load} from './AssetsLoad'
+
+function cacheImages(images) {
+    return images.map(image => {
+        if (typeof image === 'string') {
+            return Image.prefetch(image);
+        } else {
+            return Asset.fromModule(image).downloadAsync();
+        }
+    });
+}
 
 export default class App extends React.Component {
     state = {
         loaded: false,
     }
 
-    async componentDidMount() {
-        await Font.loadAsync({
-            GBold: require('./assets/fonts/GreycliffCF-Bold.otf'),
-            GDemi: require('./assets/fonts/GreycliffCF-DemiBold.otf'),
-            GMedium: require('./assets/fonts/GreycliffCF-Medium.otf'),
-            GRegular: require('./assets/fonts/GreycliffCF-Regular.otf'),
-            GLight: require('./assets/fonts/GreycliffCF-Light.otf'),
-        })
+    async _loadAssetsAsync() {
+        await cacheImages(images2load);
+        await Font.loadAsync(fonts2load);
         this.setState({loaded: true});
-    }
+      }
+
+    async componentDidMount(){
+		this._loadAssetsAsync();
+	}
     render() {
         if (!this.state.loaded) {
-            return <Text>loading</Text>;
+            return (
+                <AppLoading />
+            );
         }
         return (
             <Provider store={store}>

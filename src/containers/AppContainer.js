@@ -3,7 +3,7 @@ import { Row, Grid, Col } from 'react-native-easy-grid';
 import { Image, Text } from 'react-native';
 import { connect } from 'react-redux';
 import Navbar from './NavContainer';
-import wallpaper from '../utils/wallpaper.png';
+import wallpaper from '../../assets/img/wallpaper.png';
 import Footer from './FooterContainer';
 import styles from '../theme/styles/Containers.style';
 import theme from '../theme/theme';

@@ -5,7 +5,7 @@ import {
 } from 'react-native';
 import styles from '../../theme/styles/Settings.style';
 import font from '../../theme/styles/Typography.style';
-import avatar from '../../utils/avataaars.png';
+import avatar from '../../../assets/img/avataaars.png';
 import PushNotification from './PushNotification';
 import UpdateEmail from './UpdateEmail';
 import LogoutBtn from './LogoutBtn';

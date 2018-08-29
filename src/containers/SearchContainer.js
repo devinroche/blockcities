@@ -8,26 +8,26 @@ import LeftBtn from '../components/Nav/LeftBtn';
 import styles from '../theme/styles/Navbar.light.style'
 import SearchBox from  '../components/SearchBar'
 import Hits from './results'
-import {filteredBuildings} from '../redux/search/actions'
+import {filteredBuildings, toggleSearch} from '../redux/search/actions'
 
 const SearchContainer = (props) => {
     return (
         <Row size={8} style={[styles.topRow]}>
             <Grid style={[styles.grid, {justifyContent: 'space-between'}]}>
-                <Col>
+                <Col size={10}>
                     <LeftBtn {...props} />
                 </Col>
-                <Col>
-                    {/* <InstantSearch
+                <Col size={80}>
+                    <InstantSearch
                         appId="PKUDPP7ZVE"
                         apiKey="1b51333cef087f8a88bff30a1200d183"
                         indexName="test_blockcities"
-                        > */}
+                        >
                         <SearchBox />
-                        {/* <Hits updateHits={props.filteredBuildings}/>
-                    </InstantSearch> */}
+                        <Hits updateHits={props.filteredBuildings}/>
+                    </InstantSearch>
                 </Col>
-                <Col>
+                <Col size={10}>
                     <RightBtn {...props} />
                 </Col>
             </Grid>
@@ -36,7 +36,8 @@ const SearchContainer = (props) => {
 };
 
 const mapDispatchToProps = {
-    filteredBuildings
+    filteredBuildings,
+    toggleSearch
 }
 
 export default connect(null, mapDispatchToProps)(SearchContainer)

@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Grid } from 'react-native-easy-grid';
 import {Text, Image, ScrollView} from 'react-native'
 import font from '../../../theme/styles/Typography.style';
-import collection from '../../../utils/collection.png'
+import collection from '../../../../assets/img/collection.png'
 import IncludedBuildings from './IncludedBuildings'
 import BuildingFeatures from './BuildingFeatures'
 import CollectionFooter from './CollectionFooter'

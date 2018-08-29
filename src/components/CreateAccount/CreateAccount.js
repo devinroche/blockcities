@@ -4,7 +4,7 @@ import { Field, reduxForm } from 'redux-form';
 import { Row, Col, Grid } from 'react-native-easy-grid';
 import styles from '../../theme/styles/CreateAccount.style';
 import MyTextInput from '../TextInput';
-import loginImage from '../../utils/login-image.png';
+import loginImage from '../../../assets/img/login-image.png';
 import font from '../../theme/styles/Typography.style';
 import validate from './validate';
 import NextBtn from './NextBtn';

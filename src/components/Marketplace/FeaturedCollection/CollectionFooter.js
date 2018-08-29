@@ -3,7 +3,7 @@ import { Row} from 'react-native-easy-grid';
 import {Text, Image, View, TouchableOpacity} from 'react-native'
 import font from '../../../theme/styles/Typography.style';
 import btnStyles from '../../../theme/styles/CreateAccount.style';
-import tc from '../../../utils/limited_edition_set.png'
+import tc from '../../../../assets/img/limited_edition_set.png'
 
 const CollectionFooter = () => (
     <View>

@@ -4,7 +4,7 @@ import {
     Text, Image,
 } from 'react-native';
 import styles from '../../theme/styles/StartScreen.style';
-import startImage from '../../utils/start-image.png';
+import startImage from '../../../assets/img/start-image.png';
 import font from '../../theme/styles/Typography.style';
 import SignUpBtn from './SignUpBtn';
 import SignInBtn from './SignInBtn';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { TouchableOpacity, Image } from 'react-native';
-import searchIcon from '../../utils/search.png';
+import searchIcon from '../../../assets/img/search.png';
 
 const LeftBtn = ({ navigation, toggleSearch }) => {
     console.log(toggleSearch)

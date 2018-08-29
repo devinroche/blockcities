@@ -1,6 +1,6 @@
 import React from 'react';
 import { TouchableOpacity, Image } from 'react-native';
-import img from '../../utils/market.png'
+import img from '../../../assets/img/market.png'
 
 const LimitedEdition = ({ navigation }) => {
     return (

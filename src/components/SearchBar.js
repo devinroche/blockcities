@@ -12,7 +12,10 @@ import { connectInfiniteHits, connectSearchBox } from 'react-instantsearch-nativ
 
 const SearchBox = connectSearchBox(({ refine, currentRefinement }) => {
     const styles = {
-      padding: 25,
+      padding: 15,
+      fontSize: 24,
+      width: '100%',
+      height: '100%'
     };
 
     return (
@@ -20,7 +23,7 @@ const SearchBox = connectSearchBox(({ refine, currentRefinement }) => {
         style={styles}
         onChangeText={text => refine(text)}
         value={currentRefinement}
-        placeholder={'Search a product...'}
+        placeholder={'Search buildings, cities...'}
         clearButtonMode={'always'}
         spellCheck={false}
         autoCorrect={false}

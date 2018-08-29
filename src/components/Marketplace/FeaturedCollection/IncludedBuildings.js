@@ -2,9 +2,9 @@ import React from 'react';
 import { Row } from 'react-native-easy-grid';
 import {Text, Image, View} from 'react-native'
 import font from '../../../theme/styles/Typography.style';
-import term_100 from '../../../utils/term_100.png'
-import term_10 from '../../../utils/term_10.png'
-import term_200 from '../../../utils/term_200.png'
+import term_100 from '../../../../assets/img/term_100.png'
+import term_10 from '../../../../assets/img/term_10.png'
+import term_200 from '../../../../assets/img/term_200.png'
 
 const IncludedBuildings = () => (
     includedBuildingsData.map((el, i) => (

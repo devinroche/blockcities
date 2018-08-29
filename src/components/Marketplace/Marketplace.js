@@ -7,6 +7,7 @@ import Building from '../Building'
 import font from '../../theme/styles/Typography.style';
 import LimitedEdition from './LimitedEdition'
 import { connectInfiniteHits } from "react-instantsearch/connectors";
+import Filters from './Filters'
 
 class Marketplace extends React.Component {
     constructor(props){
@@ -28,6 +29,11 @@ class Marketplace extends React.Component {
     }
 
     renderHeader(){
+        if(this.props.isSearch) {
+            return (
+                <Filters/>
+            )
+        }
         return (
             <View>
                 <Row size={4} style={{height: 160}}>

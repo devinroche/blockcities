@@ -5,7 +5,7 @@ import {
 } from 'react-native';
 import { Field, reduxForm } from 'redux-form';
 import styles from '../../theme/styles/CreateAccount.style';
-import loginImage from '../../utils/login-image.png';
+import loginImage from '../../../assets/img/login-image.png';
 import MyTextInput from '../TextInput';
 import CreateAccountBtn from './CreateAccountBtn';
 import validate from './validate';
