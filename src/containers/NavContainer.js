@@ -6,7 +6,7 @@ import LeftBtn from '../components/Nav/LeftBtn';
 import CenterBtn from '../components/Nav/CenterBtn';
 import light from '../theme/styles/Navbar.light.style';
 import dark from '../theme/styles/Navbar.dark.style';
-import {toggleSearch} from '../redux/search/actions'
+import { toggleSearch } from '../redux/search/actions';
 
 const Navbar = (props) => {
     const { darkMode } = props;
@@ -14,7 +14,7 @@ const Navbar = (props) => {
 
     return (
         <Row size={8} style={[styles.topRow]}>
-            <Grid style={[styles.grid, {justifyContent: 'space-between'}]}>
+            <Grid style={[styles.grid, { justifyContent: 'space-between' }]}>
                 <Col>
                     <LeftBtn {...props} />
                 </Col>
@@ -30,7 +30,7 @@ const Navbar = (props) => {
 };
 
 const mapDispatchToProps = {
-    toggleSearch
-}
+    toggleSearch,
+};
 
 export default connect(null, mapDispatchToProps)(Navbar);

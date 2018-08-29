@@ -57,6 +57,5 @@ export default reduxForm({
     form: 'login',
     destroyOnUnmount: true,
     touchOnChange: true,
-    touchOnBlur: true
+    touchOnBlur: true,
 })(Login);
-

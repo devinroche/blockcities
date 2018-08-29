@@ -20,9 +20,9 @@ const style = {
         borderColor: '#E0E0E0',
         padding: 8,
         borderRadius: 20,
-        width: '90%'
+        width: '90%',
     },
     text: {
-       color: '#333333', fontSize: 11,
+        color: '#333333', fontSize: 11,
     },
 };

@@ -8,7 +8,7 @@ const MyCityBtn = ({ submit }) => (
         onPress={console.log('my city')}
         style={styles.headerBtnDark}
     >
-        <Text style={[styles.loginText, font.btnText, {fontSize: 12}]}>My City</Text>
+        <Text style={[styles.loginText, font.btnText, { fontSize: 12 }]}>My City</Text>
     </TouchableOpacity>
 );
 

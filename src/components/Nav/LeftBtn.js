@@ -3,13 +3,14 @@ import { TouchableOpacity, Image } from 'react-native';
 import searchIcon from '../../../assets/img/search.png';
 
 const LeftBtn = ({ navigation, toggleSearch }) => {
-    console.log(toggleSearch)
+    console.log(toggleSearch);
     return (
         <TouchableOpacity onPress={() => {
-            toggleSearch()
-            navigation.navigate('Marketplace')
-        }}>
-            <Image source={searchIcon}/>
+            toggleSearch();
+            navigation.navigate('Marketplace');
+        }}
+        >
+            <Image source={searchIcon} />
         </TouchableOpacity>
     );
 };

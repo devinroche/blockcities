@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
     StyleSheet,
     View,
@@ -12,24 +12,24 @@ import { connectInfiniteHits, connectSearchBox } from 'react-instantsearch-nativ
 
 const SearchBox = connectSearchBox(({ refine, currentRefinement }) => {
     const styles = {
-      padding: 15,
-      fontSize: 24,
-      width: '100%',
-      height: '100%'
+        padding: 15,
+        fontSize: 24,
+        width: '100%',
+        height: '100%',
     };
 
     return (
-      <TextInput
-        style={styles}
-        onChangeText={text => refine(text)}
-        value={currentRefinement}
-        placeholder={'Search buildings, cities...'}
-        clearButtonMode={'always'}
-        spellCheck={false}
-        autoCorrect={false}
-        autoCapitalize={'none'}
-      />
+        <TextInput
+            style={styles}
+            onChangeText={text => refine(text)}
+            value={currentRefinement}
+            placeholder="Search buildings, cities..."
+            clearButtonMode="always"
+            spellCheck={false}
+            autoCorrect={false}
+            autoCapitalize="none"
+        />
     );
 });
 
-export default SearchBox
+export default SearchBox;

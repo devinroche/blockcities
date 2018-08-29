@@ -13,8 +13,7 @@ const style = {
         paddingTop: 10, color: '#1e3799', fontWeight: 'bold',
     },
 };
-const CenterBtn = ({ navigation , user}) => {
-    return (
+const CenterBtn = ({ navigation, user }) => (
     <TouchableOpacity style={style.container} onPress={() => navigation.navigate('Profile')}>
         <Image
             style={style.img}
@@ -22,6 +21,5 @@ const CenterBtn = ({ navigation , user}) => {
         />
     </TouchableOpacity>
 );
-}
 
 export default CenterBtn;

@@ -1,28 +1,33 @@
 import React from 'react';
-import { Text, Image, TouchableOpacity, View, Dimensions } from 'react-native';
-import style from '../theme/styles/Building.style';
+import {
+    Text, Image, TouchableOpacity, View, Dimensions,
+} from 'react-native';
 import Lightbox from 'react-native-lightbox';
+import style from '../theme/styles/Building.style';
 
 class Building extends React.Component {
-    constructor(props){
-        super(props)
+    constructor(props) {
+        super(props);
         this.state = {
-            backgroundColor: randColors[Math.floor(Math.random() * 4)]
-        }
+            backgroundColor: randColors[Math.floor(Math.random() * 4)],
+        };
     }
-    render(){
-        const {item} = this.props
+
+    render() {
+        const { item } = this.props;
 
         return (
-            <TouchableOpacity style={style.touch}
+            <TouchableOpacity
+                style={style.touch}
                 onPress={() => {
-                    this.props.updateBuilding(item)
-                    this.props.redirect()
+                    this.props.updateBuilding(item);
+                    this.props.redirect();
                 }}
             >
                 <View style={[style.container,
-                    { backgroundColor: this.state.backgroundColor}
-                ]}>
+                    { backgroundColor: this.state.backgroundColor },
+                ]}
+                >
                     <Image
                         style={style.img}
                         source={{ uri: item.ImageURL }}
@@ -39,16 +44,13 @@ class Building extends React.Component {
 export default Building;
 
 const randColors = [
-    "#ffedc1",
-    "#f0dddc",
-    "#b1cafb",
-    "#b9dbf0"
-]
+    '#ffedc1',
+    '#f0dddc',
+    '#b1cafb',
+    '#b9dbf0',
+];
 
 const randStats = () => {
-    const status = ["Slow Build", "Normal Build", "Fast Build"]
-    return status[Math.floor(Math.random() * 3)]
-}
-
-
-
+    const status = ['Slow Build', 'Normal Build', 'Fast Build'];
+    return status[Math.floor(Math.random() * 3)];
+};

@@ -53,7 +53,7 @@ export default StyleSheet.create({
         paddingVertical: 10,
         paddingHorizontal: 15,
         borderWidth: 1,
-        borderColor: '#4D92FF'
+        borderColor: '#4D92FF',
     },
     headerBtnDark: {
         backgroundColor: '#4D92FF',
@@ -63,7 +63,7 @@ export default StyleSheet.create({
         paddingVertical: 10,
         paddingHorizontal: 15,
         borderWidth: 1,
-        borderColor: '#4D92FF'
+        borderColor: '#4D92FF',
     },
     smallButton: {
         backgroundColor: '#4D92FF',

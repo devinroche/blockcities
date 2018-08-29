@@ -8,41 +8,40 @@ import Footer from './FooterContainer';
 import styles from '../theme/styles/Containers.style';
 import theme from '../theme/theme';
 import Spinner from '../components/Spinner';
-import MyCityBtn from '../components/MyCity/MyCityBtn'
-import TopCitiesBtn from '../components/MyCity/TopCitiesBtn'
-import {getBuildings} from '../redux/building/actions'
+import MyCityBtn from '../components/MyCity/MyCityBtn';
+import TopCitiesBtn from '../components/MyCity/TopCitiesBtn';
+import { getBuildings } from '../redux/building/actions';
 
 class AppContainer extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.props.getBuildings()
+        this.props.getBuildings();
     }
 
-    render(){
-        const {loadApp, user} = this.props.signup;
-        const {navigation} = this.props
+    render() {
+        const { loadApp, user } = this.props.signup;
+        const { navigation } = this.props;
 
-        if(!loadApp)
-            return <Spinner/>
+        if (!loadApp) return <Spinner />;
 
         return (
             <Grid style={[styles.grid, { backgroundColor: theme.LIGHT_BLUE }]}>
                 <Col size={2} />
                 <Col size={96}>
-                    <Navbar navigation={navigation} darkMode user={user}/>
-                <Row size={10} style={{ backgroundColor: theme.LIGHT_BLUE }}>
-                    <Col size={2.5}/>
-                    <Col size={3}><MyCityBtn/></Col>
-                    <Col size={1}/>
-                    <Col size={3}><TopCitiesBtn/></Col>
-                    <Col size={2.5}/>
-                </Row>
-                <Row size={81} style={styles.body}>
-                    <Image
-                        style={styles.img}
-                        source={wallpaper}
-                    />
-                </Row>
+                    <Navbar navigation={navigation} darkMode user={user} />
+                    <Row size={10} style={{ backgroundColor: theme.LIGHT_BLUE }}>
+                        <Col size={2.5} />
+                        <Col size={3}><MyCityBtn /></Col>
+                        <Col size={1} />
+                        <Col size={3}><TopCitiesBtn /></Col>
+                        <Col size={2.5} />
+                    </Row>
+                    <Row size={81} style={styles.body}>
+                        <Image
+                            style={styles.img}
+                            source={wallpaper}
+                        />
+                    </Row>
                     <Footer navigation={navigation} darkMode />
                 </Col>
                 <Col size={2} />
@@ -51,14 +50,12 @@ class AppContainer extends React.Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        signup: state.signupReducer,
-    }
-}
+const mapStateToProps = state => ({
+    signup: state.signupReducer,
+});
 
 const mapDispatchToProps = {
-    getBuildings
-}
+    getBuildings,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(AppContainer);

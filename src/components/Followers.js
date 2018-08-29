@@ -8,10 +8,11 @@ const Followers = ({ profile }) => (
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-    }}>
+    }}
+    >
         <TouchableOpacity
             style={[styles.followBtn, {
-               
+
             }]}
         >
             <Text style={styles.whiteText}>Follow</Text>

@@ -5,10 +5,10 @@ import Navbar from './NavContainer';
 import Footer from './FooterContainer';
 import BuildingList from '../components/BuildingList';
 import styles from '../theme/styles/Profile.style';
-import {currentBuilding} from '../redux/building/actions'
+import { currentBuilding } from '../redux/building/actions';
 
-const ProfileContainer = props => {
-    const {buildingReducer, signupReducer} = props
+const ProfileContainer = (props) => {
+    const { buildingReducer, signupReducer } = props;
     return (
         <Grid style={styles.grid}>
             <Row size={85}>
@@ -29,17 +29,15 @@ const ProfileContainer = props => {
             <Footer navigation={props.navigation} />
         </Grid>
     );
-}
+};
 
-const mapStateToProps = state => {
-    return {
-        buildingReducer: state.buildingReducer,
-        signupReducer: state.signupReducer
-    }
-}
+const mapStateToProps = state => ({
+    buildingReducer: state.buildingReducer,
+    signupReducer: state.signupReducer,
+});
 
 const mapDispatchToProps = {
-    currentBuilding
-}
+    currentBuilding,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProfileContainer);

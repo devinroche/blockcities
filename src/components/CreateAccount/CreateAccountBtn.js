@@ -4,7 +4,7 @@ import styles from '../../theme/styles/CreateAccount.style';
 import sendUserInfo from '../../redux/signup/reducer';
 import font from '../../theme/styles/Typography.style';
 
-const CreateAccountBtn = ({submit, navigation}) => (
+const CreateAccountBtn = ({ submit, navigation }) => (
     <TouchableOpacity
         onPress={submit}
         style={styles.largeButton}

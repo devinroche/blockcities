@@ -17,12 +17,12 @@ const validate = (values) => {
 
     if (!values.password || values.password.length < 4) {
         errors.password = 'Required';
-    } 
+    }
     if (!values.password2) {
-        errors.password2 = 'Required' 
+        errors.password2 = 'Required';
     }
     if (values.password && values.password2 && values.password != values.password2) {
-        errors.password2 = 'Passwords do not match'
+        errors.password2 = 'Passwords do not match';
     }
 
     return errors;

@@ -6,7 +6,7 @@ export default StyleSheet.create({
         fontSize: theme.FONT_SIZE_XLARGE + 4,
         fontFamily: theme.FONT_BOLD,
         letterSpacing: 2,
-        color: '#3258A8'
+        color: '#3258A8',
     },
     error: {
         fontSize: theme.FONT_SIZE_MEDIUM,
@@ -54,19 +54,19 @@ export default StyleSheet.create({
         fontSize: theme.FONT_SIZE_LARGE,
         fontFamily: theme.FONT_BOLD,
         letterSpacing: 1,
-        color: theme.LIGHT_TEXT_COLOR
+        color: theme.LIGHT_TEXT_COLOR,
     },
     btnTextDark: {
         fontSize: theme.FONT_SIZE_LARGE,
         fontFamily: theme.FONT_BOLD,
         letterSpacing: 1,
-        color: theme.MEDIUM_BLUE
+        color: theme.MEDIUM_BLUE,
     },
     btnTextDarkSmall: {
         fontSize: theme.FONT_SIZE_MEDIUM,
         fontFamily: theme.FONT_BOLD,
         letterSpacing: 1,
-        color: theme.MEDIUM_BLUE
+        color: theme.MEDIUM_BLUE,
     },
     light: {
         fontSize: theme.FONT_SIZE_SMALL,
@@ -83,11 +83,11 @@ export default StyleSheet.create({
         fontFamily: theme.FONT_DEMI,
         fontSize: theme.FONT_SIZE_SMALL,
         letterSpacing: 1,
-        color: '#828282'
+        color: '#828282',
     },
     buildingContent: {
         fontFamily: theme.FONT_REGULAR,
-        fontSize: theme.FONT_SIZE_XLARGE-2,
+        fontSize: theme.FONT_SIZE_XLARGE - 2,
         letterSpacing: 1,
     },
     buildingDetails: {
@@ -106,6 +106,6 @@ export default StyleSheet.create({
         fontFamily: theme.FONT_DEMI,
         fontSize: 14,
         letterSpacing: 1,
-        color: '#7294e8'
-    }
+        color: '#7294e8',
+    },
 });

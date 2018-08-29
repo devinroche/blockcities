@@ -45,9 +45,9 @@ export default StyleSheet.create({
         lineHeight: 19,
     },
     img: {
-        flex: 1
+        flex: 1,
     },
     paddedRow: {
         paddingVertical: 10,
-    }
+    },
 });

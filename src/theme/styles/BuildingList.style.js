@@ -12,6 +12,6 @@ export default StyleSheet.create({
     centerContent: {
         flex: 1,
         justifyContent: 'center',
-        textAlign: 'center'
-    }
+        textAlign: 'center',
+    },
 });

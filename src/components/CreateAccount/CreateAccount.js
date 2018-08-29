@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, Image} from 'react-native';
+import { Text, Image } from 'react-native';
 import { Field, reduxForm } from 'redux-form';
 import { Row, Col, Grid } from 'react-native-easy-grid';
 import styles from '../../theme/styles/CreateAccount.style';
@@ -10,7 +10,9 @@ import validate from './validate';
 import NextBtn from './NextBtn';
 
 const CreateAccount = (props) => {
-    const { navigation, handleSubmit, pristine, reset, submitting } = props;
+    const {
+        navigation, handleSubmit, pristine, reset, submitting,
+    } = props;
     return (
         <Grid style={styles.container}>
             <Row size={0.15} />
@@ -57,5 +59,5 @@ export default reduxForm({
     destroyOnUnmount: false,
     validate,
     touchOnChange: true,
-    touchOnBlur: true
+    touchOnBlur: true,
 })(CreateAccount);

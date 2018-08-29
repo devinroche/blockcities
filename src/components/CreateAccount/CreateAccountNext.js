@@ -12,7 +12,9 @@ import validate from './validate';
 import font from '../../theme/styles/Typography.style';
 
 const CreateAccountNext = (props) => {
-    const { navigation, handleSubmit, pristine, reset, submitting } = props;
+    const {
+        navigation, handleSubmit, pristine, reset, submitting,
+    } = props;
     return (
         <Grid style={styles.container}>
             <Row size={0.15} />
@@ -69,5 +71,5 @@ export default reduxForm({
     destroyOnUnmount: false,
     validate,
     touchOnChange: true,
-    touchOnBlur: true
+    touchOnBlur: true,
 })(CreateAccountNext);

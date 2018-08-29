@@ -3,7 +3,7 @@ import { Row, Grid } from 'react-native-easy-grid';
 import { connect } from 'react-redux';
 import styles from '../theme/styles/Containers.style';
 import CreateAccountNext from '../components/CreateAccount/CreateAccountNext';
-import {sendUserInfo} from '../redux/signup/actions';
+import { sendUserInfo } from '../redux/signup/actions';
 
 const CreateAccountNextContainer = (props) => {
     const { navigation, sendUserInfo } = props;
@@ -13,8 +13,8 @@ const CreateAccountNextContainer = (props) => {
             <CreateAccountNext
                 navigation={navigation}
                 onSubmit={(values) => {
-                    sendUserInfo(values)
-                    navigation.navigate('Home')
+                    sendUserInfo(values);
+                    navigation.navigate('Home');
                 }}
             />
             <Row size={0.5} />
@@ -24,10 +24,10 @@ const CreateAccountNextContainer = (props) => {
 
 const mapStateToProps = state => (
     state.signupReducer
-)
+);
 
 const mapDispatchToProps = {
-    sendUserInfo
-}
+    sendUserInfo,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(CreateAccountNextContainer);
