@@ -14,6 +14,12 @@ export default StyleSheet.create({
         letterSpacing: 1,
         color: theme.ERR_TEXT,
     },
+    errorStrong: {
+        fontSize: theme.FONT_SIZE_MEDIUM,
+        fontFamily: theme.FONT_BOLD,
+        letterSpacing: 1,
+        color: theme.ERR_TEXT,
+    },
     title: {
         fontSize: theme.FONT_SIZE_XLARGE,
         fontFamily: theme.FONT_MEDIUM,

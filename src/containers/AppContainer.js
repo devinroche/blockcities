@@ -18,8 +18,15 @@ class AppContainer extends React.Component {
         this.props.getBuildings();
     }
 
+    componentDidMount() {
+        console.log(this.props.signup)
+        if (this.props.signup.loginErr) {
+            this.props.navigation.navigate('Login');
+        };
+    }
+
     render() {
-        const { loadApp, user } = this.props.signup;
+        const { loadApp, user, loginErr } = this.props.signup;
         const { navigation } = this.props;
 
         if (!loadApp) return <Spinner />;

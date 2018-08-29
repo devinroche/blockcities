@@ -7,16 +7,27 @@ import { sendUserLogin } from '../redux/signup/actions';
 
 
 const LoginContainer = (props) => {
-    const { navigation, sendUserLogin } = props;
+    const { navigation, sendUserLogin, loginErr } = props;
+    const submitHelper = async (info) => {
+        await sendUserLogin(info);
+    };
 
+    const navHelper = () => {
+        if (!loginErr) {
+            navigation.navigate('Home');
+            return;
+        }
+        navigation.navigate('Login');
+    };
     return (
         <Grid style={styles.grid}>
             <Row size={0.25} />
             <Login
                 navigation={navigation}
-                onSubmit={(values) => {
-                    sendUserLogin(values);
-                    navigation.navigate('Home');
+                showErrorText={loginErr}
+                onSubmit={async (values) => {
+                    await submitHelper(values)
+                    await navHelper()
                 }}
             />
         </Grid>
