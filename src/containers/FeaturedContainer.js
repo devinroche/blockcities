@@ -1,10 +1,8 @@
 import React from 'react';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import { connect } from 'react-redux';
-import Navbar from './NavContainer';
-import Footer from './FooterContainer';
-import Followers from '../components/Followers';
-import BuildingList from '../components/BuildingList';
+import Navbar from './Navigation/NavContainer';
+import Footer from './Navigation/FooterContainer';
 import styles from '../theme/styles/Profile.style';
 import FeaturedCollection from '../components/Marketplace/FeaturedCollection/FeaturedCollection';
 

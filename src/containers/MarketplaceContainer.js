@@ -1,8 +1,8 @@
 import React from 'react';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import { connect } from 'react-redux';
-import Navbar from './NavContainer';
-import Footer from './FooterContainer';
+import Navbar from './Navigation/NavContainer';
+import Footer from './Navigation/FooterContainer';
 import styles from '../theme/styles/Containers.style';
 import MarketplaceLoading from '../components/Marketplace/MarketplaceLoading';
 import Marketplace from '../components/Marketplace/Marketplace';

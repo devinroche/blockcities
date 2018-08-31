@@ -1,9 +1,9 @@
 import React from 'react';
 import { Col, Grid, Row } from 'react-native-easy-grid';
 import { Text } from 'react-native';
-import Back from '../components/Back/Back';
-import styles from '../theme/styles/Navbar.light.style';
-import typography from '../theme/styles/Typography.style';
+import Back from '../../components/Back/Back';
+import styles from '../../theme/styles/Navbar.light.style';
+import typography from '../../theme/styles/Typography.style';
 
 const BackContainer = props => (
     <Row size={15} style={styles.topRow}>

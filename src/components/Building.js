@@ -14,18 +14,18 @@ class Building extends React.Component {
     }
 
     render() {
-        const { item } = this.props;
-
+        const { item, updateBuilding, redirect } = this.props;
+        const { backgroundColor } = this.state;
         return (
             <TouchableOpacity
                 style={style.touch}
                 onPress={() => {
-                    this.props.updateBuilding(item);
-                    this.props.redirect();
+                    updateBuilding(item);
+                    redirect();
                 }}
             >
                 <View style={[style.container,
-                    { backgroundColor: this.state.backgroundColor },
+                    { backgroundColor: backgroundColor },
                 ]}
                 >
                     <Image
@@ -35,7 +35,7 @@ class Building extends React.Component {
                     />
                 </View>
                 <Text style={style.buildingHead}>{item.Name}</Text>
-                <Text style={style.subBuildingText}>Era {Math.floor(Math.random() * 5)} - {randStats()}</Text>
+                <Text style={style.subBuildingText}>Era {Math.floor(Math.random() * 5)} - { randStats() }</Text>
                 <Text style={style.buyText}> &#128184; Buy {(Math.random() * (0.04 - 0.01) + 0.01).toFixed(3)}</Text>
             </TouchableOpacity>
         );

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Row, Grid, Col } from 'react-native-easy-grid';
-import { Image, Text } from 'react-native';
+import { Image } from 'react-native';
 import { connect } from 'react-redux';
-import Navbar from './NavContainer';
+import Navbar from './Navigation/NavContainer';
 import wallpaper from '../../assets/img/wallpaper.png';
-import Footer from './FooterContainer';
+import Footer from './Navigation/FooterContainer';
 import styles from '../theme/styles/Containers.style';
 import theme from '../theme/theme';
 import Spinner from '../components/Spinner';
@@ -19,7 +19,6 @@ class AppContainer extends React.Component {
     }
 
     componentDidMount() {
-        console.log(this.props.signup)
         if (this.props.signup.loginErr) {
             this.props.navigation.navigate('Login');
         };

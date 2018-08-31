@@ -9,7 +9,7 @@ const LogoutBtn = () => (
         <Row size={0.5} />
         <Row size={0.5}>
             <TouchableOpacity
-                onPress={() => console.log('fart')}
+                // onPress={} handles logout btn
                 style={styles.warningButton}
             >
                 <Text style={font.light}>Logout</Text>

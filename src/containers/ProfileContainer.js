@@ -1,8 +1,8 @@
 import React from 'react';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import { connect } from 'react-redux';
-import Navbar from './NavContainer';
-import Footer from './FooterContainer';
+import Navbar from './Navigation/NavContainer';
+import Footer from './Navigation/FooterContainer';
 import BuildingList from '../components/BuildingList';
 import styles from '../theme/styles/Profile.style';
 import { currentBuilding } from '../redux/building/actions';

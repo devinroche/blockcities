@@ -6,7 +6,6 @@ import initialState from '../state';
 const signupReducer = (state = initialState, action) => {
     switch (action.type) {
     case SIGNUP_SUCCESS:
-        console.log(action.payload)
         return {
             ...state,
             user: action.payload.data,
@@ -25,7 +24,7 @@ const signupReducer = (state = initialState, action) => {
             ...state,
             loginErr: true,
         };
-    
+
     case LOGIN_PENDING:
         return {
             ...state,

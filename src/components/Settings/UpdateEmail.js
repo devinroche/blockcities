@@ -13,7 +13,7 @@ const UpdateEmail = () => (
             <Row size={1}>
                 <TextInput
                     style={styles.input}
-                    onChangeText={text => console.log(text)}
+                    // onChangeText={text => console.log(text)}
                     autoCorrect={false}
                     underlineColorAndroid="transparent"
                     placeholder="you@email.com"
@@ -26,7 +26,7 @@ const UpdateEmail = () => (
                 </Col>
                 <Col>
                     <TouchableOpacity
-                        onPress={() => console.log('fart')}
+                        // onPress={}
                         style={styles.smallButton}
                     >
                         <Text style={font.light}>Send Verification Email</Text>

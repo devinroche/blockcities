@@ -5,7 +5,7 @@ import font from '../../theme/styles/Typography.style';
 
 const TopCitiesBtn = () => (
     <TouchableOpacity
-        onPress={console.log('top cities')}
+        // onPress={} handle top cities button click home page
         style={styles.headerBtn}
     >
         <Text style={[styles.darkText, font.btnTextDarkSmall, { fontSize: 12 }]}>Top Cities</Text>
