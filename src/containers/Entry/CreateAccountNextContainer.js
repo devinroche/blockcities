@@ -1,9 +1,9 @@
 import React from 'react';
 import { Row, Grid } from 'react-native-easy-grid';
 import { connect } from 'react-redux';
-import styles from '../theme/styles/Containers.style';
-import CreateAccountNext from '../components/CreateAccount/CreateAccountNext';
-import { sendUserInfo } from '../redux/signup/actions';
+import styles from '../../theme/styles/Containers.style';
+import CreateAccountNext from '../../components/CreateAccount/CreateAccountNext';
+import { sendUserInfo } from '../../redux/signup/actions';
 
 const CreateAccountNextContainer = (props) => {
     const { navigation, sendUserInfo } = props;

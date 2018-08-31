@@ -6,13 +6,13 @@ import { Font, Asset, AppLoading } from 'expo';
 import store from './src/redux/store';
 import AppContainer from './src/containers/AppContainer';
 import ProfileContainer from './src/containers/ProfileContainer';
-import SearchContainer from './src/containers/SearchContainer';
+import SearchContainer from './src/containers/Search/SearchContainer';
 import SettingsContainer from './src/containers/SettingsContainer';
 import MarketplaceContainer from './src/containers/MarketplaceContainer';
-import StartContainer from './src/containers/StartContainer';
-import LoginContainer from './src/containers/LoginContainer';
-import CreateAccountContainer from './src/containers/CreateAccountContainer';
-import CreateAccountNextContainer from './src/containers/CreateAccountNextContainer';
+import StartContainer from './src/containers/Entry/StartContainer';
+import LoginContainer from './src/containers/Entry/LoginContainer';
+import CreateAccountContainer from './src/containers/Entry/CreateAccountContainer';
+import CreateAccountNextContainer from './src/containers/Entry/CreateAccountNextContainer';
 import BuildingContainer from './src/containers/BuildingContainer';
 import FeaturedContainer from './src/containers/FeaturedContainer'
 import {fonts2load, images2load} from './AssetsLoad'
@@ -39,6 +39,7 @@ export default class App extends React.Component {
       }
 
     async componentDidMount(){
+        console.disableYellowBox = true;
 		this._loadAssetsAsync();
 	}
     render() {

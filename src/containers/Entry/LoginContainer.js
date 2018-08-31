@@ -1,9 +1,9 @@
 import React from 'react';
 import { Row, Grid } from 'react-native-easy-grid';
 import { connect } from 'react-redux';
-import styles from '../theme/styles/Containers.style';
-import Login from '../components/Login/Login';
-import { sendUserLogin } from '../redux/signup/actions';
+import styles from '../../theme/styles/Containers.style';
+import Login from '../../components/Login/Login';
+import { sendUserLogin } from '../../redux/signup/actions';
 
 
 const LoginContainer = (props) => {
