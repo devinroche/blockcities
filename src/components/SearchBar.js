@@ -21,6 +21,7 @@ const SearchBox = connectSearchBox(({ refine, currentRefinement }) => {
     return (
         <TextInput
             style={styles}
+            textAlign={'center'}
             onChangeText={text => refine(text)}
             value={currentRefinement}
             placeholder="Search buildings, cities..."

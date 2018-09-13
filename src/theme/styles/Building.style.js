@@ -4,21 +4,23 @@ import theme from '../theme';
 export default StyleSheet.create({
     touch: {
         flex: 1,
-        height: 375,
+        height: 310,
     },
     container: {
         justifyContent: 'center',
         alignSelf: 'center',
+        flexWrap: 'wrap',
         width: 180,
-        height: 260,
+        height: 220,
         padding: 20,
         borderRadius: 10,
+        overflow: 'hidden',
     },
     buildingHead: {
         paddingLeft: 5,
         paddingTop: 5,
-        fontFamily: theme.FONT_MEDIUM,
-        fontSize: theme.FONT_SIZE_LARGE,
+        fontFamily: theme.FONT_DEMI,
+        fontSize: theme.FONT_SIZE_MEDIUM,
         letterSpacing: 1,
         color: theme.BLACK_TEXT,
     },
@@ -27,7 +29,7 @@ export default StyleSheet.create({
         paddingTop: 3,
         paddingLeft: 5,
         fontSize: theme.FONT_SIZE_SMALL,
-        fontFamily: theme.FONT_MEDIUM,
+        fontFamily: theme.FONT_DEMI,
         color: theme.DARK_TEXT_COLOR,
     },
     buyText: {
@@ -39,6 +41,6 @@ export default StyleSheet.create({
         lineHeight: 19,
     },
     img: {
-        flex: 1,
+        flex: 0.9,
     },
 });

@@ -12,7 +12,7 @@ import LogoutBtn from './LogoutBtn';
 
 const Settings = user => (
     <Grid style={styles.container}>
-        <Row size={1.5}>
+        <Row size={1.25}>
             <Image
                 style={styles.img}
                 source={avatar}

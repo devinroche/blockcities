@@ -6,15 +6,15 @@ import styles from '../../theme/styles/Navbar.light.style';
 import typography from '../../theme/styles/Typography.style';
 
 const BackContainer = props => (
-    <Row size={15} style={styles.topRow}>
+    <Row size={10} style={styles.topRow}>
         <Grid style={styles.grid}>
-            <Col style={styles.grid}>
+            <Col size={20}>
                 <Back {...props} />
             </Col>
-            <Col style={styles.grid}>
-                <Text style={typography.title}>Settings</Text>
+            <Col size={60}>
+                <Text style={[typography.pageTitle, {textAlign: 'center'}]}>Settings</Text>
             </Col>
-            <Col style={styles.grid} />
+            <Col size={20} />
         </Grid>
     </Row>
 );

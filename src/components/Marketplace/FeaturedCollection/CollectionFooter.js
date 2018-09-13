@@ -26,7 +26,7 @@ const CollectionFooter = () => (
         <Row size={1} style={{ justifyContent: 'center', paddingBottom: 20 }}>
             <Text style={[font.info, { fontSize: 13 }]}>Three iconic towers in Buckhead Atlanta</Text>
         </Row>
-        <Row style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Row style={{ flex: 1, alignItems: 'center', justifyContent: 'center', paddingBottom: 20 }}>
             <TouchableOpacity style={[btnStyles.followBtn, { marginBottom: 20 }]}>
                 <Text style={font.light}>Buy Collection</Text>
             </TouchableOpacity>

@@ -25,6 +25,11 @@ export default StyleSheet.create({
         fontFamily: theme.FONT_MEDIUM,
         letterSpacing: 2,
     },
+    pageTitle: {
+        fontSize: theme.FONT_SIZE_XLARGE,
+        fontFamily: theme.FONT_DEMI,
+        letterSpacing: 1,
+    },
     bold: {
         fontSize: theme.FONT_SIZE_XLARGE,
         fontFamily: theme.FONT_BOLD,
@@ -38,14 +43,14 @@ export default StyleSheet.create({
         color: theme.GREY_STANDARD,
     },
     strong: {
-        fontSize: theme.FONT_SIZE_LARGE,
+        fontSize: 22,
         fontFamily: theme.FONT_BOLD,
         letterSpacing: 1,
         color: theme.BLACK_TEXT,
     },
     info: {
         fontSize: theme.FONT_SIZE_MEDIUM,
-        fontFamily: theme.FONT_MEDIUM,
+        fontFamily: theme.FONT_DEMI,
         letterSpacing: 1,
         color: theme.GREY_STANDARD,
     },
@@ -92,6 +97,11 @@ export default StyleSheet.create({
         color: '#828282',
     },
     buildingContent: {
+        fontFamily: theme.FONT_DEMI,
+        fontSize: theme.FONT_SIZE_XLARGE - 2,
+        letterSpacing: 1,
+    },
+    buildingContentThin: {
         fontFamily: theme.FONT_REGULAR,
         fontSize: theme.FONT_SIZE_XLARGE - 2,
         letterSpacing: 1,
@@ -114,4 +124,11 @@ export default StyleSheet.create({
         letterSpacing: 1,
         color: '#7294e8',
     },
+    filterBtnText: {
+        fontFamily: theme.FONT_DEMI,
+        fontSize: 14,
+        letterSpacing: 1,
+        lineHeight: 16,
+        color: '#ffffff',
+    }
 });

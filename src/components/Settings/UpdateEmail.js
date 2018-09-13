@@ -12,7 +12,7 @@ const UpdateEmail = () => (
             </Row>
             <Row size={1}>
                 <TextInput
-                    style={styles.input}
+                    style={[styles.input, {width: '100%'}]}
                     // onChangeText={text => console.log(text)}
                     autoCorrect={false}
                     underlineColorAndroid="transparent"
@@ -20,16 +20,16 @@ const UpdateEmail = () => (
                     value=""
                 />
             </Row>
-            <Row size={1} style={styles.response}>
-                <Col>
+            <Row size={.75} style={styles.response}>
+                <Col size={1.75}>
                     <Text style={font.info}>Verify your new email.</Text>
                 </Col>
-                <Col>
+                <Col size={1.25}>
                     <TouchableOpacity
                         // onPress={}
-                        style={styles.smallButton}
+                        style={[styles.smallButton, {width: '100%'}]}
                     >
-                        <Text style={font.light}>Send Verification Email</Text>
+                        <Text style={[font.light, {fontSize: 10}]}>Send Verification Email</Text>
                     </TouchableOpacity>
                 </Col>
             </Row>

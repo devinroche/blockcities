@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, Image} from 'react-native';
 import { Provider } from 'react-redux';
 import { createStackNavigator } from 'react-navigation';
+import { FluidNavigator } from 'react-navigation-fluid-transitions';
 import { Font, Asset, AppLoading } from 'expo';
 import store from './src/redux/store';
 import AppContainer from './src/containers/AppContainer';
@@ -58,7 +59,7 @@ export default class App extends React.Component {
     }
 }
 
-const Navigator = createStackNavigator({
+const Navigator = FluidNavigator({
     Home: { screen: AppContainer },
     Profile: { screen: ProfileContainer },
     Search: { screen: SearchContainer },
@@ -73,4 +74,8 @@ const Navigator = createStackNavigator({
 }, {
     initialRouteName: 'Start',
     headerMode: 'none',
+    mode: 'card',
+    navigationOptions: {
+        gesturesEnabled: true,
+    },
 });

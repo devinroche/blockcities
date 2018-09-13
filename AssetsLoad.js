@@ -24,6 +24,7 @@ export const images2load = [
     require('./assets/img/term_100.png'),
     require('./assets/img/term_200.png'),
     require('./assets/img/wallpaper.png'),
+    require('./assets/img/back_btn.png'),
     'https://res.cloudinary.com/devinroche/image/upload/v1534455400/buildings/state-of-georgia-2.png',
     'https://res.cloudinary.com/devinroche/image/upload/v1534455400/buildings/willis-tower.png',
     'https://res.cloudinary.com/devinroche/image/upload/v1534455400/buildings/Group_1_copy_2.png',

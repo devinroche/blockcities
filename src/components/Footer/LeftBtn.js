@@ -13,7 +13,7 @@ const LeftBtn = ({ navigation, darkMode, hideSearch, searchShowing }) => {
             if(searchShowing) hideSearch()
             navigation.navigate('Marketplace')
         }}>
-            <Image source={icon} />
+            <Image source={icon} style={{width: 12, height: 16}} />
         </TouchableOpacity>
     );
 };

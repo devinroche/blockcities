@@ -8,6 +8,7 @@ import MarketplaceLoading from '../components/Marketplace/MarketplaceLoading';
 import Marketplace from '../components/Marketplace/Marketplace';
 import SearchContainer from './Search/SearchContainer';
 import { currentBuilding } from '../redux/building/actions';
+import { Transition } from 'react-navigation-fluid-transitions';
 
 class MarketplaceContainer extends React.Component {
     constructor(props) {

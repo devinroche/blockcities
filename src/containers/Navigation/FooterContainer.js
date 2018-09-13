@@ -13,7 +13,7 @@ const Footer = (props) => {
     const styles = darkMode ? dark : light;
 
     return (
-        <Row size={6} style={styles.bottomRow}>
+        <Row size={5} style={styles.bottomRow}>
             <Grid style={styles.container}>
                 <Col style={styles.grid}>
                     <LeftBtn {...props} darkMode={darkMode} hideSearch={toggleSearch} searchShowing={searchReducer.showSearch} />

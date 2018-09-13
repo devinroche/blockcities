@@ -15,13 +15,13 @@ const Navbar = (props) => {
     return (
         <Row size={8} style={[styles.topRow]}>
             <Grid style={[styles.grid, { justifyContent: 'space-between' }]}>
-                <Col>
+                <Col style={{paddingLeft: 10}}>
                     <LeftBtn {...props} />
                 </Col>
                 <Col>
                     <CenterBtn {...props} />
                 </Col>
-                <Col>
+                <Col style={{paddingRight: 10}}>
                     <RightBtn {...props} />
                 </Col>
             </Grid>

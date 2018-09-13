@@ -6,10 +6,9 @@ import initialState from '../state';
 const buildingReducer = (state = initialState, action) => {
     switch (action.type) {
     case BUILDINGS_SUCCESS:
-        const buildings = action.payload.data.filter(el => el.ImageURL != '');
         return {
             ...state,
-            buildingList: buildings,
+            buildingList: action.payload.data,
         };
 
     case CURR_BUILDING:
@@ -24,3 +23,10 @@ const buildingReducer = (state = initialState, action) => {
 };
 
 export default buildingReducer;
+
+const randColors = [
+    '#ffedc1',
+    '#f0dddc',
+    '#b1cafb',
+    '#b9dbf0',
+];

@@ -10,7 +10,7 @@ const RightBtn = ({ navigation, darkMode }) => {
 
     return (
         <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
-            <Image source={icon} />
+            <Image source={icon} style={{width: 18, height: 20}} />
         </TouchableOpacity>
     );
 };

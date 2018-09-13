@@ -5,28 +5,31 @@ import Navbar from './Navigation/NavContainer';
 import Footer from './Navigation/FooterContainer';
 import BuildingList from '../components/BuildingList';
 import styles from '../theme/styles/Profile.style';
+import style from '../theme/styles/Followers.style';
 import { currentBuilding } from '../redux/building/actions';
 
 const ProfileContainer = (props) => {
     const { buildingReducer, signupReducer } = props;
     return (
         <Grid style={styles.grid}>
-            <Row size={85}>
-                <Col size={2} />
-                <Col size={96}>
-                    <Navbar navigation={props.navigation} />
-                    <Row size={92}>
-                        <BuildingList
-                            user={signupReducer.user}
-                            buildings={buildingReducer.buildingList}
-                            navigation={props.navigation}
-                            updateBuilding={props.currentBuilding}
-                        />
+            <Col size={2} />
+            <Col size={96}>
+                <Navbar navigation={props.navigation} />
+                <Row size={81}>
+                  <Grid style={style.container}>
+                    <Row size={10}>
+                      <BuildingList
+                          user={signupReducer.user}
+                          buildings={randArr(buildingReducer.buildingList)}
+                          navigation={props.navigation}
+                          updateBuilding={props.currentBuilding}
+                      />
                     </Row>
-                </Col>
-                <Col size={2} />
-            </Row>
-            <Footer navigation={props.navigation} />
+                  </Grid>
+                </Row>
+                <Footer navigation={props.navigation} />
+            </Col>
+            <Col size={2} />
         </Grid>
     );
 };
@@ -41,3 +44,13 @@ const mapDispatchToProps = {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProfileContainer);
+
+const randArr = (buildingArr) => {
+  let numEl = Math.floor(Math.random() * (6 - 3 + 1)) + 3;
+  const newArr = [];
+  while (numEl) {
+      newArr.push(buildingArr[Math.floor(Math.random() * buildingArr.length)]);
+      numEl--;
+  }
+  return newArr.filter((e, i) => newArr.indexOf(e) == i);
+};
