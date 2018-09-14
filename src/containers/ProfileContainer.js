@@ -20,7 +20,7 @@ const ProfileContainer = (props) => {
                     <Row size={10}>
                       <BuildingList
                           user={signupReducer.user}
-                          buildings={randArr(buildingReducer.buildingList)}
+                          buildings={buildingReducer.userBuildings}
                           navigation={props.navigation}
                           updateBuilding={props.currentBuilding}
                       />
@@ -44,13 +44,3 @@ const mapDispatchToProps = {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProfileContainer);
-
-const randArr = (buildingArr) => {
-  let numEl = Math.floor(Math.random() * (6 - 3 + 1)) + 3;
-  const newArr = [];
-  while (numEl) {
-      newArr.push(buildingArr[Math.floor(Math.random() * buildingArr.length)]);
-      numEl--;
-  }
-  return newArr.filter((e, i) => newArr.indexOf(e) == i);
-};

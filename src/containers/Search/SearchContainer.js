@@ -2,7 +2,7 @@ import React from 'react';
 import { Col, Grid, Row } from 'react-native-easy-grid';
 import { connect } from 'react-redux';
 import { InstantSearch } from 'react-instantsearch-native';
-import RightBtn from '../../components/Nav/RightBtn';
+import RightSearchBtn from '../../components/Nav/RightSearchBtn';
 import LeftBtn from '../../components/Nav/LeftBtn';
 import styles from '../../theme/styles/Navbar.light.style';
 import SearchBox from '../../components/SearchBar';
@@ -18,7 +18,7 @@ class SearchContainer extends React.Component {
         return (
             <Row size={8} style={styles.topRow}>
                 <Grid style={[styles.grid, { justifyContent: 'space-between' }]}>
-                    <Col size={10}>
+                    <Col size={10} style={{paddingLeft: 10}}>
                         <LeftBtn {...this.props} />
                     </Col>
                     <Col size={80}>
@@ -31,8 +31,8 @@ class SearchContainer extends React.Component {
                             <Hits updateHits={this.props.filteredBuildings} />
                         </InstantSearch>
                     </Col>
-                    <Col size={10}>
-                        <RightBtn {...this.props} />
+                    <Col size={10} style={{paddingRight: 10}}>
+                        <RightSearchBtn {...this.props} />
                     </Col>
                 </Grid>
             </Row>

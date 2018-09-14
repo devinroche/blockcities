@@ -23,8 +23,7 @@
     "ios": "react-native-scripts ios",
     "test": "jest",
     "lint": "eslint ./src",
-    "lintfix": "eslint ./src --fix",
-    "lintapp": "eslint App.js --fix"
+    "lintfix": "eslint ./src --fix"
   },
   "jest": {
     "preset": "jest-expo"

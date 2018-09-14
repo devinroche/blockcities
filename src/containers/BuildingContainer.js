@@ -5,13 +5,14 @@ import Navbar from './Navigation/NavContainer';
 import Footer from './Navigation/FooterContainer';
 import styles from '../theme/styles/Profile.style';
 import BuildingPage from '../components/Building/BuildingPage';
+import CloseContainer from './Navigation/CloseContainer';
 
 const BuildingContainer = props => (
     <Grid style={styles.grid}>
         <Row size={75}>
             <Col size={5} />
             <Col size={90}>
-                <Navbar navigation={props.navigation} logo/>
+                <CloseContainer navigation={props.navigation} logo/>
                 <Row size={94}>
                     <BuildingPage navigation={props.navigation} item={props.currentBuilding} />
                 </Row>

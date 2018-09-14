@@ -10,9 +10,8 @@ import { Transition } from 'react-navigation-fluid-transitions';
 const SettingsContainer = (props) => {
     const { navigation, signupReducer } = props;
     const { user } = signupReducer;
-
     return (
-        <Transition appear={'right'}>
+        // <Transition appear={'right'}>
             <Grid style={styles.grid}>
                 <BackContainer navigation={navigation} />
                 <Row size={75}>
@@ -24,7 +23,7 @@ const SettingsContainer = (props) => {
                 </Row>
                 <Footer navigation={navigation} />
             </Grid>
-        </Transition>
+        // </Transition>
     );
 };
 const mapStateToProps = state => ({

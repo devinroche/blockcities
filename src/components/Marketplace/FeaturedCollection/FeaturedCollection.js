@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Grid } from 'react-native-easy-grid';
+import { Row, Grid, Col } from 'react-native-easy-grid';
 import { Text, Image, ScrollView, Dimensions, View } from 'react-native';
 import font from '../../../theme/styles/Typography.style';
 import collection from '../../../../assets/img/collection.png';
@@ -8,16 +8,25 @@ import BuildingFeatures from './BuildingFeatures';
 import CollectionFooter from './CollectionFooter';
 import { Transition } from 'react-navigation-fluid-transitions';
 
-const FeaturedCollection = () => (
+const FeaturedCollection = ({toggleHeaderColor}) => {
+  handleScroll = (event) => {
+    if(event.nativeEvent.contentOffset.y <= 335){
+      toggleHeaderColor(true)
+    }
+    if(event.nativeEvent.contentOffset.y > 335){
+      toggleHeaderColor(false)
+    }
+   }
+
+return (
     <Transition appear={"scale"}>
-        <ScrollView>
+        <ScrollView onScroll={this.handleScroll} scrollEventThrottle={1}>
             <Grid>
-                <View style={{width: Dimensions.get('window').width, height: 380, backgroundColor: "#F2F2F2"}}>
-                  <Row size={2} style={{width: Dimensions.get('window').width, height: 380, backgroundColor: "#F2F2F2"}}>
+                  <Row size={2} style={{width: Dimensions.get('window').width, height: 380, backgroundColor: "#F2F2F2", paddingHorizontal: 20}}>
                       <Image source={collection} resizeMode="contain" style={{ width: 360, height: 360 }} />
                   </Row>
-                </View>
-                <Row size={2} style={{ paddingBottom: 20 }}>
+                  <Col size={90}>
+                <Row size={2} style={{ paddingBottom: 20, paddingHorizontal: 20}}>
                     <Text style={font.infoFeature}>
                         The Terminus Towers are an iconic set of office and condo buildings set in the heart of Buckhead Atlanta. They’re named after Atlanta’s original name “Terminus,” coined due to the numerous railroad crossings that built Atlanta from a train depot to a bustling Southern city.
                     </Text>
@@ -30,10 +39,14 @@ const FeaturedCollection = () => (
                     <Text style={font.featureHead}>Features</Text>
                 </Row>
                 <BuildingFeatures />
-                <CollectionFooter />
+                </Col>
+                <Row size={2} style={{width: Dimensions.get('window').width, backgroundColor: "#F2F2F2", paddingTop: 20}}>
+                  <CollectionFooter />
+                </Row>
             </Grid>
         </ScrollView>
     </Transition>
 );
+}
 
 export default FeaturedCollection;

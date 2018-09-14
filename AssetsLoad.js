@@ -10,6 +10,7 @@ export const images2load = [
     require('./assets/img/avataaars.png'),
     require('./assets/img/collection.png'),
     require('./assets/img/gear.png'),
+    require('./assets/img/xbtn.png'),
     require('./assets/img/home_dark.png'),
     require('./assets/img/home.png'),
     require('./assets/img/limited_edition_set.png'),

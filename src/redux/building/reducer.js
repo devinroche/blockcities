@@ -1,5 +1,5 @@
 import {
-    BUILDINGS_PENDING, BUILDINGS_SUCCESS, BUILDINGS_ERROR, CURR_BUILDING,
+    BUILDINGS_PENDING, BUILDINGS_SUCCESS, BUILDINGS_ERROR, CURR_BUILDING, HEADER_COLOR
 } from './types';
 import initialState from '../state';
 
@@ -9,6 +9,7 @@ const buildingReducer = (state = initialState, action) => {
         return {
             ...state,
             buildingList: action.payload.data,
+            userBuildings: randArr(action.payload.data)
         };
 
     case CURR_BUILDING:
@@ -17,6 +18,12 @@ const buildingReducer = (state = initialState, action) => {
             currentBuilding: action.data,
         };
 
+      case HEADER_COLOR:
+        return {
+          ...state,
+          isGrey: action.isGrey
+        }
+
     default:
         return { ...state };
     }
@@ -24,9 +31,12 @@ const buildingReducer = (state = initialState, action) => {
 
 export default buildingReducer;
 
-const randColors = [
-    '#ffedc1',
-    '#f0dddc',
-    '#b1cafb',
-    '#b9dbf0',
-];
+const randArr = (buildingArr) => {
+  let numEl = Math.floor(Math.random() * (6 - 3 + 1)) + 3;
+  const newArr = [];
+  while (numEl) {
+      newArr.push(buildingArr[Math.floor(Math.random() * buildingArr.length)]);
+      numEl--;
+  }
+  return newArr.filter((e, i) => newArr.indexOf(e) == i);
+};
