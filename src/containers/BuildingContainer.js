@@ -19,7 +19,7 @@ const BuildingContainer = props => (
             </Col>
             <Col size={5} />
         </Row>
-        <Footer navigation={props.navigation} />
+        {/* <Footer navigation={props.navigation} /> */}
     </Grid>
 );
 

@@ -32,7 +32,7 @@ class MarketplaceContainer extends React.Component {
                 <Col size={2} />
                 <Col size={96}>
                     {searchReducer.showSearch && showMarketplace ? <SearchContainer navigation={navigation} /> : <Navbar navigation={navigation} logo /> }
-                    <Row size={81}>
+                    <Row size={90}>
                         {showMarketplace ? <Marketplace updateBuilding={currentBuilding} buildings={buildings} isSearch={searchReducer.showSearch} navigation={navigation} /> : <MarketplaceLoading />}
                     </Row>
                     <Footer navigation={navigation} />

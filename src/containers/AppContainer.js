@@ -35,13 +35,6 @@ class AppContainer extends React.Component {
                 <Col size={2} />
                 <Col size={96}>
                     <Navbar navigation={navigation} darkMode user={user} />
-                    {/* <Row size={10} style={{ backgroundColor: theme.LIGHT_BLUE }}>
-                        <Col size={2.5} />
-                        <Col size={3}><MyCityBtn /></Col>
-                        <Col size={1} />
-                        <Col size={3}><TopCitiesBtn /></Col>
-                        <Col size={2.5} />
-                    </Row> */}
                     <Row size={90} style={styles.body}>
                         <Image
                             style={styles.img}

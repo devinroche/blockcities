@@ -11,24 +11,19 @@ import { currentBuilding } from '../redux/building/actions';
 
 const ProfileContainer = (props) => {
     const { buildingReducer, signupReducer, profileSearchStr } = props;
-    console.log("FART: ", profileSearchStr)
     let userBuildings = buildingReducer.userBuildings.filter(el => el.Name.toLowerCase().indexOf(profileSearchStr.toLowerCase()) > -1)
     return (
         <Grid style={styles.grid}>
             <Col size={2} />
             <Col size={96}>
                 <ProfileSearch navigation={props.navigation} />
-                <Row size={81}>
-                  <Grid style={style.container}>
-                    <Row size={10}>
+                <Row size={90}>
                       <BuildingList
                           user={signupReducer.user}
                           buildings={userBuildings}
                           navigation={props.navigation}
                           updateBuilding={props.currentBuilding}
                       />
-                    </Row>
-                  </Grid>
                 </Row>
                 <Footer navigation={props.navigation} />
             </Col>
@@ -38,7 +33,6 @@ const ProfileContainer = (props) => {
 };
 
 const mapStateToProps = state => {
-  console.log(state.searchReducer)
   return {
       buildingReducer: state.buildingReducer,
       signupReducer: state.signupReducer,

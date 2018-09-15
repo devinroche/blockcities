@@ -14,7 +14,7 @@ const SettingsContainer = (props) => {
         // <Transition appear={'right'}>
             <Grid style={styles.grid}>
                 <BackContainer navigation={navigation} />
-                <Row size={75}>
+                <Row size={90}>
                     <Col size={10} />
                     <Col size={80}>
                         <Settings {...user} />
