@@ -1,14 +1,9 @@
 import React from 'react';
 import {
-    StyleSheet,
-    View,
-    FlatList,
-    Image,
-    Text,
     TextInput,
 } from 'react-native';
 
-import { connectInfiniteHits, connectSearchBox } from 'react-instantsearch-native';
+import { connectSearchBox } from 'react-instantsearch-native';
 
 const SearchBox = connectSearchBox(({ refine, currentRefinement }) => {
     const styles = {
@@ -17,14 +12,15 @@ const SearchBox = connectSearchBox(({ refine, currentRefinement }) => {
         width: '100%',
         height: '100%',
     };
-
+    console.log(currentRefinement)
     return (
         <TextInput
             style={styles}
+            textAlign={'center'}
             onChangeText={text => refine(text)}
             value={currentRefinement}
             placeholder="Search buildings, cities..."
-            clearButtonMode="always"
+            clearButtonMode="never"
             spellCheck={false}
             autoCorrect={false}
             autoCapitalize="none"

@@ -14,6 +14,7 @@ export default StyleSheet.create({
         paddingTop: 10,
         borderTopWidth: 0.5,
         borderTopColor: '#F2F2F2',
+        height: 50,
         backgroundColor: theme.LIGHT_TEXT_COLOR,
         zIndex: 100,
     },

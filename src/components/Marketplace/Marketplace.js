@@ -8,12 +8,13 @@ import Building from '../Building';
 import font from '../../theme/styles/Typography.style';
 import LimitedEdition from './LimitedEdition';
 import Filters from './Filters';
+import FilterBtn from './FilterBtn';
 
 class Marketplace extends React.Component {
     constructor(props) {
         super(props);
         this.renderItem = this.renderItem.bind(this);
-        this.renderHeader = this.renderHeader.bind(this);
+        this.renderTop = this.renderTop.bind(this);
     }
 
     renderItem(item, itemSize, itemPaddingHorizontal) {
@@ -29,18 +30,19 @@ class Marketplace extends React.Component {
         );
     }
 
-    renderHeader() {
+    renderTop() {
         if (this.props.isSearch) {
-            return (
-                <Filters />
-            );
+            return <Filters />
         }
         return (
             <View>
-                <Row size={4} style={{ height: 160 }}>
-                    <LimitedEdition navigation={this.props.navigation} />
+                <Row size={5} style={{ justifyContent: 'center', paddingBottom: 10}}>
+                    <LimitedEdition
+                        navigation={this.props.navigation}
+                        // updateBuilding={item => this.props.updateBuilding(item)}
+                    />
                 </Row>
-                <Row size={4} style={{ height: 40 }}>
+                <Row size={2} style={{ height: 40, paddingLeft: 10, paddingBottom: 0}}>
                     <Text style={font.buildingHead}>Hall of Fame &#127941;</Text>
                 </Row>
             </View>
@@ -50,15 +52,18 @@ class Marketplace extends React.Component {
     render() {
         return (
             <Grid style={styles.container}>
+              <Row size={this.props.isSearch ? 2.5 : 5}>
+                {this.renderTop()}
+              </Row>
                 <Row size={10}>
                     <PhotoGrid
                         data={this.props.buildings}
-                        renderHeader={this.renderHeader}
                         itemsPerRow={2}
                         itemMargin={1}
                         itemPaddingHorizontal={1}
                         renderItem={this.renderItem}
                     />
+                    {this.props.isSearch ? <FilterBtn/> : ""}
                 </Row>
             </Grid>
         );

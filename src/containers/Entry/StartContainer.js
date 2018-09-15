@@ -1,8 +1,7 @@
 import React from 'react';
 import { Row, Grid } from 'react-native-easy-grid';
-import { connect } from 'react-redux';
-import styles from '../theme/styles/Containers.style';
-import Start from '../components/StartScreen/Start';
+import styles from '../../theme/styles/Containers.style';
+import Start from '../../components/StartScreen/Start';
 
 
 const StartContainer = (props) => {

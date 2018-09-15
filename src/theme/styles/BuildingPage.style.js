@@ -6,21 +6,28 @@ export default StyleSheet.create({
         flex: 1,
         height: 375,
     },
+    dialogContentView: {
+      flex: 1,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
     body: {
         flexGrow: 1,
         alignItems: 'center',
     },
     container: {
         justifyContent: 'center',
+        alignSelf: 'center',
+        flexWrap: 'wrap',
         width: 360,
         height: 420,
         padding: 20,
+        overflow: 'hidden',
         borderRadius: 10,
     },
     buildingHead: {
         paddingTop: 10,
         paddingLeft: 5,
-        paddingTop: 5,
         fontFamily: theme.FONT_MEDIUM,
         fontSize: theme.FONT_SIZE_XLARGE,
         letterSpacing: 1,
@@ -45,7 +52,7 @@ export default StyleSheet.create({
         lineHeight: 19,
     },
     img: {
-        flex: 1,
+        flex: 0.9,
     },
     paddedRow: {
         paddingVertical: 10,

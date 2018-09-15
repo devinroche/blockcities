@@ -1,13 +1,14 @@
 import React from 'react';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import { connect } from 'react-redux';
-import Navbar from './NavContainer';
-import Footer from './FooterContainer';
+import Navbar from './Navigation/NavContainer';
+import Footer from './Navigation/FooterContainer';
 import styles from '../theme/styles/Containers.style';
 import MarketplaceLoading from '../components/Marketplace/MarketplaceLoading';
 import Marketplace from '../components/Marketplace/Marketplace';
-import SearchContainer from './SearchContainer';
+import SearchContainer from './Search/SearchContainer';
 import { currentBuilding } from '../redux/building/actions';
+import { Transition } from 'react-navigation-fluid-transitions';
 
 class MarketplaceContainer extends React.Component {
     constructor(props) {
@@ -18,20 +19,21 @@ class MarketplaceContainer extends React.Component {
     }
 
     render() {
-        const { navigation, searchReducer, buildingReducer } = this.props;
-        const buildings = searchReducer.data && searchReducer.data.length > 0 ? searchReducer.data : buildingReducer.buildingList;
+        const { showMarketplace } = this.state
+        const { navigation, searchReducer, buildingReducer, currentBuilding } = this.props;
+        const buildings = (searchReducer.showSearch && searchReducer.data && searchReducer.data.length > 0) ? searchReducer.data : buildingReducer.buildingList;
 
         setTimeout(() => {
-            if (this.state.showMarketplace === false) this.setState({ showMarketplace: true });
+            if (showMarketplace === false) this.setState({ showMarketplace: true })
         }, 1500);
+
         return (
             <Grid style={styles.grid}>
-                {/* {this.props.searchReducer.showSearch && this.state.showMarketplace ? <SearchContainer  navigation={navigation}/> : <Navbar navigation={navigation} /> } */}
                 <Col size={2} />
                 <Col size={96}>
-                    {this.props.searchReducer.showSearch && this.state.showMarketplace ? <SearchContainer navigation={navigation} /> : <Navbar navigation={navigation} /> }
+                    {searchReducer.showSearch && showMarketplace ? <SearchContainer navigation={navigation} /> : <Navbar navigation={navigation} logo /> }
                     <Row size={81}>
-                        {this.state.showMarketplace ? <Marketplace updateBuilding={this.props.currentBuilding} buildings={buildings} isSearch={this.props.searchReducer.showSearch} navigation={navigation} /> : <MarketplaceLoading />}
+                        {showMarketplace ? <Marketplace updateBuilding={currentBuilding} buildings={buildings} isSearch={searchReducer.showSearch} navigation={navigation} /> : <MarketplaceLoading />}
                     </Row>
                     <Footer navigation={navigation} />
                 </Col>

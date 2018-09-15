@@ -1,5 +1,5 @@
 import {
-    LOGIN_SUCCESS, SIGNUP_PENDING, SIGNUP_ERROR, SIGNUP_SUCCESS,
+    LOGIN_SUCCESS, SIGNUP_PENDING, LOGIN_ERROR, SIGNUP_SUCCESS, LOGIN_PENDING
 } from './types';
 import initialState from '../state';
 
@@ -16,7 +16,21 @@ const signupReducer = (state = initialState, action) => {
             ...state,
             user: action.payload.data,
             loadApp: true,
+            loginErr: false,
         };
+
+    case LOGIN_ERROR:
+        return {
+            ...state,
+            loginErr: true,
+        };
+
+    case LOGIN_PENDING:
+        return {
+            ...state,
+            loginErr: false,
+        };
+
 
     default:
         return { ...state };

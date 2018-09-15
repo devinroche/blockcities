@@ -6,10 +6,12 @@ import styles from '../theme/styles/CreateAccount.style';
 
 export default function MyTextInput(props) {
     const {
-        input, type, meta: { touched, error }, ...inputProps
+        showErr, input, type, meta: { touched, error }, ...inputProps
     } = props;
+
     const style = [styles.input];
     if (touched && error) style.push(styles.errorInput);
+    if (showErr) style.push(styles.errorInput);
     return (
         <Grid style={styles.container}>
             <Row>

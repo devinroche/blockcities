@@ -14,11 +14,11 @@
     "rules": {
         "indent": [
             "error",
-            4
+            2
         ],
         "react/jsx-indent": [
             "error",
-            4
+            2
         ],
         "react/jsx-filename-extension": [
             1,

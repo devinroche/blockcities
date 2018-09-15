@@ -19,4 +19,12 @@ export default StyleSheet.create({
         justifyContent: 'center',
         textAlign: 'center',
     },
+    greyBG: {
+      position: 'relative',
+      top: 0,
+      left: 0,
+      backgroundColor: '#F2F2F2',
+      width: 414,
+      height: 500,
+    }
 });

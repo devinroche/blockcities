@@ -12,7 +12,7 @@ const ContentCol = ({ header, detail, ext }) => {
                 <Text style={font.buildingContentHead}>{header}</Text>
             </Row>
             <Row>
-                <Text style={font.buildingContent}>{detail} {ext}</Text>
+                <Text style={font.buildingContentThin}>{detail} {ext}</Text>
             </Row>
         </Col>
     );
@@ -27,7 +27,7 @@ const ContentRow = ({ header, detail }) => {
                 <Text style={font.buildingContentHead}>{header}</Text>
             </Row>
             <Row size={12}>
-                <Text style={font.buildingContent}>{detail}</Text>
+                <Text style={font.buildingContentThin}>{detail}</Text>
             </Row>
         </Grid>
     );

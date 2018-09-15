@@ -10,19 +10,19 @@ import PushNotification from './PushNotification';
 import UpdateEmail from './UpdateEmail';
 import LogoutBtn from './LogoutBtn';
 
-const Settings = profile => (
+const Settings = user => (
     <Grid style={styles.container}>
-        <Row size={1.5}>
+        <Row size={1.25}>
             <Image
                 style={styles.img}
                 source={avatar}
             />
         </Row>
         <Row size={0.5}>
-            <Text style={font.bold}>@{profile.user.username}</Text>
+            <Text style={font.bold}>@{user.Username}</Text>
         </Row>
         <Row size={0.5}>
-            <Text style={font.normal}>{profile.user.name}</Text>
+            <Text style={font.normal}>{user.Name}</Text>
         </Row>
         <Line />
         <PushNotification />

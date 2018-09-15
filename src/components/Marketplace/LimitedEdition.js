@@ -4,7 +4,7 @@ import img from '../../../assets/img/market.png';
 
 const LimitedEdition = ({ navigation }) => (
     <TouchableOpacity onPress={() => navigation.navigate('FeaturedPage')}>
-        <Image source={img} resizeMode="stretch" style={{ width: 360, height: 140 }} />
+        <Image source={img} resizeMode="cover" style={{width: 370, height: 132, borderRadius: 7}}/>
     </TouchableOpacity>
 );
 

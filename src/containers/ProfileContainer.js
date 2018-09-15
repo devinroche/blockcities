@@ -1,32 +1,35 @@
 import React from 'react';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import { connect } from 'react-redux';
-import Navbar from './NavContainer';
-import Footer from './FooterContainer';
+import Navbar from './Navigation/NavContainer';
+import Footer from './Navigation/FooterContainer';
 import BuildingList from '../components/BuildingList';
 import styles from '../theme/styles/Profile.style';
+import style from '../theme/styles/Followers.style';
 import { currentBuilding } from '../redux/building/actions';
 
 const ProfileContainer = (props) => {
     const { buildingReducer, signupReducer } = props;
     return (
         <Grid style={styles.grid}>
-            <Row size={85}>
-                <Col size={2} />
-                <Col size={96}>
-                    <Navbar navigation={props.navigation} />
-                    <Row size={92}>
-                        <BuildingList
-                            user={signupReducer.user}
-                            buildings={buildingReducer.buildingList}
-                            navigation={props.navigation}
-                            updateBuilding={props.currentBuilding}
-                        />
+            <Col size={2} />
+            <Col size={96}>
+                <Navbar navigation={props.navigation} />
+                <Row size={81}>
+                  <Grid style={style.container}>
+                    <Row size={10}>
+                      <BuildingList
+                          user={signupReducer.user}
+                          buildings={buildingReducer.userBuildings}
+                          navigation={props.navigation}
+                          updateBuilding={props.currentBuilding}
+                      />
                     </Row>
-                </Col>
-                <Col size={2} />
-            </Row>
-            <Footer navigation={props.navigation} />
+                  </Grid>
+                </Row>
+                <Footer navigation={props.navigation} />
+            </Col>
+            <Col size={2} />
         </Grid>
     );
 };

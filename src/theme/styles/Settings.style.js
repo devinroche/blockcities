@@ -51,11 +51,11 @@ export default StyleSheet.create({
     },
     warningButton: {
         backgroundColor: '#EB5757',
-        borderRadius: 20,
+        borderRadius: 18.5,
         alignItems: 'center',
         justifyContent: 'center',
-        width: 100,
-        height: 35,
-        marginBottom: 15,
+        width: 160,
+        height: 30,
+        marginBottom: 10,
     },
 });

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Row, Grid } from 'react-native-easy-grid';
 import { connect } from 'react-redux';
-import styles from '../theme/styles/Containers.style';
-import CreateAccount from '../components/CreateAccount/CreateAccount';
+import styles from '../../theme/styles/Containers.style';
+import CreateAccount from '../../components/CreateAccount/CreateAccount';
 
 
 const CreateAccountContainer = (props) => {

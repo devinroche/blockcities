@@ -10,7 +10,7 @@ const CenterBtn = ({ navigation, darkMode }) => {
 
     return (
         <TouchableOpacity onPress={() => navigation.navigate('Home')}>
-            <Image source={icon} />
+            <Image source={icon} style={{width: 22, height: 19}} />
         </TouchableOpacity>
     );
 };

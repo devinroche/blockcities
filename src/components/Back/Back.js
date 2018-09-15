@@ -1,12 +1,14 @@
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
-import Icon from 'react-native-vector-icons/SimpleLineIcons';
-import theme from '../../theme/theme';
+import { TouchableOpacity, Image } from 'react-native';
+import backBtn from '../../../assets/img/back_btn.png';
 
-const Back = ({ navigation }) => (
-    <TouchableOpacity onPress={() => navigation.goBack()}>
-        <Icon name="arrow-left" size={15} color={theme.DARK_BLUE} />
-    </TouchableOpacity>
-);
+const Back = ({ navigation, logo }) => {
+  let isPadded = logo ? 30 : 0
+  return (
+      <TouchableOpacity onPress={() => navigation.goBack()}>
+          <Image source={backBtn} style={{width: 18, height: 15, marginLeft: 30}}/>
+      </TouchableOpacity>
+  );
+}
 
 export default Back;

@@ -16,11 +16,13 @@ export default Btn;
 const style = {
     container: {
         alignItems: 'center',
-        borderWidth: 1,
+        justifyContent: 'center',
+        borderWidth: 2,
         borderColor: '#E0E0E0',
         padding: 8,
         borderRadius: 20,
         width: '90%',
+        height: 40,
     },
     text: {
         color: '#333333', fontSize: 11,

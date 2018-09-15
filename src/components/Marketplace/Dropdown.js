@@ -1,6 +1,5 @@
 import React from 'react';
-import { Text, View, Picker } from 'react-native';
-import DropdownMenu from 'react-native-dropdown-menu';
+import { View } from 'react-native';
 import { Dropdown } from 'react-native-material-dropdown';
 
 const sort1 = [
@@ -25,7 +24,7 @@ class MyDropdown extends React.Component {
     render() {
         if (this.props.data == 2) {
             return (
-                <View style={{ flex: 1 }}>
+                <View style={{ flex: 1, paddingBottom: 10}}>
                     <Dropdown
                         data={sort2}
                         label="sorting"
@@ -36,7 +35,7 @@ class MyDropdown extends React.Component {
             );
         }
         return (
-            <View style={{ flex: 1 }}>
+            <View style={{ flex: 1, paddingBottom: 10}}>
                 <Dropdown
                     data={sort1}
                     textColor="#828282"

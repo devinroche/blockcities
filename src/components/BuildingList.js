@@ -1,11 +1,12 @@
 import React from 'react';
-import { ScrollView, View, Text } from 'react-native';
+import { View, Text } from 'react-native';
 import PhotoGrid from 'react-native-image-grid';
-import { Row } from 'react-native-easy-grid';
+import { Grid, Row } from 'react-native-easy-grid';
 import Building from './Building';
 import styles from '../theme/styles/BuildingList.style';
 import fonts from '../theme/styles/Typography.style';
 import Followers from './Followers';
+import { Transition } from 'react-navigation-fluid-transitions';
 
 export default class BuildingList extends React.Component {
     constructor(props) {
@@ -44,28 +45,15 @@ export default class BuildingList extends React.Component {
     }
 
     render() {
-        const userBuildings = randArr(this.props.buildings);
         return (
-            <ScrollView style={styles.container}>
-                <PhotoGrid
-                    data={userBuildings}
-                    itemsPerRow={2}
-                    itemMargin={1}
-                    itemPaddingHorizontal={1}
-                    renderHeader={this.renderHeader}
-                    renderItem={this.renderItem}
-                />
-            </ScrollView>
+            <PhotoGrid
+                data={this.props.buildings}
+                renderHeader={this.renderHeader}
+                itemsPerRow={2}
+                itemMargin={1}
+                itemPaddingHorizontal={1}
+                renderItem={this.renderItem}
+            />
         );
     }
 }
-
-const randArr = (buildingArr) => {
-    let numEl = Math.floor(Math.random() * (6 - 3 + 1)) + 3;
-    const newArr = [];
-    while (numEl) {
-        newArr.push(buildingArr[Math.floor(Math.random() * buildingArr.length)]);
-        numEl--;
-    }
-    return newArr.filter((e, i) => newArr.indexOf(e) == i);
-};

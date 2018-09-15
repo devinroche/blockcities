@@ -5,7 +5,7 @@ import font from '../../theme/styles/Typography.style';
 
 const MyCityBtn = ({ submit }) => (
     <TouchableOpacity
-        onPress={console.log('my city')}
+        // onPress={} handle the my cities button on the homepage
         style={styles.headerBtnDark}
     >
         <Text style={[styles.loginText, font.btnText, { fontSize: 12 }]}>My City</Text>

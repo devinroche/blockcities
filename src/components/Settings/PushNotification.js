@@ -5,19 +5,24 @@ import styles from '../../theme/styles/Settings.style';
 import font from '../../theme/styles/Typography.style';
 
 const PushNotification = () => (
-    <Row size={1} style={styles.pillContainer}>
+    <Row size={1.5} style={styles.pillContainer}>
         <Grid>
-            <Row size={0.75}>
-                <Col size={1}>
-                    <Text style={font.strong}>Push Notifications</Text>
+            <Row>
+                <Col size={2}>
+                    <Row size={.5}>
+                        <Text style={font.strong}>Push Notifications</Text>
+                    </Row>
+                    <Row size={1}>
+                        <Text style={[font.info, {flexWrap: 'wrap'}]}>Enable this setting to get updates and notifications from BlockCities</Text>
+                    </Row>
                 </Col>
                 <Col size={1} style={styles.container}>
                     <Switch />
                 </Col>
             </Row>
-            <Row size={1}>
+            {/* <Row size={1}>
                 <Text style={font.info}>Enable this setting to get updates and notifications from BlockCities</Text>
-            </Row>
+            </Row> */}
         </Grid>
     </Row>
 );

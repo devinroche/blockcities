@@ -1,6 +1,6 @@
 import React from 'react';
-import { Text } from 'react-native';
-import RadioForm, { RadioButton, RadioButtonInput, RadioButtonLabel } from 'react-native-simple-radio-button';
+import { View } from 'react-native';
+import RadioForm, { RadioButton } from 'react-native-simple-radio-button';
 import { Grid, Row, Col } from 'react-native-easy-grid';
 
 const radio_props = [
@@ -22,23 +22,26 @@ class RadioBtns extends React.Component {
             <RadioForm
                 formHorizontal
                 animation
+                style={{justifyContent: 'space-evenly'}}
             >
                 {radio_props.map((obj, i) => (
+                  <View key={i} style={{marginHorizontal: 15, textAlign: 'center'}}>
                     <RadioButton
                         isSelected={this.state.value === i}
                         obj={obj}
-                        key={i}
                         index={i}
                         labelHorizontal
-                        buttonSize={10}
+                        buttonSize={6}
                         buttonColor="#4D92FF"
                         style={{
                             borderWidth: 1,
                             borderColor: '#F2F2F2',
-                            paddingVertical: 10,
                             paddingHorizontal: 15,
-                            marginHorizontal: 10,
-                            flex: 1,
+                            paddingVertical: 0,
+                            marginVertical: 0,
+                            justifyContent: 'center',
+                            height: 45,
+                            width: 110
                         }}
                         buttonStyle={[this.state.value === i ? { borderWidth: 1 } : { borderWidth: 1, borderColor: '#828282' }]}
                         labelColor="#828282"
@@ -46,6 +49,7 @@ class RadioBtns extends React.Component {
                             this.setState({ value: index });
                         }}
                     />
+                    </View>
                 ))}
             </RadioForm>
         );
