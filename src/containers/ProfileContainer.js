@@ -10,7 +10,9 @@ import style from '../theme/styles/Followers.style';
 import { currentBuilding } from '../redux/building/actions';
 
 const ProfileContainer = (props) => {
-    const { buildingReducer, signupReducer } = props;
+    const { buildingReducer, signupReducer, profileSearchStr } = props;
+    console.log("FART: ", profileSearchStr)
+    let userBuildings = buildingReducer.userBuildings.filter(el => el.Name.toLowerCase().indexOf(profileSearchStr.toLowerCase()) > -1)
     return (
         <Grid style={styles.grid}>
             <Col size={2} />
@@ -21,7 +23,7 @@ const ProfileContainer = (props) => {
                     <Row size={10}>
                       <BuildingList
                           user={signupReducer.user}
-                          buildings={buildingReducer.userBuildings}
+                          buildings={userBuildings}
                           navigation={props.navigation}
                           updateBuilding={props.currentBuilding}
                       />
@@ -35,10 +37,14 @@ const ProfileContainer = (props) => {
     );
 };
 
-const mapStateToProps = state => ({
-    buildingReducer: state.buildingReducer,
-    signupReducer: state.signupReducer,
-});
+const mapStateToProps = state => {
+  console.log(state.searchReducer)
+  return {
+      buildingReducer: state.buildingReducer,
+      signupReducer: state.signupReducer,
+      profileSearchStr: state.searchReducer.profileSearchStr
+  }
+};
 
 const mapDispatchToProps = {
     currentBuilding,

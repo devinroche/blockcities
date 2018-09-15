@@ -4,6 +4,7 @@ const initialState = {
     showSearch: false,
     showProfileSearch: false,
     loginErr: false,
+    profileSearchStr: ''
 };
 
 export default initialState;
