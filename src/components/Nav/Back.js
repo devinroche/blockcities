@@ -5,7 +5,6 @@ import xbtn from '../../../assets/img/xbtn.png';
 const BackBtn = ({ navigation, toggleSearch }) => {
     return (
         <TouchableOpacity onPress={() => {
-            toggleSearch();
             navigation.goBack();
         }}
         >

@@ -15,6 +15,7 @@ class Marketplace extends React.Component {
         super(props);
         this.renderItem = this.renderItem.bind(this);
         this.renderTop = this.renderTop.bind(this);
+        this.renderHeader = this.renderHeader.bind(this);
     }
 
     renderItem(item, itemSize, itemPaddingHorizontal) {
@@ -34,30 +35,31 @@ class Marketplace extends React.Component {
         if (this.props.isSearch) {
             return <Filters />
         }
-        return (
-            <View>
-                <Row size={5} style={{ justifyContent: 'center', paddingBottom: 10}}>
-                    <LimitedEdition
-                        navigation={this.props.navigation}
-                        // updateBuilding={item => this.props.updateBuilding(item)}
-                    />
-                </Row>
-                <Row size={2} style={{ height: 40, paddingLeft: 10, paddingBottom: 0}}>
-                    <Text style={font.buildingHead}>Hall of Fame &#127941;</Text>
-                </Row>
-            </View>
-        );
     }
 
+    renderHeader() {
+      return (
+          <View>
+              <Row size={4} style={{alignSelf: 'center'}}>
+                  <LimitedEdition navigation={this.props.navigation} />
+              </Row>
+              <Row size={4} style={{paddingVertical: 10, paddingLeft: 20}}>
+                  <Text style={font.buildingHead}>Hall of Fame &#127941;</Text>
+              </Row>
+          </View>
+      )
+  }
+  
     render() {
         return (
             <Grid style={styles.container}>
-              <Row size={this.props.isSearch ? 2.5 : 5}>
+              {this.props.isSearch ? <Row size={2.5}>
                 {this.renderTop()}
-              </Row>
+              </Row> : ""}
                 <Row size={10}>
                     <PhotoGrid
                         data={this.props.buildings}
+                        renderHeader = { this.renderHeader }
                         itemsPerRow={2}
                         itemMargin={1}
                         itemPaddingHorizontal={1}

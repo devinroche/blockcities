@@ -2,6 +2,7 @@ import React from 'react';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import { connect } from 'react-redux';
 import Navbar from './Navigation/NavContainer';
+import ProfileSearch from './Navigation/ProfileSearch';
 import Footer from './Navigation/FooterContainer';
 import BuildingList from '../components/BuildingList';
 import styles from '../theme/styles/Profile.style';
@@ -14,7 +15,7 @@ const ProfileContainer = (props) => {
         <Grid style={styles.grid}>
             <Col size={2} />
             <Col size={96}>
-                <Navbar navigation={props.navigation} />
+                <ProfileSearch navigation={props.navigation} />
                 <Row size={81}>
                   <Grid style={style.container}>
                     <Row size={10}>

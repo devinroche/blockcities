@@ -5,7 +5,7 @@ import font from '../../../theme/styles/Typography.style';
 
 const BuildingFeatures = () => (
     <View style={{
-        width: '75%', flex: 1, justifyContent: 'center', alignSelf: 'center', paddingBottom: 30,
+        width: '75%', flex: 1, justifyContent: 'center', alignSelf: 'center', paddingBottom: 30
     }}
     >
         {

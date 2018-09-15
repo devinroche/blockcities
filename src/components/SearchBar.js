@@ -12,7 +12,7 @@ const SearchBox = connectSearchBox(({ refine, currentRefinement }) => {
         width: '100%',
         height: '100%',
     };
-    console.log(currentRefinement)
+
     return (
         <TextInput
             style={styles}

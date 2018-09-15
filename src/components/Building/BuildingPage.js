@@ -31,7 +31,6 @@ class BuildingPage extends React.Component {
                                 minimumZoomScale={0.5}
                                 maximumZoomScale={3}
                                 androidScaleType="center"
-                                onLoad={() => console.log("Image loaded!")}
                                 resizeMode="contain"
                             />
                         </TouchableOpacity>

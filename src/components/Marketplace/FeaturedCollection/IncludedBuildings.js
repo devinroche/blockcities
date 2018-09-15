@@ -8,7 +8,8 @@ import term_200 from '../../../../assets/img/term_200.png';
 
 //updateBuilding(el)
 const IncludedBuildings = () => (
-    includedBuildingsData.map((el, i) => (
+  <View style={{backgroundColor: '#ffffff'}}>
+    {includedBuildingsData.map((el, i) => (
         <TouchableOpacity key={i}>
             <Row size={1} style={{ justifyContent: 'center' }}>
                 <Image source={el.img} resizeMode="contain" style={{ width: 360, height: 480 }} />
@@ -20,7 +21,8 @@ const IncludedBuildings = () => (
                 <Text style={font.featurePrice}>{el.details}</Text>
             </Row>
         </TouchableOpacity>
-    ))
+    ))}
+    </View>
 );
 
 export default IncludedBuildings;
