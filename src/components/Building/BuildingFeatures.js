@@ -11,11 +11,10 @@ const BuildingFeatures = () => (
         {
             features.map((el, idx) => (
                 <Row key={idx} style={{ paddingVertical: 20 }}>
-                    <Col size={25}>
+                    <Col size={25} style={{paddingHorizontal: 15,}}>
                         <View style={{
                             width: 35,
                             height: 35,
-                            paddingHorizontal: 20,
                             borderRadius: 50,
                             backgroundColor: '#c4c4c4',
                         }}

@@ -18,18 +18,18 @@ const CreateAccountNext = (props) => {
     return (
         <Grid style={styles.container}>
             <Row size={0.15} />
-            <Row size={0.15}>
+            <Row size={0.25}>
                 <Col size={0.75} style={styles.center}>
                     <Text style={styles.text}>Create Account to Play</Text>
                 </Col>
             </Row>
-            <Row size={0.3}>
+            <Row size={0.5}>
                 <Image
                     style={styles.img}
                     source={loginImage}
                 />
             </Row>
-            <Row size={0.12}>
+            <Row size={0.27}>
                 <Field
                     name="username"
                     style={styles.input}
@@ -38,7 +38,7 @@ const CreateAccountNext = (props) => {
                     component={MyTextInput}
                 />
             </Row>
-            <Row size={0.12}>
+            <Row size={0.27}>
                 <Field
                     name="password"
                     style={styles.input}
@@ -47,7 +47,7 @@ const CreateAccountNext = (props) => {
                     component={MyTextInput}
                 />
             </Row>
-            <Row size={0.12}>
+            <Row size={0.27}>
                 <Field
                     name="password2"
                     style={styles.input}
@@ -56,7 +56,7 @@ const CreateAccountNext = (props) => {
                     component={MyTextInput}
                 />
             </Row>
-            <Row size={0.09}>
+            <Row size={0.19}>
                 <CreateAccountBtn
                     submit={handleSubmit}
                     navigation={navigation}
