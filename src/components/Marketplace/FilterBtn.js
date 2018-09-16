@@ -2,7 +2,7 @@ import React from 'react'
 import {Text, TouchableOpacity, Dimensions} from 'react-native'
 import fonts from '../../theme/styles/Typography.style'
 
-const FilterBtn = () => {
+const FilterBtn = (props) => {
   return (
     <TouchableOpacity style={styles.buttonStyle}>
       <Text style={fonts.filterBtnText}>FILTER</Text>

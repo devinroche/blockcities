@@ -16,15 +16,17 @@ class Filters extends React.Component {
     render() {
         return (
             <Grid>
-                <Row
+                <Row size={1}
                     style={{
                         justifyContent: 'center',
                     }}
                 >
                     <RadioBtns />
                 </Row>
-                <Row style={{
+                <Row size={1} style={{
                         alignItems: 'flex-start',
+                        paddingTop: 0,
+                        marginTop: -40
                     }}>
                     <Col size={1} />
                     <Col size={4}>

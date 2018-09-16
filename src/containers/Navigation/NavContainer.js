@@ -9,14 +9,14 @@ import dark from '../../theme/styles/Navbar.dark.style';
 import { toggleSearch } from '../../redux/search/actions';
 
 const Navbar = (props) => {
-    const { darkMode } = props;
+    const { darkMode, toggleSearch } = props;
     const styles = darkMode ? dark : light;
 
     return (
         <Row size={8} style={[styles.topRow]}>
             <Grid style={[styles.grid, { justifyContent: 'space-between' }]}>
                 <Col style={{paddingLeft: 10}}>
-                    <LeftBtn {...props} />
+                    <LeftBtn {...props} toggleSearch={toggleSearch}/>
                 </Col>
                 <Col>
                     <CenterBtn {...props} />

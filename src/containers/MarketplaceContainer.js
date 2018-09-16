@@ -5,6 +5,7 @@ import Navbar from './Navigation/NavContainer';
 import Footer from './Navigation/FooterContainer';
 import styles from '../theme/styles/Containers.style';
 import MarketplaceLoading from '../components/Marketplace/MarketplaceLoading';
+import MarketSearch from './Navigation/ProfileSearch';
 import Marketplace from '../components/Marketplace/Marketplace';
 import SearchContainer from './Search/SearchContainer';
 import { currentBuilding } from '../redux/building/actions';
@@ -26,12 +27,14 @@ class MarketplaceContainer extends React.Component {
         setTimeout(() => {
             if (showMarketplace === false) this.setState({ showMarketplace: true })
         }, 1500);
-
+        console.log(searchReducer)
         return (
             <Grid style={styles.grid}>
                 <Col size={2} />
                 <Col size={96}>
-                    {searchReducer.showSearch && showMarketplace ? <SearchContainer navigation={navigation} /> : <Navbar navigation={navigation} logo /> }
+                {/* <SearchContainer navigation={navigation} /> */}
+                <MarketSearch navigation={this.props.navigation} logo/>
+                    {/* {searchReducer.showSearch && showMarketplace ? <MarketSearch navigation={this.props.navigation} /> : <Navbar navigation={navigation} logo /> } */}
                     <Row size={90}>
                         {showMarketplace ? <Marketplace updateBuilding={currentBuilding} buildings={buildings} isSearch={searchReducer.showSearch} navigation={navigation} /> : <MarketplaceLoading />}
                     </Row>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Grid } from 'react-native-easy-grid';
-import { Text, View } from 'react-native';
+import { Text, View, Button } from 'react-native';
 import PhotoGrid from 'react-native-image-grid';
 import { connectInfiniteHits } from 'react-instantsearch/connectors';
 import styles from '../../theme/styles/Followers.style';
@@ -38,6 +38,7 @@ class Marketplace extends React.Component {
     }
 
     renderHeader() {
+      if(!this.props.isSearch){
       return (
           <View>
               <Row size={4} style={{alignSelf: 'center'}}>
@@ -48,6 +49,7 @@ class Marketplace extends React.Component {
               </Row>
           </View>
       )
+      }
   }
   
     render() {
@@ -65,7 +67,7 @@ class Marketplace extends React.Component {
                         itemPaddingHorizontal={1}
                         renderItem={this.renderItem}
                     />
-                    {this.props.isSearch ? <FilterBtn/> : ""}
+                    {this.props.isSearch ? <FilterBtn />: ""}
                 </Row>
             </Grid>
         );

@@ -1,4 +1,4 @@
-import { TOGGLE_SEARCH, UPDATE_BUILDINGS, TOGGLE_PROFILE_SEARCH, UPDATE_PROFILE_SEARCH } from './types';
+import { TOGGLE_SEARCH, UPDATE_BUILDINGS, TOGGLE_PROFILE_SEARCH, UPDATE_PROFILE_SEARCH, UPDATE_MARKET_SEARCH } from './types';
 
 export const toggleSearch = () => ({
     type: TOGGLE_SEARCH,
@@ -7,6 +7,11 @@ export const toggleSearch = () => ({
 export const toggleProfileSearch = () => ({
   type: TOGGLE_PROFILE_SEARCH,
 });
+
+export const updateMarketSearch = (searchStr) => ({
+  type: UPDATE_MARKET_SEARCH,
+  marketSearchStr: searchStr
+})
 
 export const updateProfileSearch = (searchStr) => ({
   type: UPDATE_PROFILE_SEARCH,

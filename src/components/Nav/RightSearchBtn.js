@@ -1,8 +1,8 @@
 import React from 'react';
 import { TouchableOpacity, Image } from 'react-native';
+import { ClearAll, RefinementList, InstantSearch } from 'react-instantsearch/dom';
 import styles from '../../theme/styles/Icon.style';
 import xbtn from '../../../assets/img/xbtn.png';
-
 
 const RightSearchBtn = ({ navigation, darkMode }) => {
     const style = darkMode ? styles.dark : styles.light;
