@@ -5,6 +5,7 @@ const initialState = {
     showProfileSearch: false,
     loginErr: false,
     profileSearchStr: '',
+    showFilters: false,
     marketSearchStr: ''
 };
 

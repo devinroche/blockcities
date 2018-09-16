@@ -9,6 +9,7 @@ import font from '../../theme/styles/Typography.style';
 import LimitedEdition from './LimitedEdition';
 import Filters from './Filters';
 import FilterBtn from './FilterBtn';
+import FilterView from './FilterView';
 
 class Marketplace extends React.Component {
     constructor(props) {
@@ -67,7 +68,7 @@ class Marketplace extends React.Component {
                         itemPaddingHorizontal={1}
                         renderItem={this.renderItem}
                     />
-                    {this.props.isSearch ? <FilterBtn />: ""}
+                    {this.props.isSearch ? <FilterBtn toggleFilters={this.props.toggleFilters} />: ""}
                 </Row>
             </Grid>
         );
