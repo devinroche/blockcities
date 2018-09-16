@@ -5,7 +5,7 @@ import Navbar from './Navigation/NavContainer';
 import Footer from './Navigation/FooterContainer';
 import styles from '../theme/styles/Containers.style';
 import MarketplaceLoading from '../components/Marketplace/MarketplaceLoading';
-import MarketSearch from './Navigation/ProfileSearch';
+import MarketSearch from './Navigation/MarketSearch';
 import Marketplace from '../components/Marketplace/Marketplace';
 import SearchContainer from './Search/SearchContainer';
 import { currentBuilding } from '../redux/building/actions';
@@ -22,19 +22,16 @@ class MarketplaceContainer extends React.Component {
     render() {
         const { showMarketplace } = this.state
         const { navigation, searchReducer, buildingReducer, currentBuilding } = this.props;
-        const buildings = (searchReducer.showSearch && searchReducer.data && searchReducer.data.length > 0) ? searchReducer.data : buildingReducer.buildingList;
-
+        const buildings = searchReducer.showSearch ? buildingReducer.buildingList.filter(el => el.Name.toLowerCase().indexOf(searchReducer.marketSearchStr.toLowerCase()) > -1) : buildingReducer.buildingList;
         setTimeout(() => {
             if (showMarketplace === false) this.setState({ showMarketplace: true })
         }, 1500);
-        console.log(searchReducer)
+
         return (
             <Grid style={styles.grid}>
                 <Col size={2} />
                 <Col size={96}>
-                {/* <SearchContainer navigation={navigation} /> */}
-                <MarketSearch navigation={this.props.navigation} logo/>
-                    {/* {searchReducer.showSearch && showMarketplace ? <MarketSearch navigation={this.props.navigation} /> : <Navbar navigation={navigation} logo /> } */}
+                <MarketSearch navigation={this.props.navigation} isSearch={searchReducer.showSearch} logo/>
                     <Row size={90}>
                         {showMarketplace ? <Marketplace updateBuilding={currentBuilding} buildings={buildings} isSearch={searchReducer.showSearch} navigation={navigation} /> : <MarketplaceLoading />}
                     </Row>

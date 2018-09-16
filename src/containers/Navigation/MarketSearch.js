@@ -19,7 +19,7 @@ const MarketSearch = (props) => {
       width: '100%',
       height: '100%',
   };
-  console.log("FARt: ", props)
+
     return (
         <Row size={8} style={[styles.topRow]}>
             <Grid style={[styles.grid, { justifyContent: 'space-between' }]}>
@@ -27,7 +27,7 @@ const MarketSearch = (props) => {
                     <LeftBtn {...props} toggleSearch={toggleSearch}/>
                 </Col>
                 <Col size={80}>
-                { showSearch ? <TextInput
+                { props.isSearch ? <TextInput
                     style={istyle}
                     textAlign={'center'}
                     onChangeText={text => updateMarketSearch(text)}
@@ -40,7 +40,7 @@ const MarketSearch = (props) => {
                 /> : <CenterBtn {...props} /> }
                 </Col>
                 <Col size={10} style={{paddingRight: 10}}>
-                {showMarket ? <ClearBtn clearSearch={props.updateMarketSearch} />: <RightBtn {...props} /> }
+                {props.isSearch ? <ClearBtn clearSearch={props.updateMarketSearch} />: <RightBtn {...props} /> }
                 </Col>
             </Grid>
         </Row>
@@ -52,9 +52,11 @@ const mapDispatchToProps = {
     updateMarketSearch
 };
 
-const mapStateToProps = state => ({
-  showSearch: state.searchReducer.showSearch,
-  marketSearchStr: state.searchReducer.marketSearchStr
-})
+const mapStateToProps = state => {
+  return {
+    showSearch: state.searchReducer.showSearch,
+    marketSearchStr: state.searchReducer.marketSearchStr
+  }
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(MarketSearch);

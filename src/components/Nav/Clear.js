@@ -4,12 +4,8 @@ import xbtn from '../../../assets/img/xbtn.png';
 
 const ClearBtn = ({ navigation, profile, clearSearch }) => {
     return (
-        <TouchableOpacity onPress={() => {
-            clearSearch('');
-            // navigation.goBack();
-        }}
-        >
-            <Image source={xbtn} style={{width: 15, height: 15}}/>
+        <TouchableOpacity onPress={() => {clearSearch('')}}>
+            <Image source={xbtn} style={{width: 15, height: 15, alignSelf: 'flex-end'}}/>
         </TouchableOpacity>
     );
 };
