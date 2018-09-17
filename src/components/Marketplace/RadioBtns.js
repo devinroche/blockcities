@@ -40,6 +40,7 @@ class RadioBtns extends React.Component {
                             paddingVertical: 0,
                             marginVertical: 0,
                             justifyContent: 'center',
+                            alignItems: 'center',
                             height: 45,
                             width: 110
                         }}
