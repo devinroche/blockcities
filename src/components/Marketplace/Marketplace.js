@@ -40,16 +40,16 @@ class Marketplace extends React.Component {
 
     renderHeader() {
       if(!this.props.isSearch){
-      return (
-          <View>
-              <Row size={4} style={{alignSelf: 'center'}}>
-                  <LimitedEdition navigation={this.props.navigation} />
-              </Row>
-              <Row size={4} style={{paddingVertical: 10, paddingLeft: 20}}>
-                  <Text style={font.buildingHead}>Hall of Fame &#127941;</Text>
-              </Row>
-          </View>
-      )
+        return (
+            <View>
+                <Row size={4} style={{alignSelf: 'center'}}>
+                    <LimitedEdition navigation={this.props.navigation} />
+                </Row>
+                <Row size={4} style={{paddingVertical: 10, paddingLeft: 20}}>
+                    <Text style={font.buildingHead}>Hall of Fame &#127941;</Text>
+                </Row>
+            </View>
+        )
       }
   }
   

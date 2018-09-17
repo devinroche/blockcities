@@ -62,4 +62,7 @@ export const images2load = [
     'https://res.cloudinary.com/devinroche/image/upload/v1534455385/buildings/Group_1_6.png',
     'https://res.cloudinary.com/devinroche/image/upload/v1534455384/buildings/equitable-2.png',
     'https://res.cloudinary.com/devinroche/image/upload/v1534455384/buildings/56-leonard-2.png',
+    'https://res.cloudinary.com/devinroche/image/upload/v1537208858/better-buildings/term_100.png',
+    'https://res.cloudinary.com/devinroche/image/upload/v1537208858/better-buildings/term_200.png',
+    'https://res.cloudinary.com/devinroche/image/upload/v1537208858/better-buildings/term_10.png'
 ]

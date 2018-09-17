@@ -1,0 +1,32 @@
+export const includedBuildings = [
+  {
+    Name : "Terminus 100",
+    ImageURL : "https://res.cloudinary.com/devinroche/image/upload/v1537208858/better-buildings/term_100.png",
+    Color : "ffedc1",
+    City: "Atlanta",
+    Built : "2007",
+    Height : "485",
+    Architect : "Duda/Paine Architects, LLP HKS, Inc.",
+    Summary : "Terminus 100, at the corner of Peachtree Road and Piedmont Road, is the tallest building in Terminus, and is the 18th-tallest building in Atlanta.",
+  },
+  {
+    Name : "10 Terminus",
+    ImageURL : "https://res.cloudinary.com/devinroche/image/upload/v1537208858/better-buildings/term_10.png",
+    Color : "ffedc1",
+    City: "Atlanta",
+    Built : "2008",
+    Height : "411",
+    Architect : "Cooper Carry, Inc. Duda/Paine Architects, LLP",
+    Summary : "10 Terminus Place, the residential component of the complex, is a condominium tower with 32 floors.",
+  },
+  {
+    Name : "Terminus 200",
+    ImageURL : "https://res.cloudinary.com/devinroche/image/upload/v1537208858/better-buildings/term_200.png",
+    Color : "ffedc1",
+    City: "Atlanta",
+    Built : "2009",
+    Height : "282",
+    Architect : "Duda/Paine Architects, LLP HKS, Inc.",
+    Summary : "Estimated construction costs are expected to total $172.5 million.",
+  },
+]

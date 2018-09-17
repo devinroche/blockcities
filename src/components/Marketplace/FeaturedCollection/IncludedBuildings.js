@@ -2,23 +2,24 @@ import React from 'react';
 import { Row } from 'react-native-easy-grid';
 import { Text, Image, View, TouchableOpacity } from 'react-native';
 import font from '../../../theme/styles/Typography.style';
-import term_100 from '../../../../assets/img/term_100.png';
-import term_10 from '../../../../assets/img/term_10.png';
-import term_200 from '../../../../assets/img/term_200.png';
+import {includedBuildings} from './IncludedBuildingsData'
 
 //updateBuilding(el)
-const IncludedBuildings = () => (
+const IncludedBuildings = ({currentBuilding, navigation}) => (
   <View style={{backgroundColor: '#ffffff'}}>
-    {includedBuildingsData.map((el, i) => (
-        <TouchableOpacity key={i}>
-            <Row size={1} style={{ justifyContent: 'center' }}>
-                <Image source={el.img} resizeMode="contain" style={{ width: 360, height: 480 }} />
+    {includedBuildings.map((el, i) => (
+        <TouchableOpacity key={i} onPress={() => {
+          currentBuilding(el)
+          navigation.navigate('BuildingPage')
+          }} style={{marginBottom: 40}}>
+            <Row size={2} style={{ justifyContent: 'center', paddingBottom: 5}}>
+              <Image source={{uri: el.ImageURL}} resizeMode="cover" style={{ width: 360, height: 480, borderRadius: 7 }} />
             </Row>
-            <Row size={1} style={{ justifyContent: 'center' }}>
-                <Text style={font.title}>{el.name}</Text>
+            <Row size={1} style={{ justifyContent: 'center', paddingTop: 5 }}>
+                <Text style={font.title}>{el.Name}</Text>
             </Row>
-            <Row size={1} style={{ justifyContent: 'center', paddingBottom: 20 }}>
-                <Text style={font.featurePrice}>{el.details}</Text>
+            <Row size={2} style={{ justifyContent: 'center', paddingTop: 5 }}>
+                <Text style={font.featurePrice}>`Era 0 - {el.City} - Instant Build`</Text>
             </Row>
         </TouchableOpacity>
     ))}
@@ -26,21 +27,3 @@ const IncludedBuildings = () => (
 );
 
 export default IncludedBuildings;
-
-const includedBuildingsData = [
-    {
-        name: 'Terminus 100',
-        img: term_100,
-        details: 'Era 0 - Atlanta - Instant Build',
-    },
-    {
-        name: '10 Terminus',
-        img: term_10,
-        details: 'Era 0 - Atlanta - Instant Build',
-    },
-    {
-        name: 'Terminus 200',
-        img: term_200,
-        details: 'Era 0 - Atlanta - Instant Build',
-    },
-];

@@ -6,7 +6,7 @@ import BackContainer from './Navigation/BackContainer';
 import Footer from './Navigation/FooterContainer';
 import styles from '../theme/styles/Profile.style';
 import FeaturedCollection from '../components/Marketplace/FeaturedCollection/FeaturedCollection';
-import {toggleHeaderColor} from '../redux/building/actions';
+import {toggleHeaderColor, currentBuilding} from '../redux/building/actions';
 
 const FeaturedContainer = props => {
   return (
@@ -29,6 +29,8 @@ const mapStateToProps = state => (
 );
 
 const mapDispatchToProps = {
-  toggleHeaderColor
+  toggleHeaderColor,
+  currentBuilding,
 }
+
 export default connect(mapStateToProps, mapDispatchToProps)(FeaturedContainer);
