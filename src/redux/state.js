@@ -6,7 +6,9 @@ const initialState = {
     loginErr: false,
     profileSearchStr: '',
     showFilters: false,
-    marketSearchStr: ''
+    marketSearchStr: '',
+    cityFilter: '',
+    buildingModal: false
 };
 
 export default initialState;

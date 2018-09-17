@@ -125,10 +125,23 @@ export default StyleSheet.create({
         color: '#7294e8',
     },
     filterBtnText: {
-        fontFamily: theme.FONT_DEMI,
+        fontFamily: theme.FONT_MEDIUM,
         fontSize: 14,
         letterSpacing: 1,
         lineHeight: 16,
         color: '#ffffff',
+    },
+    eraBtnText: {
+      fontFamily: theme.FONT_MEDIUM,
+      fontSize: 14,
+      textAlign: 'center',
+      color: '#828282',
+    },
+    filterHeaderText: {
+      fontFamily: theme.FONT_MEDIUM,
+      fontSize: 18,
+      textAlign: 'center',
+      color: '#000000',
+      letterSpacing: 0.25,
     }
 });

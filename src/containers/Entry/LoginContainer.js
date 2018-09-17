@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Grid } from 'react-native-easy-grid';
+import {Keyboard} from 'react-native'
 import { connect } from 'react-redux';
 import styles from '../../theme/styles/Containers.style';
 import Login from '../../components/Login/Login';
@@ -26,6 +27,7 @@ const LoginContainer = (props) => {
                 navigation={navigation}
                 showErrorText={loginErr}
                 onSubmit={async (values) => {
+                    Keyboard.dismiss()
                     await submitHelper(values)
                     await navHelper()
                 }}

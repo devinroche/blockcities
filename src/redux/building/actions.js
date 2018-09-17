@@ -1,5 +1,5 @@
 import {
-    BUILDINGS_PENDING, BUILDINGS_SUCCESS, BUILDINGS_ERROR, CURR_BUILDING, HEADER_COLOR
+    BUILDINGS_PENDING, BUILDINGS_SUCCESS, BUILDINGS_ERROR, CURR_BUILDING, HEADER_COLOR, TOGGLE_IMG_MODAL
 } from './types';
 
 export const getBuildings = () => ({
@@ -11,6 +11,10 @@ export const getBuildings = () => ({
         },
     },
 });
+
+export const showBuildingImg = () => ({
+  type: TOGGLE_IMG_MODAL
+})
 
 export const currentBuilding = building => ({
     type: CURR_BUILDING,

@@ -1,4 +1,4 @@
-import { TOGGLE_SEARCH, UPDATE_BUILDINGS, TOGGLE_PROFILE_SEARCH, TOGGLE_FILTERS, UPDATE_PROFILE_SEARCH, UPDATE_MARKET_SEARCH} from './types';
+import { TOGGLE_SEARCH, UPDATE_BUILDINGS, UPDATE_CITY, TOGGLE_PROFILE_SEARCH, TOGGLE_FILTERS, UPDATE_PROFILE_SEARCH, UPDATE_MARKET_SEARCH} from './types';
 import initialState from '../state';
 
 const searchReducer = (state = initialState, action) => {
@@ -20,6 +20,12 @@ const searchReducer = (state = initialState, action) => {
           ...state,
           marketSearchStr: action.marketSearchStr,
         };
+
+      case UPDATE_CITY:
+        return {
+          ...state,
+          cityFilter: action.city
+        }
 
       case TOGGLE_PROFILE_SEARCH:
         return {

@@ -8,7 +8,7 @@ import LeftBtn from '../../components/Nav/LeftBtn';
 import CenterBtn from '../../components/Nav/CenterBtn';
 import light from '../../theme/styles/Navbar.light.style';
 import dark from '../../theme/styles/Navbar.dark.style';
-import { toggleSearch, updateMarketSearch } from '../../redux/search/actions';
+import { toggleSearch, updateMarketSearch, updateCityFilter} from '../../redux/search/actions';
 
 const MarketSearch = (props) => {
     const { darkMode, showSearch, toggleSearch, updateMarketSearch } = props;
@@ -19,6 +19,11 @@ const MarketSearch = (props) => {
       width: '100%',
       height: '100%',
   };
+
+  const clearSearch = () => {
+    props.updateCityFilter('')
+    props.updateMarketSearch('')
+  }
 
     return (
         <Row size={8} style={[styles.topRow]}>
@@ -40,7 +45,7 @@ const MarketSearch = (props) => {
                 /> : <CenterBtn {...props} /> }
                 </Col>
                 <Col size={10} style={{paddingRight: 10}}>
-                {props.isSearch ? <ClearBtn clearSearch={props.updateMarketSearch} />: <RightBtn {...props} /> }
+                {props.isSearch ? <ClearBtn clearSearch={clearSearch} />: <RightBtn {...props} /> }
                 </Col>
             </Grid>
         </Row>
@@ -49,7 +54,8 @@ const MarketSearch = (props) => {
 
 const mapDispatchToProps = {
     toggleSearch,
-    updateMarketSearch
+    updateMarketSearch,
+    updateCityFilter
 };
 
 const mapStateToProps = state => {

@@ -1,5 +1,5 @@
 import {
-    BUILDINGS_PENDING, BUILDINGS_SUCCESS, BUILDINGS_ERROR, CURR_BUILDING, HEADER_COLOR
+    BUILDINGS_PENDING, BUILDINGS_SUCCESS, BUILDINGS_ERROR, CURR_BUILDING, HEADER_COLOR, TOGGLE_IMG_MODAL
 } from './types';
 import initialState from '../state';
 
@@ -11,6 +11,12 @@ const buildingReducer = (state = initialState, action) => {
             buildingList: action.payload.data,
             userBuildings: randArr(action.payload.data)
         };
+
+    case TOGGLE_IMG_MODAL:
+      return {
+        ...state,
+        buildingModal: !state.buildingModal
+      }
 
     case CURR_BUILDING:
         return {

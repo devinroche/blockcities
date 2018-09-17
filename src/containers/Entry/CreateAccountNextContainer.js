@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Grid } from 'react-native-easy-grid';
+import {Keyboard} from 'react-native'
 import { connect } from 'react-redux';
 import styles from '../../theme/styles/Containers.style';
 import CreateAccountNext from '../../components/CreateAccount/CreateAccountNext';
@@ -14,6 +15,7 @@ const CreateAccountNextContainer = (props) => {
                 navigation={navigation}
                 onSubmit={(values) => {
                     sendUserInfo(values);
+                    Keyboard.dismiss()
                     navigation.navigate('Home');
                 }}
             />
