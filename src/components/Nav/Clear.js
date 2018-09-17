@@ -1,6 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, Image } from 'react-native';
-import xbtn from '../../../assets/img/xbtn.png';
+// import xbtn from '../../../assets/img/xbtn.png';
+import XBtn from '../SVGS/XBtn'
 
 const ClearBtn = ({ navigation, profile, clearSearch}) => {
     return (
@@ -8,7 +9,8 @@ const ClearBtn = ({ navigation, profile, clearSearch}) => {
           clearSearch('')
           
         }}>
-            <Image source={xbtn} style={{width: 15, height: 15, alignSelf: 'flex-end'}}/>
+            {/* <Image source={xbtn} style={{width: 15, height: 15, alignSelf: 'flex-end'}}/> */}
+            <XBtn />
         </TouchableOpacity>
     );
 };

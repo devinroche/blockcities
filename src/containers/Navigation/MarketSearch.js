@@ -44,8 +44,8 @@ const MarketSearch = (props) => {
                     autoCapitalize="none"
                 /> : <CenterBtn {...props} /> }
                 </Col>
-                <Col size={10} style={{paddingRight: 10}}>
-                {props.isSearch ? <ClearBtn clearSearch={clearSearch} />: <RightBtn {...props} /> }
+                <Col size={10} style={{paddingRight: 10, alignItems: 'flex-end'}}>
+                  {props.isSearch ? <ClearBtn clearSearch={clearSearch} />: <RightBtn {...props} /> }
                 </Col>
             </Grid>
         </Row>

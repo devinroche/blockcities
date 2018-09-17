@@ -15,7 +15,7 @@ const BackContainer = props => {
                 <Back {...props} />
             </Col>
             <Col size={60}>
-                {props.logo ? <CenterBtn {...props} /> : <Text style={[typography.pageTitle, {textAlign: 'center'}]}>Settings</Text>}
+                {props.is_logo ? <CenterBtn {...props} /> : <Text style={[typography.pageTitle, {textAlign: 'center'}]}>Settings</Text>}
             </Col>
             <Col size={20} />
         </Grid>

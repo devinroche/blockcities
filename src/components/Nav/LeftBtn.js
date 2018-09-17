@@ -1,6 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, Image } from 'react-native';
 import searchIcon from '../../../assets/img/search.png';
+import Search from '../SVGS/Search'
 
 const LeftBtn = ({ navigation, toggleSearch, profile}) => {
     return (
@@ -9,7 +10,7 @@ const LeftBtn = ({ navigation, toggleSearch, profile}) => {
             profile ? null : navigation.navigate('Marketplace');
         }}
         >
-            <Image source={searchIcon} />
+            <Search />
         </TouchableOpacity>
     );
 };

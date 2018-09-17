@@ -22,7 +22,7 @@ class BuildingContainer extends React.Component {
           <Row size={75}>
               <Col size={5} />
               <Col size={90}>
-                  <CloseContainer navigation={this.props.navigation} logo/>
+                  <CloseContainer navigation={this.props.navigation} is_logo/>
                   <Row size={94}>
                       <BuildingPage navigation={this.props.navigation} item={this.props.currentBuilding} clickHandler={this.props.showBuildingImg}/>
                   </Row>

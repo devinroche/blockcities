@@ -42,7 +42,7 @@ class MarketplaceContainer extends React.Component {
             <Grid style={styles.grid}>
                 <Col size={2} />
                 <Col size={96}>
-                <MarketSearch navigation={this.props.navigation} isSearch={showSearch} logo/>
+                <MarketSearch navigation={this.props.navigation} isSearch={showSearch} is_logo/>
                     <Row size={90}>
                         {showMarketplace ? <Marketplace updateBuilding={currentBuilding} toggleFilters={toggleFilters} buildings={buildings} isSearch={showSearch} navigation={navigation} /> : <MarketplaceLoading />}
                     </Row>

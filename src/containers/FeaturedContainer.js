@@ -13,7 +13,7 @@ const FeaturedContainer = props => {
     <Grid style={styles.grid}>
         <Row size={75}>
             <Col size={100}>
-                {props.isGrey ? <BackContainer navigation={props.navigation} logo isGrey/> :<BackContainer navigation={props.navigation} logo/>}
+                {props.isGrey ? <BackContainer navigation={props.navigation} is_logo isGrey/> :<BackContainer navigation={props.navigation} is_logo/>}
                 <Row size={94}>
                     <FeaturedCollection {...props}/>
                 </Row>
