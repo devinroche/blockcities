@@ -15,8 +15,8 @@ const CreateAccount = (props) => {
     } = props;
     return (
         <Grid style={styles.container}>
-            <Row size={0.15} />
-            <Row size={0.15}>
+            <Row size={0.05} />
+            <Row size={0.15} style={{justifyContent: 'center'}}>
                 <Col size={0.75} style={styles.align}>
                     <Text style={styles.text}>Create Account to Play</Text>
                 </Col>
@@ -32,7 +32,7 @@ const CreateAccount = (props) => {
                     source={loginImage}
                 />
             </Row>
-            <Row size={0.17}>
+            <Row size={0.14}>
                 <Field
                     name="name"
                     style={styles.input}
@@ -41,7 +41,7 @@ const CreateAccount = (props) => {
                     placeholder="Name"
                 />
             </Row>
-            <Row size={0.17}>
+            <Row size={0.14}>
                 <Field
                     name="email"
                     style={styles.input}

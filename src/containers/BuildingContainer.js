@@ -16,7 +16,6 @@ class BuildingContainer extends React.Component {
     }
     
     render(){
-
       return (
         <Grid style={styles.grid}>
           <Row size={75}>
@@ -29,7 +28,7 @@ class BuildingContainer extends React.Component {
               </Col>
               <Col size={5} />
           </Row>
-          <Modal isOpen={this.props.buildingModal} style={stylez(this.props.currentBuilding.Color).modal} onClosed={this.props.showBuildingImg} backdrop={false} swipeToClose={true} position={"bottom"} ref={"modal2"}>
+          <Modal isOpen={this.props.buildingModal} style={stylez(this.props.currentBuilding.Color).modal} onClosed={this.props.showBuildingImg} backdrop={true} backdropOpacity={.8} swipeToClose={true} position={"bottom"} ref={"modal2"}>
               <BuildingModal current={this.props.currentBuilding}/>
           </Modal>
       </Grid>
@@ -49,12 +48,9 @@ export default connect(mapStateToProps, mapDispatchToProps)(BuildingContainer);
 
 const stylez = (background) => StyleSheet.create({
   modal: {
-    height: 660,
+    height: 685,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
-    shadowOffset: { width: 0, height: -5 },
-    shadowOpacity: 0.15,
-    shadowRadius: 10,
     width: '100%',
     backgroundColor: `#${background}`,
   },

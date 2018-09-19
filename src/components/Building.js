@@ -16,6 +16,7 @@ class Building extends React.Component {
         const { item, updateBuilding, redirect } = this.props;
         return (
             <TouchableOpacity
+                activeOpacity={1}
                 style={style.touch}
                 onPress={() => {
                     updateBuilding(item);

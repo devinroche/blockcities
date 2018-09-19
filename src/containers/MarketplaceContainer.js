@@ -26,11 +26,12 @@ class MarketplaceContainer extends React.Component {
         const {marketSearchStr, cityFilter, showFilters, showSearch} = searchReducer
 
         const buildings = showSearch ? (
-          buildingReducer.buildingList.filter(el => (
-            el.Name.toLowerCase().indexOf(marketSearchStr.toLowerCase()) > -1) && (
-              el.City.toLowerCase().indexOf(cityFilter.toLowerCase()) > -1
-            )) )
-          : (buildingReducer.buildingList)
+          buildingReducer.buildingList.filter(el => {
+            let nameMatch = el.Name.toLowerCase().indexOf(marketSearchStr.toLowerCase()) > -1
+            let cityTextMatch = el.City.toLowerCase().indexOf(marketSearchStr.toLowerCase()) > -1
+            let cityFilterMatch = el.City.toLowerCase().indexOf(cityFilter.toLowerCase()) > -1
+            return ((nameMatch || cityTextMatch) && cityFilterMatch)
+          })) : (buildingReducer.buildingList)
 
         setTimeout(() => {
             if (showMarketplace === false) this.setState({ showMarketplace: true })

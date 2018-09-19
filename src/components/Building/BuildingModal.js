@@ -7,9 +7,9 @@ const BuildingModal = ({current}) => {
     return (
       <View>
         <View style={{width: 76, height: 4, marginTop: 15, marginBottom: 5, backgroundColor: '#ffffff', borderRadius: 2, alignSelf: 'center'}}/>
-      <View style={{justifyContent: 'center', alignItems: 'center', width: '100%', height: '100%'}}>
+      <View style={{justifyContent: 'center', width: '100%', height: '100%'}}>
         <Image
-            style={{width: 475, height: 575, alignSelf: 'center'}}
+            style={{width: 400, height: 500, marginTop: -100}}
             source={{ uri: ImageURL }}
             resizeMode="contain"
         />

@@ -1,7 +1,7 @@
 export const includedBuildings = [
   {
     Name : "Terminus 100",
-    ImageURL : "https://res.cloudinary.com/devinroche/image/upload/v1537208858/better-buildings/term_100.png",
+    ImageURL : "https://res.cloudinary.com/devinroche/image/upload/v1537396688/term_100.png",
     Color : "ffedc1",
     City: "Atlanta",
     Built : "2007",
@@ -11,7 +11,7 @@ export const includedBuildings = [
   },
   {
     Name : "10 Terminus",
-    ImageURL : "https://res.cloudinary.com/devinroche/image/upload/v1537208858/better-buildings/term_10.png",
+    ImageURL : "https://res.cloudinary.com/devinroche/image/upload/v1537396693/term_10.png",
     Color : "ffedc1",
     City: "Atlanta",
     Built : "2008",
@@ -21,7 +21,7 @@ export const includedBuildings = [
   },
   {
     Name : "Terminus 200",
-    ImageURL : "https://res.cloudinary.com/devinroche/image/upload/v1537208858/better-buildings/term_200.png",
+    ImageURL : "https://res.cloudinary.com/devinroche/image/upload/v1537396687/term_200.png",
     Color : "ffedc1",
     City: "Atlanta",
     Built : "2009",

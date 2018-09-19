@@ -22,7 +22,7 @@ const LoginContainer = (props) => {
     };
     return (
         <Grid style={styles.grid}>
-            <Row size={0.25} />
+            <Row size={0.1} />
             <Login
                 navigation={navigation}
                 showErrorText={loginErr}

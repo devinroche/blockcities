@@ -5,7 +5,7 @@ import {
 } from 'react-native';
 import styles from '../../theme/styles/Settings.style';
 import font from '../../theme/styles/Typography.style';
-import avatar from '../../../assets/img/avataaars.png';
+import avatar from '../../../assets/img/pa.png';
 import PushNotification from './PushNotification';
 import UpdateEmail from './UpdateEmail';
 import LogoutBtn from './LogoutBtn';
@@ -18,10 +18,10 @@ const Settings = user => (
                 source={avatar}
             />
         </Row>
-        <Row size={0.5}>
+        <Row size={0.4}>
             <Text style={font.bold}>@{user.Username}</Text>
         </Row>
-        <Row size={0.5}>
+        <Row size={0.4}>
             <Text style={font.normal}>{user.Name}</Text>
         </Row>
         <Line />

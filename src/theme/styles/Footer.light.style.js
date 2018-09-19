@@ -4,7 +4,8 @@ import theme from '../theme';
 export default StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: 'flex-start',
+        paddingBottom: 12,
+        alignItems: 'flex-end',
     },
     grid: {
         flex: 1,

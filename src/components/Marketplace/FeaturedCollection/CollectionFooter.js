@@ -14,10 +14,10 @@ const CollectionFooter = () => (
         }}
         >
             <View style={{
-                width: 160, shadowColor: '#000000', shadowOpacity: 0.2, shadowRadius: 6, height: 180, backgroundColor: '#E6F5FF', flex: 1, justifyContent: 'center', alignSelf: 'center',
+                width: 175, height: 175, shadowColor: '#000000', shadowOpacity: 0.2, shadowRadius: 6, backgroundColor: '#E6F5FF', borderRadius: 7, justifyContent: 'center', alignSelf: 'center',
             }}
             >
-                <Image source={tc} resizeMode="contain" style={{ width: 180, height: 160, alignSelf: 'center' }} />
+                <Image source={tc} resizeMode="contain" style={{ width: 145, height: 112, alignSelf: 'center' }} />
             </View>
         </Row>
         <Row size={1} style={{ paddingTop: 20, justifyContent: 'center' }}>

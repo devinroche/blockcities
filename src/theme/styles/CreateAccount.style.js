@@ -7,8 +7,8 @@ export default StyleSheet.create({
         alignItems: 'center',
     },
     img: {
-        width: 85,
-        height: 85,
+        width: 126,
+        height: 100,
     },
     text: {
         color: theme.BLACK_TEXT,

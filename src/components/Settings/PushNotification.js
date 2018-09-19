@@ -8,7 +8,7 @@ const PushNotification = () => (
     <Row size={1.5} style={styles.pillContainer}>
         <Grid>
             <Row>
-                <Col size={2}>
+                <Col size={2.5}>
                     <Row size={.5}>
                         <Text style={font.strong}>Push Notifications</Text>
                     </Row>
@@ -16,8 +16,9 @@ const PushNotification = () => (
                         <Text style={[font.info, {flexWrap: 'wrap'}]}>Enable this setting to get updates and notifications from BlockCities</Text>
                     </Row>
                 </Col>
-                <Col size={1} style={styles.container}>
-                    <Switch />
+                <Col size={.5}/>
+                <Col size={.5} style={[styles.container]}>
+                    <Switch style={{alignSelf: 'flex-end'}} />
                 </Col>
             </Row>
             {/* <Row size={1}>

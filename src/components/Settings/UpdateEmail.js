@@ -24,10 +24,9 @@ const UpdateEmail = () => (
                 <Col size={1.75}>
                     <Text style={font.info}>Verify your new email.</Text>
                 </Col>
-                <Col size={1.25}>
+                <Col size={1.35}>
                     <TouchableOpacity
-                        // onPress={}
-                        style={[styles.smallButton, {width: '100%'}]}
+                        style={[styles.smallButton, {width: '100%', paddingHorizontal: 9}]}
                     >
                         <Text style={[font.light, {fontSize: 10}]}>Send Verification Email</Text>
                     </TouchableOpacity>

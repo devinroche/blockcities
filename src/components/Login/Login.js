@@ -15,13 +15,13 @@ import NoAccountBtn from './NoAccountBtn';
 const Login = (props) => {
     const { navigation, handleSubmit, showErrorText } = props;
     return (
-        <Grid style={styles.container}>
+        <Grid style={[styles.container]}>
             <Image
-                style={styles.img}
+                style={[styles.img]}
                 source={loginImage}
             />
-            <Row size={0.1}/>
-            <Row size={0.1}>{showErrorText ? <Text style={font.errorStrong}>Wrong Username or Password</Text> : <View/> }</Row>
+            <Row size={0.05}/>
+            <Row size={0.05}>{showErrorText ? <Text style={font.errorStrong}>Wrong Username or Password</Text> : <View/> }</Row>
             <Row size={0.1}>
                 <Field
                     name="username"
@@ -32,7 +32,7 @@ const Login = (props) => {
                     placeholder="Username"
                 />
             </Row>
-            <Row size={0.05} />
+            <Row size={0.03} />
             <Row size={0.1}>
                 <Field
                     name="password"
@@ -43,7 +43,7 @@ const Login = (props) => {
                     component={MyTextInput}
                 />
             </Row>
-            <Row size={0.05} />
+            <Row size={0.03} />
             <LoginBtn
                 submit={handleSubmit}
                 navigation={navigation}

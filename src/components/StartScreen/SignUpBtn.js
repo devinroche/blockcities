@@ -6,15 +6,12 @@ import font from '../../theme/styles/Typography.style';
 
 const SignUpBtn = ({ navigation }) => (
     <React.Fragment>
-        <Col size={0.1} />
-        <Col size={1.5}>
             <TouchableOpacity
                 onPress={() => navigation.navigate('CreateAccount')}
-                style={styles.largeButton}
+                style={[styles.largeButton, {height: 50}]}
             >
                 <Text style={[styles.whiteText, font.btnText]}>Sign Up</Text>
             </TouchableOpacity>
-        </Col>
     </React.Fragment>
 );
 

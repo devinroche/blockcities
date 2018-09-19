@@ -7,8 +7,8 @@ export default StyleSheet.create({
         alignItems: 'center',
     },
     img: {
-        width: 275,
-        height: 275,
+        width: 280,
+        height: 291,
     },
     grid: {
         flex: 1,

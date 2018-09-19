@@ -9,7 +9,7 @@ import typography from '../../theme/styles/Typography.style';
 const BackContainer = props => {
   let bg = props.isGrey ? '#f2f2f2' : '#ffffff'
   return (
-    <Row size={10} style={[styles.topRow,  {backgroundColor : bg}]}>
+    <Row size={8} style={[styles.topRow,  {backgroundColor : bg}]}>
         <Grid style={[styles.grid, {backgroundColor : bg}]}>
             <Col size={20}>
                 <Back {...props} />

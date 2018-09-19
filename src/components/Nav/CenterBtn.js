@@ -12,9 +12,10 @@ const style = {
 };
 const CenterBtn = ({ navigation, user, is_logo }) => {
     let logo = is_logo ? bc_logo : pa
+    let zt = is_logo ? {width: 63, height: 50} : {width: 50, height: 50}
     return (
         <TouchableOpacity style={style.container} onPress={() => navigation.navigate('Profile')}>
-          <Image source={logo} style={{width: 50, height: 50}}/>
+          <Image source={logo} style={zt}/>
         </TouchableOpacity>
     );
 }

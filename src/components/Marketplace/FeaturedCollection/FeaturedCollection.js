@@ -26,7 +26,7 @@ return (
                       <Image source={collection} resizeMode="contain" style={{ width: 360, height: 360 }} />
                   </Row>
                   <Col size={90}>
-                <Row size={2} style={{ paddingBottom: 20, paddingHorizontal: 20, width: Dimensions.get('window').width, backgroundColor: "#ffffff",}}>
+                <Row size={2} style={{ paddingBottom: 20, paddingTop: 50, paddingHorizontal: 20, width: Dimensions.get('window').width, backgroundColor: "#ffffff",}}>
                     <Text style={font.infoFeature}>
                         The Terminus Towers are an iconic set of office and condo buildings set in the heart of Buckhead Atlanta. They’re named after Atlanta’s original name “Terminus,” coined due to the numerous railroad crossings that built Atlanta from a train depot to a bustling Southern city.
                     </Text>
@@ -42,7 +42,7 @@ return (
                 <BuildingFeatures />
                 </View>
                 </Col>
-                <Row size={2} style={{width: Dimensions.get('window').width, backgroundColor: "#F2F2F2", paddingTop: 20}}>
+                <Row size={2} style={{width: Dimensions.get('window').width, backgroundColor: "#F2F2F2", paddingTop: 20, paddingBottom: 20}}>
                   <CollectionFooter />
                 </Row>
             </Grid>
