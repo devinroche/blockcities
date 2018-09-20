@@ -8,7 +8,7 @@ import {includedBuildings} from './IncludedBuildingsData'
 const IncludedBuildings = ({currentBuilding, navigation}) => (
   <View style={{backgroundColor: '#ffffff'}}>
     {includedBuildings.map((el, i) => (
-        <TouchableOpacity key={i} onPress={() => {
+        <TouchableOpacity activeOpacity={1} key={i} onPress={() => {
           currentBuilding(el)
           navigation.navigate('BuildingPage')
           }} style={{marginBottom: 40, justifyContent: 'center'}}>

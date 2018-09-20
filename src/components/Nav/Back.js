@@ -5,7 +5,7 @@ import XBtn from '../SVGS/XBtn'
 
 const BackBtn = ({ navigation, toggleSearch }) => {
     return (
-        <TouchableOpacity onPress={() => navigation.goBack()}>
+        <TouchableOpacity activeOpacity={1} onPress={() => navigation.goBack()}>
             {/* <Image source={xbtn} style={{width: 15, height: 15}}/> */}
             <XBtn />
         </TouchableOpacity>

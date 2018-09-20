@@ -5,7 +5,7 @@ import Search from '../SVGS/Search'
 
 const LeftBtn = ({ navigation, toggleSearch, profile}) => {
     return (
-        <TouchableOpacity onPress={() => {
+        <TouchableOpacity activeOpacity={1} onPress={() => {
             toggleSearch();
             profile ? null : navigation.navigate('Marketplace');
         }}

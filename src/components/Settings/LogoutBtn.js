@@ -7,7 +7,7 @@ import font from '../../theme/styles/Typography.style';
 const LogoutBtn = () => (
     <React.Fragment>
         <Row size={1} style={{marginBottom: -35}}>
-            <TouchableOpacity
+            <TouchableOpacity activeOpacity={1}
                 // onPress={} handles logout btn
                 style={[styles.warningButton, {alignSelf: 'flex-end'}]}
             >

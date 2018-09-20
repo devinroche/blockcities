@@ -13,7 +13,7 @@ const CityBtns = (props) => {
         isSelected = true
       return (
         <Col size={2.5} style={{justifyContent: 'center', alignContent: 'center', height: 60}}>
-            <TouchableOpacity style={[styles.buttonStyle, isSelected && styles.selectedBorder]} onPress={() => props.updateCityFilter(el.value)}>
+            <TouchableOpacity activeOpacity={1} style={[styles.buttonStyle, isSelected && styles.selectedBorder]} onPress={() => props.updateCityFilter(el.value)}>
                 <Text style={{textAlign: 'center'}}>{el.key}</Text>
             </TouchableOpacity>
         </Col>

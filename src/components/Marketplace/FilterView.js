@@ -21,7 +21,7 @@ const FilterView = (props) => {
         <Text style={[fonts.filterHeaderText, {paddingTop: 5}]}>Era</Text>
       </Row>
       <Row size={1.5} style={{justifyContent: 'center'}}>
-        <TouchableOpacity style={{
+        <TouchableOpacity activeOpacity={1} style={{
             width: 80,
             height: 38,
             backgroundColor: '#FFFFFF',
@@ -46,7 +46,7 @@ const FilterView = (props) => {
       </Row>
 
       <Row size={3.5} style={{justifyContent: 'center', alignItems: 'center'}}>
-        <TouchableOpacity style={styles.buttonStyle} onPress={() => props.closeModal() }>
+        <TouchableOpacity activeOpacity={1} style={styles.buttonStyle} onPress={() => props.closeModal() }>
           <Text style={fonts.filterBtnText}>APPLY FILTERS</Text>
         </TouchableOpacity>
       </Row>

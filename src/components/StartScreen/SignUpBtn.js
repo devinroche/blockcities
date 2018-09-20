@@ -6,7 +6,7 @@ import font from '../../theme/styles/Typography.style';
 
 const SignUpBtn = ({ navigation }) => (
     <React.Fragment>
-            <TouchableOpacity
+            <TouchableOpacity activeOpacity={1}
                 onPress={() => navigation.navigate('CreateAccount')}
                 style={[styles.largeButton, {height: 50}]}
             >

@@ -11,6 +11,7 @@ const Followers = ({ profile }) => (
     }}
     >
         <TouchableOpacity
+            activeOpacity={1}
             style={[styles.followBtn, {
 
             }]}

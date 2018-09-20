@@ -10,7 +10,7 @@ const CenterBtn = ({ navigation, darkMode }) => {
     const elColor = darkMode ? "#3258A8" : "#CFD1D4"
 
     return (
-        <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Home')} activeOpacity={1}>
             {/* <Image source={icon} style={{width: 22, height: 19}} /> */}
             <Home color={elColor} />
         </TouchableOpacity>

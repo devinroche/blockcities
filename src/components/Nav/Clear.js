@@ -5,7 +5,7 @@ import XBtn from '../SVGS/XBtn'
 
 const ClearBtn = ({ navigation, profile, clearSearch}) => {
     return (
-        <TouchableOpacity onPress={() => {
+        <TouchableOpacity activeOpacity={1} onPress={() => {
           clearSearch('')
           
         }}>

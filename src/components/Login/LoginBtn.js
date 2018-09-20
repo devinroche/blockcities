@@ -5,6 +5,7 @@ import font from '../../theme/styles/Typography.style';
 
 const LoginBtn = ({ submit }) => (
     <TouchableOpacity
+        activeOpacity={1}
         onPress={submit}
         style={styles.largeButton}
     >

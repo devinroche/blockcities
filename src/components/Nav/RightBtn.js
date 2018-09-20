@@ -9,7 +9,7 @@ const RightBtn = ({ navigation, darkMode }) => {
     const style = darkMode ? styles.dark : styles.light;
 
     return (
-        <TouchableOpacity onPress={() => navigation.navigate('Settings')} style={{alignItems: 'flex-end'}}>
+        <TouchableOpacity activeOpacity={1} onPress={() => navigation.navigate('Settings')} style={{alignItems: 'flex-end'}}>
             <Gear />
         </TouchableOpacity>
     );

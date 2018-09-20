@@ -10,7 +10,7 @@ const LeftBtn = ({ navigation, darkMode, hideSearch, searchShowing }) => {
     const elColor = darkMode ? "#3258A8" : "#CFD1D4"
 
     return (
-        <TouchableOpacity onPress={() => {
+        <TouchableOpacity activeOpacity={1} onPress={() => {
             if(searchShowing) hideSearch()
             navigation.navigate('Marketplace')
         }}>

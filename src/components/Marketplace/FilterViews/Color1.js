@@ -10,7 +10,7 @@ const Color1 = (props) => {
     {colors.map(el => {
       return (
         <Col size={1} style={{justifyContent: 'center', alignContent: 'center', height: 60}}>
-            <TouchableOpacity style={styles.buttonStyle}>
+            <TouchableOpacity activeOpacity={1} style={styles.buttonStyle}>
                 <View style={{
                   backgroundColor: `#${el}`,
                   width: 25,

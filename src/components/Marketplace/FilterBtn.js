@@ -4,7 +4,7 @@ import fonts from '../../theme/styles/Typography.style'
 
 const FilterBtn = (props) => {
   return (
-    <TouchableOpacity style={styles.buttonStyle} onPress={() => props.toggleFilters()}>
+    <TouchableOpacity activeOpacity={1} style={styles.buttonStyle} onPress={() => props.toggleFilters()}>
       <Text style={fonts.filterBtnText}>FILTER</Text>
     </TouchableOpacity>
   )

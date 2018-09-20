@@ -15,7 +15,7 @@ const Color2 = (props) => {
 
       return (
         <Col size={1.2} style={{justifyContent: 'center', alignContent: 'center', height: 60}}>
-            <TouchableOpacity style={styles.buttonStyle}>
+            <TouchableOpacity activeOpacity={1} style={styles.buttonStyle}>
                 <View style={[showBorder ? {borderWidth: 1, borderColor: '#BDBDBD'} : {}, {
                   backgroundColor: `#${el}`,
                   width: 25,

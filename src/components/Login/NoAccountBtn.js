@@ -6,6 +6,7 @@ import font from '../../theme/styles/Typography.style';
 const NoAccountBtn = ({ navigation }) => (
 
     <TouchableOpacity
+        activeOpacity={1}
         onPress={() => navigation.navigate('CreateAccount')}
         style={styles.clearButton}
     >

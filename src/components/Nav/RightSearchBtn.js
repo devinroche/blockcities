@@ -9,7 +9,7 @@ const RightSearchBtn = ({ navigation, darkMode }) => {
     const style = darkMode ? styles.dark : styles.light;
 
     return (
-        <TouchableOpacity onPress={() => console.log("clear search")}>
+        <TouchableOpacity activeOpacity={1} onPress={() => console.log("clear search")}>
             {/* <Image source={xbtn} style={{width: 15, height: 15, alignSelf: "flex-end"}}/> */}
             <XBtn/>
         </TouchableOpacity>

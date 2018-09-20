@@ -24,7 +24,7 @@ class BuildingPage extends React.Component {
             <Transition appear="scale" disappear="bottom">
                 <ScrollView contentContainerStyle={style.body}>
                     <View style={[style.container, { backgroundColor: `#${item.Color}` },]}>
-                        <TouchableOpacity style={style.touch} onPress={() => clickHandler()}>
+                        <TouchableOpacity activeOpacity={1} style={style.touch} onPress={() => clickHandler()}>
                             <Image
                                 style={style.img}
                                 source={{ uri: item.ImageURL }}

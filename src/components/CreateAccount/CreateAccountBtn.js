@@ -7,6 +7,7 @@ import font from '../../theme/styles/Typography.style';
 const CreateAccountBtn = ({ submit, navigation }) => (
     <TouchableOpacity
         onPress={submit}
+        activeOpacity={1}
         style={styles.largeButton}
     >
         <Text style={styles.loginText}>Create Account</Text>

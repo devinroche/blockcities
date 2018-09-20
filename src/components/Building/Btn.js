@@ -5,7 +5,7 @@ import Emoji from 'react-native-emoji';
 
 const Btn = ({ title, unicode }) => (
     <Col size={4}>
-        <TouchableOpacity style={style.container}>
+        <TouchableOpacity style={style.container} activeOpacity={1}>
             <Text style={style.text}><Emoji name={unicode} /> {title}</Text>
         </TouchableOpacity>
     </Col>

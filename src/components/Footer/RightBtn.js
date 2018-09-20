@@ -10,7 +10,7 @@ const RightBtn = ({ navigation, darkMode }) => {
     const elColor = darkMode ? "#3258A8" : "#CFD1D4"
 
     return (
-        <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
+        <TouchableOpacity activeOpacity={1} onPress={() => navigation.navigate('Profile')}>
             {/* <Image source={icon} style={{width: 18, height: 20}} /> */}
             <Profile color={elColor}/>
         </TouchableOpacity>

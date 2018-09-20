@@ -6,6 +6,7 @@ import font from '../../theme/styles/Typography.style';
 const NextBtn = ({ navigation }) => (
 
     <TouchableOpacity
+        activeOpacity={1}
         onPress={() => navigation.navigate('CreateAccountNext')}
         style={styles.smallButton}
     >

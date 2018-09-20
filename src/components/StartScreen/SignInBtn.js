@@ -5,7 +5,7 @@ import styles from '../../theme/styles/StartScreen.style';
 import font from '../../theme/styles/Typography.style';
 
 const SignInBtn = ({ navigation }) => (
-        <TouchableOpacity
+        <TouchableOpacity activeOpacity={1}
             onPress={() => navigation.navigate('Login')}
             style={styles.clearButton}
         >
