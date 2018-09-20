@@ -12,6 +12,7 @@ export const images2load = [
     require('./assets/img/gear.png'),
     require('./assets/img/pa.png'),
     require('./assets/img/text-logo.png'),
+    require('./assets/img/homebase.png'),
     require('./assets/img/xbtn.png'),
     require('./assets/img/home_dark.png'),
     require('./assets/img/home.png'),

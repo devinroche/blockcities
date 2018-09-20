@@ -3,7 +3,7 @@ import { Row, Grid, Col } from 'react-native-easy-grid';
 import { Image } from 'react-native';
 import { connect } from 'react-redux';
 import Navbar from './Navigation/NavContainer';
-import wallpaper from '../../assets/img/wallpaper.png';
+import wallpaper from '../../assets/img/homebase.png';
 import Footer from './Navigation/FooterContainer';
 import styles from '../theme/styles/Containers.style';
 import theme from '../theme/theme';
@@ -32,18 +32,25 @@ class AppContainer extends React.Component {
 
         return (
             <Grid style={[styles.grid, { backgroundColor: theme.LIGHT_BLUE }]}>
-                <Col size={2} />
-                <Col size={96}>
+                {/* <Col size={2} /> */}
+                  <Row size={10} style={{paddingTop: 5}}>
+                    <Col size={90} style={{paddingHorizontal: 7.5}}>
                     <Navbar navigation={navigation} darkMode user={user} />
-                    <Row size={90} style={styles.body}>
+                    </Col>
+                    </Row>
+                    <Row size={85} style={styles.body}>
                         <Image
                             style={styles.img}
                             source={wallpaper}
                         />
                     </Row>
+                    <Row size={5}>
+                    <Col size={96}>
                     <Footer navigation={navigation} darkMode />
-                </Col>
-                <Col size={2} />
+                    </Col>
+                    </Row>
+                {/* </Col> */}
+                {/* <Col size={2} /> */}
             </Grid>
         );
     }
