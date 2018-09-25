@@ -56,9 +56,12 @@ class AppContainer extends React.Component {
     }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = state => {
+  console.log(state)
+  return {
     signup: state.signupReducer,
-});
+  };
+}
 
 const mapDispatchToProps = {
     getBuildings,

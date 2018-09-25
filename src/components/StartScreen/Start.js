@@ -8,6 +8,7 @@ import startImage from '../../../assets/img/start-image.png';
 import textLogo from '../../../assets/img/text-logo.png';
 import font from '../../theme/styles/Typography.style';
 import SignUpBtn from './SignUpBtn';
+import GetStartedBtn from './GetStartedBtn'
 import SignInBtn from './SignInBtn';
 
 
@@ -27,14 +28,19 @@ const Start = (props) => {
             </Row>
             <Row size={15} />
             <Row size={15} style={{justifyContent: 'center'}}>
-                <SignUpBtn
+                <GetStartedBtn
                     navigation={navigation}
                 />
             </Row>
-            <Row size={15} style={{justifyContent: 'center'}}>
-                <SignInBtn
+            {/* <Row size={15} style={{justifyContent: 'center'}}>
+                <SignUpBtn
                     navigation={navigation}
                 />
+            </Row> */}
+            <Row size={15} style={{justifyContent: 'center'}}>
+                {/* <SignInBtn
+                    navigation={navigation}
+                /> */}
             </Row>
         </Grid>
     );
